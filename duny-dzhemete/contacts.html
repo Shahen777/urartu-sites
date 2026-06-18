@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Контакты и бронирование — Гостевой дом «Дюны Джемете», Анапа</title>
+<meta name="description" content="Контакты гостевого дома «Дюны Джемете» в Анапе: телефон 8 804 333-73-20, адрес Джемете, Пионерский пр., 104Д. Форма бронирования напрямую.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..600;1,9..144,400..500&family=Manrope:wght@400;500;600;700&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+
+<header id="hdr" class="hdr onlight">
+  <div class="hdr-inner">
+    <a href="index.html" class="brand">
+      <span class="brand-mark"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M3 19c2-3 4-3 6 0s4 3 6 0 4-3 6 0" stroke="white" stroke-width="1.8" stroke-linecap="round"/><path d="M5 13c1.5-4 4-6 7-6s5.5 2 7 6" stroke="white" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+      <span><span class="brand-name">Дюны Джемете</span><span class="brand-sub">АНАПА · ГОСТЕВОЙ ДОМ</span></span>
+    </a>
+    <nav class="nav">
+      <a href="index.html">Главная</a><a href="rooms.html">Номера</a><a href="about.html">Об отеле</a><a href="gallery.html">Галерея</a><a href="contacts.html" class="active">Контакты</a>
+    </nav>
+    <div class="hdr-cta">
+      <a href="tel:88043337320" class="hdr-tel">8 804 333-73-20</a>
+      <span class="magnetic"><a href="#form" class="btn btn-primary">Забронировать</a></span>
+      <button id="burger" class="burger" aria-label="Меню"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+    </div>
+  </div>
+</header>
+
+<div id="mmenu" class="mmenu">
+  <button id="mclose" class="mclose" aria-label="Закрыть">&times;</button>
+  <a href="index.html" class="mlink">Главная</a><a href="rooms.html" class="mlink">Номера</a><a href="about.html" class="mlink">Об отеле</a><a href="gallery.html" class="mlink">Галерея</a><a href="contacts.html" class="mlink">Контакты</a>
+  <div class="mactions"><a href="tel:88043337320" class="btn btn-outline">Позвонить</a><a href="#form" class="btn btn-primary">Забронировать</a></div>
+</div>
+
+<!-- PAGE HERO -->
+<section class="phero" style="min-height:48vh;">
+  <div class="phero-media"><img data-parallax="hero" src="https://images.unsplash.com/photo-1455587734955-081b22074882?auto=format&fit=crop&w=2200&q=85" alt="Лобби отеля"></div>
+  <div class="phero-scrim"></div>
+  <div class="phero-inner">
+    <span class="eyebrow">Свяжитесь с нами</span>
+    <h1 style="margin-top:1rem;">Контакты<br>и бронирование</h1>
+    <p class="phero-sub">Бронируйте напрямую — без комиссий агрегаторов. Мы на связи и поможем с выбором.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap contact-grid">
+
+    <!-- INFO -->
+    <div style="display:flex; flex-direction:column; gap:1.1rem;" class="reveal">
+      <div class="info-card">
+        <div class="ic">📞</div>
+        <div><h3>Телефон</h3><a href="tel:88043337320" class="big">8 804 333-73-20</a><p>Звоните — забронируем и подскажем лучшую цену.</p></div>
+      </div>
+      <div class="info-card">
+        <div class="ic">📍</div>
+        <div><h3>Адрес</h3><p style="margin-top:.4rem; color:var(--ink); font-weight:600;">Анапа, Джемете,<br>Пионерский пр., 104Д</p><p>~300 м до моря · 64 номера · бассейн</p></div>
+      </div>
+      <div class="info-card">
+        <div class="ic">🤖</div>
+        <div><h3>Скоро — бронь 24/7</h3><p>Запускаем AI-помощника: ответит на вопросы и забронирует номер в любое время суток.</p></div>
+      </div>
+      <div class="map-card">
+        <div class="map-stub">
+          <div>
+            <div class="pin">🗺️</div>
+            <p style="font-family:'Fraunces',serif; font-size:1.1rem; margin-top:.6rem;">Анапа · Джемете · Пионерский пр., 104Д</p>
+            <p style="color:var(--ink-soft); font-size:.85rem; margin-top:.3rem;">Карта — заглушка концепта</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FORM -->
+    <div id="form" class="form-card reveal d1">
+      <span class="eyebrow">Прямое бронирование</span>
+      <h2 style="margin-top:.8rem;">Заявка на бронирование</h2>
+      <p style="color:var(--ink-soft); margin-top:.6rem;">Оставьте данные — перезвоним, подтвердим даты и дадим прямую цену без наценок агрегаторов.</p>
+      <form id="bookForm" style="margin-top:1.4rem;">
+        <div class="fgrid">
+          <div class="field"><label for="cin">Заезд</label><input type="date" id="cin" class="inp" required></div>
+          <div class="field"><label for="cout">Выезд</label><input type="date" id="cout" class="inp" required></div>
+        </div>
+        <div class="fgrid">
+          <div class="field"><label for="guests">Гостей</label>
+            <select id="guests" class="inp" required>
+              <option value="1">1 гость</option><option value="2" selected>2 гостя</option><option value="3">3 гостя</option><option value="4">4 гостя</option><option value="5+">5 и более</option>
+            </select></div>
+          <div class="field"><label for="room">Категория</label>
+            <select id="room" class="inp"><option>Стандарт</option><option>Комфорт</option><option>Семейный</option><option>Люкс с видом</option><option>Апартаменты</option></select></div>
+        </div>
+        <div class="field"><label for="name">Ваше имя</label><input type="text" id="name" class="inp" placeholder="Как к вам обращаться" required></div>
+        <div class="field"><label for="phone">Телефон</label><input type="tel" id="phone" class="inp" placeholder="+7 ___ ___-__-__" required></div>
+        <div class="field"><label for="note">Комментарий <span style="color:var(--ink-soft); font-weight:500;">(необязательно)</span></label><textarea id="note" rows="3" class="inp" placeholder="Пожелания к заселению"></textarea></div>
+        <button type="submit" class="btn btn-primary btn-lg" style="width:100%; margin-top:1.2rem;">Отправить заявку</button>
+        <p style="font-size:.78rem; color:var(--ink-soft); text-align:center; margin-top:.9rem;">Нажимая кнопку, вы соглашаетесь на обработку данных для связи по заявке.</p>
+      </form>
+      <div id="success" class="success" style="display:none;">
+        <div class="check">✓</div>
+        <h2 style="margin-top:1rem;">Спасибо за заявку!</h2>
+        <p style="color:var(--ink-soft); margin-top:.7rem; max-width:36ch; margin-inline:auto;">Мы получили ваш запрос и скоро перезвоним по номеру <b id="echoPhone"></b>, чтобы подтвердить бронирование.</p>
+        <span class="magnetic" style="margin-top:1.4rem; display:inline-block;"><a href="tel:88043337320" class="btn btn-primary btn-lg">Позвонить сейчас</a></span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer class="ftr">
+  <div class="ftr-top">
+    <div>
+      <a href="index.html" class="brand"><span class="brand-mark"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M3 19c2-3 4-3 6 0s4 3 6 0 4-3 6 0" stroke="white" stroke-width="1.8" stroke-linecap="round"/><path d="M5 13c1.5-4 4-6 7-6s5.5 2 7 6" stroke="white" stroke-width="1.8" stroke-linecap="round"/></svg></span><span class="brand-name">Дюны Джемете</span></a>
+      <p class="ftr-tag">Гостевой дом в Анапе. Море, бассейн и лёгкий бриз — для вашего отдыха.</p>
+    </div>
+    <div><h4>Навигация</h4><ul><li><a href="index.html">Главная</a></li><li><a href="rooms.html">Номера</a></li><li><a href="about.html">Об отеле</a></li><li><a href="gallery.html">Галерея</a></li><li><a href="contacts.html">Контакты</a></li></ul></div>
+    <div><h4>Контакты</h4><ul><li><a href="tel:88043337320">8 804 333-73-20</a></li><li>Анапа, Джемете,<br>Пионерский пр., 104Д</li><li>~300 м до моря · 64 номера</li></ul></div>
+    <div><h4>Бронирование</h4><p class="ftr-tag" style="margin-top:0;">Напрямую — без наценок. Звоните или оставьте заявку.</p><span class="magnetic" style="margin-top:1.2rem; display:inline-block;"><a href="#form" class="btn btn-primary">Забронировать</a></span></div>
+  </div>
+  <div class="ftr-bot"><div class="row"><span>© <span id="year"></span> Гостевой дом «Дюны Джемете», Анапа</span><span>Концепт сайта · Urartu AI Studio · <a href="https://urartu.pro">urartu.pro</a></span></div></div>
+</footer>
+
+<a href="tel:88043337320" class="fab" aria-label="Позвонить"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M6.5 3h2l1.5 4-2 1.5a12 12 0 005.5 5.5l1.5-2 4 1.5v2a2 2 0 01-2 2A15 15 0 014.5 5a2 2 0 012-2z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></a>
+
+<script src="assets/site.js" defer></script>
+</body>
+</html>

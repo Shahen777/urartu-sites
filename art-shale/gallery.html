@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Галерея — Арт Шале, Геленджик</title>
+<meta name="description" content="Фотогалерея мини-гостиницы «Арт Шале» в Геленджике: номера, природа, бухта, сосновый лес." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,500;1,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="preconnect" href="https://images.unsplash.com" crossorigin />
+<link rel="stylesheet" href="assets/site.css" />
+</head>
+<body>
+
+<header class="hdr hdr--light">
+  <nav class="wrap hdr__bar" aria-label="Главная навигация">
+    <a href="index.html" class="brand">
+      <span class="brand__mark">А</span>
+      <span><span class="brand__name">Арт&nbsp;Шале</span><span class="brand__sub">Геленджик</span></span>
+    </a>
+    <div class="nav">
+      <a href="index.html">Главная</a>
+      <a href="rooms.html">Номера</a>
+      <a href="about.html">Об отеле</a>
+      <a href="gallery.html" aria-current="page">Галерея</a>
+      <a href="contacts.html">Контакты</a>
+    </div>
+    <div class="hdr__cta">
+      <a href="tel:+79298277772" class="hdr__phone">+7 929 827-77-72</a>
+      <a href="contacts.html" class="btn btn--sm" data-magnet=".3"><span class="btn__mag">Забронировать</span></a>
+    </div>
+    <button class="burger" aria-label="Открыть меню">
+      <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 8h20M4 14h20M4 20h20" stroke-linecap="round"/></svg>
+    </button>
+  </nav>
+</header>
+
+<div class="mnav" aria-hidden="true">
+  <button class="mnav__close" aria-label="Закрыть меню">&times;</button>
+  <a href="index.html">Главная</a>
+  <a href="rooms.html">Номера</a>
+  <a href="about.html">Об отеле</a>
+  <a href="gallery.html">Галерея</a>
+  <a href="contacts.html">Контакты</a>
+  <a href="tel:+79298277772" class="mnav__phone">+7 929 827-77-72</a>
+</div>
+
+<!-- PAGE HEAD -->
+<section class="phead">
+  <div class="phead__bg" data-px=".12">
+    <img src="https://images.unsplash.com/photo-1455587734955-081b22074882?auto=format&fit=crop&w=2000&q=85" alt="Интерьер гостиницы" fetchpriority="high" />
+  </div>
+  <div class="phead__scrim"></div>
+  <div class="wrap phead__inner">
+    <p class="kicker">Фотографии</p>
+    <h1 class="kin"><span class="line"><span>Галерея</span></span></h1>
+    <p class="lead">Номера, природа и виды «Арт Шале». Нажмите на фото, чтобы рассмотреть.</p>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<section class="section--tight" style="padding-top:clamp(2.5rem,5vw,4rem)">
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee__track">
+      <figure><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=700&q=80" alt="" loading="lazy" /></figure>
+      <figure><img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=700&q=80" alt="" loading="lazy" /></figure>
+      <figure><img src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=700&q=80" alt="" loading="lazy" /></figure>
+      <figure><img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?auto=format&fit=crop&w=700&q=80" alt="" loading="lazy" /></figure>
+      <figure><img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=700&q=80" alt="" loading="lazy" /></figure>
+      <figure><img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=700&q=80" alt="" loading="lazy" /></figure>
+      <!-- duplicate set for seamless loop -->
+      <figure><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=700&q=80" alt="" loading="lazy" /></figure>
+      <figure><img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=700&q=80" alt="" loading="lazy" /></figure>
+      <figure><img src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=700&q=80" alt="" loading="lazy" /></figure>
+      <figure><img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?auto=format&fit=crop&w=700&q=80" alt="" loading="lazy" /></figure>
+      <figure><img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=700&q=80" alt="" loading="lazy" /></figure>
+      <figure><img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=700&q=80" alt="" loading="lazy" /></figure>
+    </div>
+  </div>
+</section>
+
+<!-- GRID -->
+<section class="section" style="padding-top:0">
+  <div class="wrap">
+    <div class="gal">
+      <div class="gitem gitem--tall reveal" data-full="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1600&q=85">
+        <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=800&q=80" alt="Номер с двуспальной кроватью" loading="lazy" /></div>
+      <div class="gitem reveal" data-full="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=1600&q=85">
+        <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=800&q=80" alt="Горы над облаками" loading="lazy" /></div>
+      <div class="gitem reveal" data-full="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1600&q=85">
+        <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=800&q=80" alt="Светлый номер с балконом" loading="lazy" /></div>
+      <div class="gitem reveal" data-full="https://images.unsplash.com/photo-1564501049412-61c2a3083791?auto=format&fit=crop&w=1600&q=85">
+        <img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?auto=format&fit=crop&w=800&q=80" alt="Бухта Чёрного моря" loading="lazy" /></div>
+      <div class="gitem gitem--tall reveal" data-full="https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=1600&q=85">
+        <img src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=800&q=80" alt="Люкс с панорамой" loading="lazy" /></div>
+      <div class="gitem reveal" data-full="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1600&q=85">
+        <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=800&q=80" alt="Шале среди сосен" loading="lazy" /></div>
+      <div class="gitem reveal" data-full="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=1600&q=85">
+        <img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=800&q=80" alt="Заправленная кровать" loading="lazy" /></div>
+      <div class="gitem reveal" data-full="https://images.unsplash.com/photo-1455587734955-081b22074882?auto=format&fit=crop&w=1600&q=85">
+        <img src="https://images.unsplash.com/photo-1455587734955-081b22074882?auto=format&fit=crop&w=800&q=80" alt="Лобби отеля" loading="lazy" /></div>
+      <div class="gitem gitem--tall reveal" data-full="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?auto=format&fit=crop&w=1600&q=85">
+        <img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?auto=format&fit=crop&w=800&q=80" alt="Интерьер номера" loading="lazy" /></div>
+      <div class="gitem reveal" data-full="https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=1600&q=85">
+        <img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=800&q=80" alt="Балкон с видом" loading="lazy" /></div>
+      <div class="gitem reveal" data-full="https://images.unsplash.com/photo-1445019980597-93fa8acb246c?auto=format&fit=crop&w=1600&q=85">
+        <img src="https://images.unsplash.com/photo-1445019980597-93fa8acb246c?auto=format&fit=crop&w=800&q=80" alt="Холл и зона отдыха" loading="lazy" /></div>
+      <div class="gitem reveal" data-full="https://images.unsplash.com/photo-1535827841776-24afc1e255ac?auto=format&fit=crop&w=1600&q=85">
+        <img src="https://images.unsplash.com/photo-1535827841776-24afc1e255ac?auto=format&fit=crop&w=800&q=80" alt="Пляж и море" loading="lazy" /></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-bleed">
+  <div class="cta-bleed__bg" data-px=".1">
+    <img src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=2000&q=85" alt="Премиальный номер" loading="lazy" />
+  </div>
+  <div class="wrap reveal">
+    <p class="kicker center" style="color:var(--gold)">Бронь напрямую</p>
+    <h2>Хотите увидеть всё вживую?</h2>
+    <p class="lead">Забронируйте номер напрямую — без комиссий агрегаторов.</p>
+    <div class="hero__cta">
+      <a href="contacts.html" class="btn btn--lg" data-magnet=".35"><span class="btn__mag">Забронировать</span></a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="wrap footer__grid">
+    <div class="footer__brand">
+      <div class="brand">
+        <span class="brand__mark" style="background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.3)">А</span>
+        <span class="brand__name">Арт Шале</span>
+      </div>
+      <p>Мини-гостиница у соснового леса с видом на бухту. Рейтинг 10.0.</p>
+    </div>
+    <div>
+      <h4>Навигация</h4>
+      <ul>
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="rooms.html">Номера</a></li>
+        <li><a href="about.html">Об отеле</a></li>
+        <li><a href="gallery.html">Галерея</a></li>
+        <li><a href="contacts.html">Контакты</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Контакты</h4>
+      <ul>
+        <li><a href="tel:+79298277772" style="font-weight:600;color:#fff">+7 929 827-77-72</a></li>
+        <li>Геленджик, ул. Средняя, 11</li>
+        <li>У соснового леса · виды на бухту</li>
+      </ul>
+    </div>
+    <div>
+      <h4>Бронирование</h4>
+      <p style="margin-bottom:1.1rem">Прямые цены без комиссий. Бот принимает брони 24/7.</p>
+      <a href="contacts.html" class="btn btn--sm" data-magnet=".3"><span class="btn__mag">Забронировать</span></a>
+    </div>
+  </div>
+  <div class="wrap footer__bar">
+    <span>© <span id="year"></span> Мини-гостиница «Арт Шале», Геленджик</span>
+    <span>Концепт сайта · Urartu AI Studio · urartu.pro</span>
+  </div>
+</footer>
+
+<a href="tel:+79298277772" class="fab" aria-label="Позвонить">
+  <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 4l3-1 2 4-2 2a12 12 0 005 5l2-2 4 2-1 3a2 2 0 01-2 1A15 15 0 013 6a2 2 0 010-2z" stroke-linejoin="round"/></svg>
+</a>
+
+<!-- LIGHTBOX -->
+<div class="lb" role="dialog" aria-modal="true" aria-label="Просмотр фото">
+  <button class="lb__btn lb__close" aria-label="Закрыть">&times;</button>
+  <button class="lb__btn lb__nav lb__prev" aria-label="Назад">
+    <svg width="42" height="42" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M26 8L13 21l13 13" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </button>
+  <img src="" alt="Фото галереи" />
+  <button class="lb__btn lb__nav lb__next" aria-label="Вперёд">
+    <svg width="42" height="42" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M15 8l13 13-13 13" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </button>
+</div>
+
+<script src="assets/site.js" defer></script>
+<script>
+(function(){
+  var items=[].slice.call(document.querySelectorAll('.gitem'));
+  var fulls=items.map(function(i){return i.dataset.full;});
+  var lb=document.querySelector('.lb'), lbImg=lb.querySelector('img'), idx=0;
+  function open(i){idx=i;lbImg.src=fulls[idx];lb.classList.add('is-open');document.body.style.overflow='hidden';}
+  function close(){lb.classList.remove('is-open');document.body.style.overflow='';}
+  function show(d){idx=(idx+d+fulls.length)%fulls.length;lbImg.src=fulls[idx];}
+  items.forEach(function(it,i){it.addEventListener('click',function(){open(i);});});
+  lb.querySelector('.lb__close').addEventListener('click',close);
+  lb.querySelector('.lb__prev').addEventListener('click',function(e){e.stopPropagation();show(-1);});
+  lb.querySelector('.lb__next').addEventListener('click',function(e){e.stopPropagation();show(1);});
+  lb.addEventListener('click',function(e){if(e.target===lb)close();});
+  document.addEventListener('keydown',function(e){
+    if(!lb.classList.contains('is-open'))return;
+    if(e.key==='Escape')close();if(e.key==='ArrowLeft')show(-1);if(e.key==='ArrowRight')show(1);
+  });
+})();
+</script>
+</body>
+</html>

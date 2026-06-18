@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Urartu AI Studio — концепты сайтов отелей</title>
+<style>
+  :root{ --bg:#0b0b10; --card:#14141c; --line:rgba(255,255,255,.08); --txt:#f4f1ea; --mut:#9a97a6; --gold:#c9a961; }
+  *{box-sizing:border-box} html{scroll-behavior:smooth}
+  body{margin:0;background:radial-gradient(120% 80% at 50% -10%, #1a1330 0%, var(--bg) 60%);color:var(--txt);
+       font-family:-apple-system,'Segoe UI',Roboto,Arial,sans-serif;-webkit-font-smoothing:antialiased;min-height:100vh}
+  .wrap{max-width:1080px;margin:0 auto;padding:64px 22px 80px}
+  .brand{font-family:Georgia,serif;letter-spacing:3px;font-size:24px}
+  .brand b{color:var(--gold)}
+  .kicker{color:var(--gold);letter-spacing:4px;text-transform:uppercase;font-size:12px;margin-top:4px}
+  h1{font-family:Georgia,serif;font-size:clamp(30px,5vw,52px);line-height:1.05;margin:26px 0 12px;font-weight:600}
+  .lead{color:var(--mut);max-width:680px;font-size:17px;line-height:1.6}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:18px;margin-top:40px}
+  a.card{display:block;text-decoration:none;color:inherit;background:var(--card);border:1px solid var(--line);
+         border-radius:18px;padding:22px;transition:transform .25s ease,border-color .25s ease,box-shadow .25s ease}
+  a.card:hover{transform:translateY(-4px);border-color:rgba(201,169,97,.5);box-shadow:0 18px 40px rgba(0,0,0,.45)}
+  .name{font-family:Georgia,serif;font-size:21px;margin:0 0 4px}
+  .city{color:var(--mut);font-size:14px}
+  .meta{display:flex;align-items:center;gap:10px;margin-top:14px;font-size:13px;color:var(--mut)}
+  .star{color:var(--gold)}
+  .go{margin-top:16px;display:inline-flex;align-items:center;gap:7px;color:var(--gold);font-weight:600;font-size:14px}
+  footer{margin-top:56px;color:var(--mut);font-size:13px;border-top:1px solid var(--line);padding-top:22px}
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="brand">URARTU<b>.</b></div>
+    <div class="kicker">AI Studio · концепты сайтов</div>
+    <h1>Премиальные сайты отелей — 2026</h1>
+    <p class="lead">10 концептов современных сайтов с прямым бронированием для отелей без собственного сайта. Нажмите на карточку — откроется живой сайт отеля.</p>
+
+    <div class="grid" id="grid"></div>
+
+    <footer>Концепты сайтов · Urartu AI Studio · <a href="https://urartu.pro" style="color:var(--gold);text-decoration:none">urartu.pro</a></footer>
+  </div>
+<script>
+  const sites = [
+    { s:'art-shale',         n:'Арт Шале',        c:'Геленджик',  r:'10.0' },
+    { s:'pegas-gelendzhik',  n:'Пегас',           c:'Геленджик',  r:'9.4'  },
+    { s:'alyans-sevastopol', n:'Альянс',          c:'Севастополь',r:'9.8'  },
+    { s:'stary-gorod',       n:'Старый город',    c:'Севастополь',r:'9.3'  },
+    { s:'akvarel-yalta',     n:'Акварель',        c:'Ялта',       r:'9.7'  },
+    { s:'anapa-briz',        n:'Анапский Бриз',   c:'Анапа',      r:'9.5'  },
+    { s:'duny-dzhemete',     n:'Дюны Джемете',    c:'Анапа',      r:'7.9'  },
+    { s:'valeria-anapa',     n:'Валерия',         c:'Анапа',      r:'5.0'  },
+    { s:'english-house',     n:'Английский Дом',  c:'Краснодар',  r:'9.0'  },
+    { s:'akva-villa',        n:'Аква вилла',      c:'Краснодар',  r:'5.0'  },
+  ];
+  document.getElementById('grid').innerHTML = sites.map(x => `
+    <a class="card" href="./${x.s}/">
+      <div class="name">${x.n}</div>
+      <div class="city">${x.c}</div>
+      <div class="meta"><span class="star">★ ${x.r}</span> · современный сайт + прямое бронирование</div>
+      <div class="go">Открыть сайт →</div>
+    </a>`).join('');
+</script>
+</body>
+</html>

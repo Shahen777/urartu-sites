@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="ru" class="no-js">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<script>document.documentElement.classList.remove('no-js');</script>
+<title>Аква вилла · Банно-гостиничный комплекс в Краснодаре · Рейтинг 5.0</title>
+<meta name="description" content="Аква вилла — банно-гостиничный комплекс в Краснодаре. Бассейн, баня, релакс, уютные номера. Рейтинг 5.0, номинант премии 2ГИС. Бронируйте напрямую без комиссий." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<style>
+/* =========================================================================
+   АКВА ВИЛЛА — bespoke design system 2026 · Urartu AI Studio
+   No runtime CDN. CSS custom properties. Fluid type. transform/opacity only.
+   ========================================================================= */
+:root{
+  --teal:#0C4A4A; --teal-deep:#083636; --teal-mid:#0F5C5C;
+  --aqua:#43B0A0; --aqua-light:#6FCBBD; --aqua-soft:#A9E1D8;
+  --cream:#F0F6F5; --ink:#0C4A4A; --white:#fff;
+  --line:rgba(12,74,74,.12);
+  --shadow-soft:0 28px 70px -28px rgba(8,54,54,.45);
+  --shadow-card:0 18px 48px -22px rgba(8,54,54,.4);
+  --shadow-lift:0 40px 90px -36px rgba(8,54,54,.55);
+  --ease:cubic-bezier(.22,.61,.36,1);
+  --ease-out:cubic-bezier(.16,1,.3,1);
+  --r:clamp(18px,2vw,28px);
+  --r-lg:clamp(28px,3.4vw,44px);
+  --maxw:1240px;
+  --pad:clamp(20px,5vw,56px);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  margin:0;font-family:'Inter',system-ui,sans-serif;color:var(--ink);
+  background:var(--cream);line-height:1.6;overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;
+}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit;text-decoration:none}
+svg{width:1.5rem;height:1.5rem}
+button{font-family:inherit}
+::selection{background:var(--aqua);color:#fff}
+h1,h2,h3,h4{font-family:'Sora',sans-serif;color:var(--teal);margin:0;line-height:1.05;letter-spacing:-.02em}
+.serif{font-family:'Fraunces',serif;font-weight:500;letter-spacing:-.01em}
+p{margin:0}
+.wrap{max-width:var(--maxw);margin:0 auto;padding-inline:var(--pad)}
+.eyebrow{font-size:.78rem;font-weight:600;letter-spacing:.26em;text-transform:uppercase;color:var(--aqua)}
+.mono-num{font-variant-numeric:tabular-nums}
+
+/* ---- grain / noise overlay ---- */
+body::after{
+  content:"";position:fixed;inset:0;z-index:9998;pointer-events:none;opacity:.04;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  mix-blend-mode:multiply;
+}
+
+/* ---- custom cursor ---- */
+.cursor-dot,.cursor-ring{position:fixed;top:0;left:0;z-index:9999;pointer-events:none;border-radius:50%;mix-blend-mode:difference;will-change:transform}
+.cursor-dot{width:7px;height:7px;background:#fff;transform:translate(-50%,-50%)}
+.cursor-ring{width:42px;height:42px;border:1.5px solid rgba(255,255,255,.8);transform:translate(-50%,-50%);transition:width .3s var(--ease),height .3s var(--ease),background .3s,border-color .3s}
+.cursor-ring.is-hover{width:64px;height:64px;background:rgba(255,255,255,.12);border-color:transparent}
+@media (hover:none),(pointer:coarse){.cursor-dot,.cursor-ring{display:none!important}}
+
+/* ---- buttons ---- */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.55rem;font-weight:600;border-radius:999px;
+  padding:1rem 1.8rem;font-size:1.02rem;transition:transform .4s var(--ease),box-shadow .4s var(--ease),background .35s;cursor:pointer;border:0;will-change:transform}
+.btn-primary{background:var(--aqua);color:#fff;box-shadow:0 16px 36px -16px rgba(67,176,160,.85)}
+.btn-primary:hover{background:var(--teal-mid);box-shadow:var(--shadow-lift)}
+.btn-ghost{background:rgba(255,255,255,.1);color:#fff;border:1px solid rgba(255,255,255,.32);backdrop-filter:blur(8px)}
+.btn-ghost:hover{background:rgba(255,255,255,.2)}
+.btn-outline{background:transparent;border:1px solid var(--line);color:var(--teal)}
+.btn-outline:hover{background:rgba(12,74,74,.05)}
+.magnetic{will-change:transform}
+
+/* ---- animated link underline ---- */
+.ul{position:relative}
+.ul::after{content:'';position:absolute;left:0;bottom:-5px;height:2px;width:0;background:var(--aqua);transition:width .4s var(--ease)}
+.ul:hover::after{width:100%}
+
+/* ---- header ---- */
+.site-header{position:fixed;top:0;inset-inline:0;z-index:120;transition:transform .5s var(--ease),background .4s,box-shadow .4s,backdrop-filter .4s;
+  background:rgba(240,246,245,0);backdrop-filter:blur(0)}
+.site-header.scrolled{background:rgba(240,246,245,.78);backdrop-filter:blur(18px) saturate(1.4);box-shadow:0 1px 0 var(--line),0 12px 40px -28px rgba(8,54,54,.4)}
+.site-header.hide{transform:translateY(-110%)}
+.hdr-row{display:flex;align-items:center;justify-content:space-between;height:76px;transition:height .4s var(--ease)}
+.scrolled .hdr-row{height:64px}
+.brand{display:flex;align-items:center;gap:.7rem}
+.brand-mark{display:grid;place-items:center;height:42px;width:42px;border-radius:13px;background:var(--teal);color:var(--cream);font-family:'Sora';font-weight:700;font-size:1.15rem;box-shadow:var(--shadow-card)}
+.brand-name{font-family:'Sora';font-weight:700;color:var(--teal);font-size:1.16rem;line-height:1;letter-spacing:-.02em}
+.brand-sub{display:block;font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:var(--aqua);font-weight:600;margin-top:3px}
+.nav{display:flex;align-items:center;gap:2rem;font-weight:500;font-size:.97rem;color:var(--teal)}
+.nav a.active{color:var(--aqua)}
+.hdr-cta{display:flex;align-items:center;gap:1rem}
+.hdr-tel{display:flex;align-items:center;gap:.5rem;color:var(--teal);font-weight:600;font-size:.97rem;transition:color .3s}
+.hdr-tel:hover{color:var(--aqua)}
+.hdr-tel svg{width:1rem;height:1rem}
+.btn-sm{padding:.62rem 1.3rem;font-size:.95rem}
+.burger{display:none;background:rgba(12,74,74,.06);border:0;border-radius:13px;height:46px;width:46px;place-items:center;color:var(--teal);cursor:pointer}
+.mobile-menu{display:none}
+@media (max-width:980px){
+  .nav,.hdr-cta{display:none}
+  .burger{display:grid}
+  .mobile-menu{display:block;max-height:0;overflow:hidden;transition:max-height .5s var(--ease);background:rgba(240,246,245,.97);backdrop-filter:blur(16px);border-top:1px solid transparent}
+  .mobile-menu.open{max-height:460px;border-top-color:var(--line)}
+  .mobile-menu .inner{padding:1.2rem var(--pad) 1.6rem;display:flex;flex-direction:column;gap:.3rem}
+  .mobile-menu a{padding:.85rem 1rem;border-radius:12px;color:var(--teal);font-weight:500}
+  .mobile-menu a:active{background:rgba(67,176,160,.12)}
+  .mm-actions{margin-top:.8rem;display:flex;flex-direction:column;gap:.7rem}
+}
+
+/* ---- HERO ---- */
+.hero{position:relative;min-height:100svh;display:flex;align-items:flex-end;overflow:hidden}
+.hero-media{position:absolute;inset:0;overflow:hidden}
+.hero-media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;will-change:transform;transform:scale(1.14);animation:kenburns 18s ease-out forwards}
+@keyframes kenburns{from{transform:scale(1.14) translate(0,0)}to{transform:scale(1.24) translate(-2%,-3%)}}
+.hero-scrim{position:absolute;inset:0;background:
+  linear-gradient(180deg,rgba(8,54,54,.5) 0%,rgba(8,54,54,.15) 32%,rgba(8,54,54,.35) 62%,rgba(8,54,54,.88) 100%);}
+.hero-scrim::after{content:'';position:absolute;inset:0;background:radial-gradient(120% 80% at 15% 90%,rgba(8,54,54,.6),transparent 60%)}
+.hero-inner{position:relative;z-index:5;width:100%;padding-bottom:clamp(48px,9vh,120px);padding-top:120px}
+.hero-badge{display:inline-flex;align-items:center;gap:.6rem;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.28);backdrop-filter:blur(10px);
+  border-radius:999px;padding:.5rem 1.1rem;color:#fff;font-size:.9rem;font-weight:500;margin-bottom:1.6rem}
+.hero-badge .stars{color:var(--aqua-soft);letter-spacing:1px}
+.hero h1{color:#fff;font-size:clamp(3rem,12vw,9.5rem);font-weight:800;line-height:.92;text-shadow:0 4px 40px rgba(8,54,54,.4)}
+.hero h1 .line{display:block;overflow:hidden}
+.hero h1 .line span{display:block}
+.hero-tag{color:var(--aqua-soft);font-size:clamp(1.1rem,2.6vw,1.7rem);font-weight:600;font-family:'Sora';margin-top:1rem;text-shadow:0 2px 18px rgba(8,54,54,.5)}
+.hero-lead{color:rgba(255,255,255,.9);font-size:clamp(1.05rem,1.4vw,1.2rem);max-width:34rem;margin-top:1.3rem;text-shadow:0 2px 14px rgba(8,54,54,.5)}
+.hero-actions{display:flex;flex-wrap:wrap;gap:1rem;margin-top:2.2rem}
+.hero-meta{display:flex;flex-wrap:wrap;gap:.7rem 1.8rem;margin-top:2.4rem;color:rgba(255,255,255,.85);font-size:.92rem}
+.hero-meta span{display:inline-flex;align-items:center;gap:.55rem}
+.hero-meta .dot{height:7px;width:7px;border-radius:50%;background:var(--aqua)}
+.scroll-cue{position:absolute;bottom:26px;left:50%;transform:translateX(-50%);z-index:6;color:rgba(255,255,255,.7);display:flex;flex-direction:column;align-items:center;gap:.5rem;font-size:.7rem;letter-spacing:.2em;text-transform:uppercase}
+.scroll-cue .bar{width:1px;height:42px;background:linear-gradient(rgba(255,255,255,.7),transparent);animation:cue 2.2s var(--ease) infinite}
+@keyframes cue{0%{transform:scaleY(0);transform-origin:top}45%{transform:scaleY(1);transform-origin:top}55%{transform:scaleY(1);transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+
+/* ---- reveal ---- */
+.reveal{opacity:0;transform:translateY(34px);transition:opacity .9s var(--ease-out),transform .9s var(--ease-out)}
+.reveal.in{opacity:1;transform:none}
+[data-stagger]>*{opacity:0;transform:translateY(26px);transition:opacity .8s var(--ease-out),transform .8s var(--ease-out)}
+[data-stagger].in>*{opacity:1;transform:none}
+
+/* ---- section scaffolding ---- */
+.section{padding-block:clamp(72px,11vw,140px)}
+.section-head{max-width:42rem}
+.section-head h2{font-size:clamp(2rem,5vw,3.4rem);margin-top:.7rem}
+.lead{font-size:clamp(1.05rem,1.5vw,1.22rem);color:rgba(12,74,74,.75);line-height:1.65}
+
+/* ---- intro split ---- */
+.intro{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(2rem,5vw,4.5rem);align-items:center}
+.intro-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:2.2rem}
+.stat{background:#fff;border-radius:var(--r);padding:1.4rem 1rem;text-align:center;box-shadow:var(--shadow-card);transition:transform .5s var(--ease),box-shadow .5s var(--ease)}
+.stat:hover{transform:translateY(-7px);box-shadow:var(--shadow-lift)}
+.stat .num{font-family:'Sora';font-weight:800;color:var(--teal);font-size:clamp(1.7rem,3vw,2.2rem)}
+.stat .lbl{color:rgba(12,74,74,.65);font-size:.82rem;margin-top:.3rem}
+.intro-mosaic{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:auto auto;gap:1rem}
+.frame{overflow:hidden;border-radius:var(--r-lg);box-shadow:var(--shadow-soft);position:relative}
+.frame img{width:100%;height:100%;object-fit:cover;transition:transform .9s var(--ease)}
+.frame:hover img{transform:scale(1.08)}
+.frame.tall{grid-row:span 2}
+.frame.h-sm img{height:clamp(180px,26vw,260px)}
+
+/* ---- features (dark bento) ---- */
+.features{background:var(--teal);color:var(--cream);position:relative;overflow:hidden}
+.features .glow{position:absolute;width:520px;height:520px;border-radius:50%;filter:blur(120px);opacity:.5}
+.features .glow.a{background:var(--aqua);top:-200px;right:-160px;opacity:.25}
+.features .glow.b{background:var(--aqua-light);bottom:-220px;left:-180px;opacity:.14}
+.features h2{color:#fff}
+.bento{display:grid;grid-template-columns:repeat(4,1fr);gap:1.1rem;margin-top:clamp(2.4rem,5vw,3.4rem)}
+.bento-card{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:var(--r);padding:1.8rem;transition:transform .5s var(--ease),background .4s,border-color .4s;position:relative;overflow:hidden}
+.bento-card:hover{background:rgba(255,255,255,.09);border-color:rgba(111,203,189,.4);transform:translateY(-6px)}
+.bento-card.wide{grid-column:span 2}
+.bento-card.feature{grid-column:span 2;grid-row:span 2;display:flex;flex-direction:column;justify-content:flex-end;min-height:260px}
+.bento-card.feature img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.42;transition:transform .9s var(--ease),opacity .5s}
+.bento-card.feature:hover img{transform:scale(1.07);opacity:.5}
+.bento-card.feature .b-content{position:relative;z-index:2}
+.b-ico{display:grid;place-items:center;height:50px;width:50px;border-radius:15px;background:rgba(67,176,160,.2);color:var(--aqua-light);margin-bottom:1.2rem}
+.bento-card h3{color:#fff;font-size:1.32rem;font-weight:600}
+.bento-card p{color:rgba(240,246,245,.72);font-size:.92rem;margin-top:.55rem;line-height:1.55}
+.bento-card.feature h3{font-size:clamp(1.5rem,3vw,2.1rem)}
+
+/* ---- rooms preview (sticky split feel) ---- */
+.rooms-head{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:1.2rem}
+.room-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem;margin-top:clamp(2.4rem,5vw,3.4rem)}
+.room-card{background:#fff;border-radius:var(--r-lg);overflow:hidden;box-shadow:var(--shadow-card);transition:transform .55s var(--ease),box-shadow .55s var(--ease)}
+.room-card:hover{transform:translateY(-9px);box-shadow:var(--shadow-lift)}
+.room-card .ph{height:240px;overflow:hidden}
+.room-card .ph img{width:100%;height:100%;object-fit:cover;transition:transform .9s var(--ease)}
+.room-card:hover .ph img{transform:scale(1.09)}
+.room-card .body{padding:1.6rem}
+.room-card h3{font-size:1.4rem;font-weight:600}
+.room-card p{color:rgba(12,74,74,.65);font-size:.94rem;margin-top:.5rem}
+.room-foot{display:flex;align-items:center;justify-content:space-between;margin-top:1.4rem}
+.price{font-family:'Sora';font-weight:700;color:var(--teal);font-size:1.25rem}
+.price small{font-weight:400;font-family:'Inter';color:rgba(12,74,74,.5);font-size:.85rem}
+.room-link{color:var(--aqua);font-weight:600;transition:color .3s}
+.room-link:hover{color:var(--teal)}
+
+/* ---- pinned scrolly ritual ---- */
+.ritual{background:var(--teal-deep);color:var(--cream);position:relative;overflow:hidden}
+.ritual-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,5vw,4rem);align-items:start}
+.ritual-sticky{position:sticky;top:12vh}
+.ritual-sticky .clip{border-radius:var(--r-lg);overflow:hidden;box-shadow:var(--shadow-lift)}
+.ritual-sticky img{width:100%;height:min(64vh,560px);object-fit:cover}
+.ritual h2{color:#fff;font-size:clamp(2rem,5vw,3.4rem)}
+.steps{margin-top:2rem;display:flex;flex-direction:column;gap:1rem}
+.step{border:1px solid rgba(255,255,255,.12);border-radius:var(--r);padding:1.6rem;transition:background .4s,border-color .4s}
+.step:hover{background:rgba(255,255,255,.05);border-color:rgba(111,203,189,.35)}
+.step .n{font-family:'Fraunces',serif;font-size:2rem;color:var(--aqua-light);line-height:1}
+.step h3{color:#fff;font-size:1.3rem;margin-top:.6rem}
+.step p{color:rgba(240,246,245,.7);margin-top:.4rem;font-size:.95rem}
+
+/* ---- reviews ---- */
+.reviews{background:linear-gradient(180deg,var(--cream),rgba(169,225,216,.28))}
+.review-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem;margin-top:clamp(2.4rem,5vw,3.4rem)}
+.review{background:#fff;border-radius:var(--r-lg);padding:2rem;box-shadow:var(--shadow-card);transition:transform .5s var(--ease),box-shadow .5s var(--ease)}
+.review:hover{transform:translateY(-6px);box-shadow:var(--shadow-lift)}
+.review .stars{color:var(--aqua);letter-spacing:2px;font-size:1.05rem}
+.review blockquote{margin:1.1rem 0 0;color:rgba(12,74,74,.82);font-size:1.05rem;line-height:1.6;font-family:'Fraunces',serif;font-weight:400}
+.review figcaption{display:flex;align-items:center;gap:.8rem;margin-top:1.4rem}
+.av{display:grid;place-items:center;height:44px;width:44px;border-radius:50%;background:rgba(67,176,160,.16);color:var(--teal);font-family:'Sora';font-weight:700}
+.review .who{font-weight:600;color:var(--teal);display:block}
+.review .src{color:rgba(12,74,74,.5);font-size:.84rem}
+
+/* ---- big CTA ---- */
+.cta-band{position:relative;overflow:hidden;border-radius:var(--r-lg);background:var(--teal);color:var(--cream);padding:clamp(3rem,7vw,5.5rem) clamp(1.5rem,5vw,4rem);text-align:center;box-shadow:var(--shadow-soft)}
+.cta-band img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.22;transform:scale(1.05)}
+.cta-band .glow{position:absolute;width:420px;height:420px;border-radius:50%;background:var(--aqua);filter:blur(130px);opacity:.3;top:-160px;left:50%;transform:translateX(-50%)}
+.cta-band .inner{position:relative;z-index:2}
+.cta-band h2{color:#fff;font-size:clamp(2rem,5.5vw,3.6rem);max-width:24ch;margin:0 auto}
+.cta-band p{color:rgba(240,246,245,.82);max-width:40rem;margin:1.4rem auto 0;font-size:1.1rem}
+.cta-actions{display:flex;flex-wrap:wrap;gap:1rem;justify-content:center;margin-top:2.4rem}
+
+/* ---- footer ---- */
+.site-footer{background:var(--teal-deep);color:rgba(240,246,245,.8);padding-top:clamp(3.5rem,7vw,5rem);padding-bottom:2rem}
+.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:2.5rem}
+.foot-brand .brand-mark{background:var(--aqua);color:var(--teal-deep)}
+.foot-brand p{margin-top:1rem;font-size:.9rem;color:rgba(240,246,245,.6);line-height:1.6;max-width:24rem}
+.site-footer h4{color:var(--cream);font-size:1rem;margin-bottom:1rem;font-weight:600}
+.site-footer ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:.7rem;font-size:.92rem}
+.site-footer ul a{transition:color .3s}
+.site-footer ul a:hover{color:var(--aqua-light)}
+.foot-muted{color:rgba(240,246,245,.55)}
+.foot-bottom{margin-top:3rem;padding-top:1.5rem;border-top:1px solid rgba(255,255,255,.1);display:flex;flex-wrap:wrap;gap:.6rem;align-items:center;justify-content:space-between;font-size:.78rem;color:rgba(240,246,245,.45)}
+.foot-bottom a:hover{color:var(--aqua-light)}
+
+/* ---- floating mobile call ---- */
+.fab{position:fixed;bottom:20px;right:20px;z-index:115;display:none;place-items:center;height:58px;width:58px;border-radius:50%;background:var(--aqua);color:#fff;box-shadow:var(--shadow-soft);animation:pulse 2.4s infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(67,176,160,.55)}70%{box-shadow:0 0 0 18px rgba(67,176,160,0)}100%{box-shadow:0 0 0 0 rgba(67,176,160,0)}}
+@media (max-width:980px){.fab{display:grid}}
+
+/* ---- responsive ---- */
+@media (max-width:980px){
+  .intro{grid-template-columns:1fr}
+  .bento{grid-template-columns:repeat(2,1fr)}
+  .bento-card.feature{grid-column:span 2;grid-row:auto;min-height:220px}
+  .room-grid,.review-grid{grid-template-columns:1fr}
+  .ritual-grid{grid-template-columns:1fr}
+  .ritual-sticky{position:static;top:auto}
+  .foot-grid{grid-template-columns:1fr 1fr}
+}
+@media (max-width:560px){
+  .bento{grid-template-columns:1fr}
+  .bento-card.wide,.bento-card.feature{grid-column:span 1}
+  .foot-grid{grid-template-columns:1fr}
+  .intro-stats{grid-template-columns:repeat(3,1fr);gap:.6rem}
+  .stat{padding:1rem .5rem}
+}
+
+/* ---- reduced motion ---- */
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important}
+  .reveal,[data-stagger]>*{opacity:1!important;transform:none!important}
+  .hero-media img{animation:none!important;transform:scale(1.05)!important}
+  .cursor-dot,.cursor-ring{display:none!important}
+}
+/* ---- no-js failsafe ---- */
+.no-js .reveal,.no-js [data-stagger]>*{opacity:1!important;transform:none!important}
+.no-js .hero-media img{animation:none!important;transform:scale(1.05)!important}
+</style>
+</head>
+<body>
+
+<!-- custom cursor -->
+<div class="cursor-ring" id="cRing" aria-hidden="true"></div>
+<div class="cursor-dot" id="cDot" aria-hidden="true"></div>
+
+<!-- ===== HEADER ===== -->
+<header class="site-header" id="siteHeader">
+  <div class="wrap">
+    <div class="hdr-row">
+      <a href="index.html" class="brand" data-cursor>
+        <span class="brand-mark">A</span>
+        <span><span class="brand-name">Аква вилла</span><span class="brand-sub">Краснодар · 5.0 ★</span></span>
+      </a>
+      <nav class="nav">
+        <a href="index.html" class="ul active">Главная</a>
+        <a href="rooms.html" class="ul">Номера</a>
+        <a href="about.html" class="ul">Об отеле</a>
+        <a href="gallery.html" class="ul">Галерея</a>
+        <a href="contacts.html" class="ul">Контакты</a>
+      </nav>
+      <div class="hdr-cta">
+        <a href="tel:+79288833390" class="hdr-tel" data-cursor>
+          <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z"/></svg>
+          +7 928 883-33-90
+        </a>
+        <a href="contacts.html" class="btn btn-primary btn-sm magnetic" data-cursor>Забронировать</a>
+      </div>
+      <button class="burger" id="burger" aria-label="Меню">
+        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" d="M3.75 6.75h16.5M3.75 12h16.5M3.75 17.25h16.5"/></svg>
+      </button>
+    </div>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="inner">
+      <a href="index.html">Главная</a>
+      <a href="rooms.html">Номера</a>
+      <a href="about.html">Об отеле</a>
+      <a href="gallery.html">Галерея</a>
+      <a href="contacts.html">Контакты</a>
+      <div class="mm-actions">
+        <a href="tel:+79288833390" class="btn btn-outline">+7 928 883-33-90</a>
+        <a href="contacts.html" class="btn btn-primary">Забронировать</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ===== HERO ===== -->
+<section class="hero">
+  <div class="hero-media">
+    <img id="heroImg" src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?auto=format&fit=crop&w=2000&q=85" alt="Тёплый бассейн Аква вилла" />
+  </div>
+  <div class="hero-scrim"></div>
+  <div class="wrap hero-inner">
+    <div class="hero-badge reveal"><span class="stars">★★★★★</span> Рейтинг 5.0 · 120 отзывов</div>
+    <h1 class="reveal">Аква<br>вилла</h1>
+    <p class="hero-tag reveal">Банно-гостиничный комплекс · Краснодар</p>
+    <p class="hero-lead reveal">Тёплая вода, пар, тишина и уют. Место, где замедляешься: бассейн, баня и спокойные номера для отдыха вдали от городской суеты.</p>
+    <div class="hero-actions reveal">
+      <a href="contacts.html" class="btn btn-primary magnetic" data-cursor>Забронировать</a>
+      <a href="tel:+79288833390" class="btn btn-ghost magnetic" data-cursor>Позвонить · +7 928 883-33-90</a>
+    </div>
+    <div class="hero-meta reveal">
+      <span><i class="dot"></i> Номинант премии 2ГИС</span>
+      <span><i class="dot"></i> Прямое бронирование</span>
+      <span><i class="dot"></i> Без комиссий агрегаторов</span>
+    </div>
+  </div>
+  <a href="#intro" class="scroll-cue" aria-label="Листать вниз"><span>Листайте</span><span class="bar"></span></a>
+</section>
+
+<!-- ===== INTRO ===== -->
+<section class="section" id="intro">
+  <div class="wrap intro">
+    <div class="reveal">
+      <span class="eyebrow">О комплексе</span>
+      <h2 class="section-head" style="font-size:clamp(2rem,5vw,3.4rem);margin-top:.7rem">Релакс, который<br>чувствуешь телом</h2>
+      <p class="lead" style="margin-top:1.6rem">«Аква вилла» — банно-гостиничный комплекс в Прикубанском округе Краснодара. Мы собрали под одной крышей всё для настоящего отдыха: тёплый бассейн, парную, зоны релакса и уютные номера, где легко выспаться и восстановиться.</p>
+      <p class="lead" style="margin-top:1rem">Гости ставят нам <strong style="color:var(--teal)">5.0</strong> — и возвращаются. Мы номинант премии 2ГИС и работаем для тех, кто ценит тишину, чистоту и внимание к деталям.</p>
+      <div class="intro-stats" data-stagger>
+        <div class="stat"><div class="num mono-num" data-count="5" data-dec="1">5.0</div><div class="lbl">Рейтинг гостей</div></div>
+        <div class="stat"><div class="num mono-num" data-count="120" data-suffix="+">120+</div><div class="lbl">Отзывов</div></div>
+        <div class="stat"><div class="num">24/7</div><div class="lbl">Приём гостей</div></div>
+      </div>
+    </div>
+    <div class="reveal intro-mosaic">
+      <div class="frame tall"><img loading="lazy" src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=900&q=85" alt="Спа и релакс" /></div>
+      <div class="frame h-sm"><img loading="lazy" src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?auto=format&fit=crop&w=800&q=85" alt="Бассейн" /></div>
+      <div class="frame h-sm"><img loading="lazy" src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=800&q=85" alt="Уютный номер" /></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FEATURES (bento) ===== -->
+<section class="features section">
+  <span class="glow a"></span><span class="glow b"></span>
+  <div class="wrap" style="position:relative">
+    <div class="section-head reveal">
+      <span class="eyebrow" style="color:var(--aqua-light)">Почему гости возвращаются</span>
+      <h2 style="font-size:clamp(2rem,5vw,3.4rem);margin-top:.7rem">Четыре причины<br>остаться у нас</h2>
+    </div>
+    <div class="bento" data-stagger>
+      <div class="bento-card feature" data-cursor>
+        <img loading="lazy" src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?auto=format&fit=crop&w=1100&q=85" alt="Тёплый бассейн" />
+        <div class="b-content">
+          <div class="b-ico"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3c2.5 3 4 5.5 4 8a4 4 0 1 1-8 0c0-2.5 1.5-5 4-8Z"/></svg></div>
+          <h3>Тёплый бассейн</h3>
+          <p>Чистая вода и комфортная температура круглый год — плавайте и расслабляйтесь в любое время.</p>
+        </div>
+      </div>
+      <div class="bento-card" data-cursor>
+        <div class="b-ico"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 21c0-3 1-4 1-6m6 6c0-3-1-4-1-6M5 10h14M7 10c0-3 2-5 5-5s5 2 5 5"/></svg></div>
+        <h3>Настоящая баня</h3>
+        <p>Жаркая парная и зона отдыха — классический банный ритуал для тела и головы.</p>
+      </div>
+      <div class="bento-card" data-cursor>
+        <div class="b-ico"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 7v10a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V7M3 7l9 6 9-6M3 7l9-4 9 4"/></svg></div>
+        <h3>Уютные номера</h3>
+        <p>Тихо, чисто и мягко. Спите крепко и просыпайтесь отдохнувшими.</p>
+      </div>
+      <div class="bento-card wide" data-cursor>
+        <div class="b-ico"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"/></svg></div>
+        <h3>Без комиссий</h3>
+        <p>Бронируйте напрямую — лучшая цена и личное внимание без посредников. Скоро — заявки через AI-бота 24/7.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ROOMS PREVIEW ===== -->
+<section class="section">
+  <div class="wrap">
+    <div class="rooms-head reveal">
+      <div>
+        <span class="eyebrow">Размещение</span>
+        <h2 style="font-size:clamp(2rem,5vw,3.4rem);margin-top:.7rem">Номера для отдыха</h2>
+      </div>
+      <a href="rooms.html" class="ul" style="color:var(--teal);font-weight:600" data-cursor>Смотреть все номера →</a>
+    </div>
+    <div class="room-grid" data-stagger>
+      <article class="room-card" data-cursor>
+        <div class="ph"><img loading="lazy" src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=900&q=85" alt="Стандарт" /></div>
+        <div class="body">
+          <h3>Стандарт</h3>
+          <p>Уютный номер для двоих с мягкой кроватью и всем необходимым.</p>
+          <div class="room-foot"><span class="price">от 2 900 ₽ <small>/ночь</small></span><a href="contacts.html" class="room-link">Забронировать →</a></div>
+        </div>
+      </article>
+      <article class="room-card" data-cursor>
+        <div class="ph"><img loading="lazy" src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=900&q=85" alt="Люкс с зоной отдыха" /></div>
+        <div class="body">
+          <h3>Люкс с зоной отдыха</h3>
+          <p>Просторный номер с отдельной гостиной для полного релакса.</p>
+          <div class="room-foot"><span class="price">от 5 400 ₽ <small>/ночь</small></span><a href="contacts.html" class="room-link">Забронировать →</a></div>
+        </div>
+      </article>
+      <article class="room-card" data-cursor>
+        <div class="ph"><img loading="lazy" src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=900&q=85" alt="Семейный номер" /></div>
+        <div class="body">
+          <h3>Семейный номер</h3>
+          <p>Места хватит всем — комфортно для семьи или компании друзей.</p>
+          <div class="room-foot"><span class="price">от 4 200 ₽ <small>/ночь</small></span><a href="contacts.html" class="room-link">Забронировать →</a></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===== RITUAL (pinned/sticky) ===== -->
+<section class="ritual section">
+  <div class="wrap ritual-grid">
+    <div class="ritual-sticky reveal">
+      <div class="clip"><img loading="lazy" src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?auto=format&fit=crop&w=1100&q=85" alt="Банный ритуал у бассейна" /></div>
+    </div>
+    <div>
+      <div class="reveal">
+        <span class="eyebrow" style="color:var(--aqua-light)">Ритуал релакса</span>
+        <h2 style="margin-top:.7rem">Три шага к тишине<br>внутри</h2>
+      </div>
+      <div class="steps">
+        <div class="step reveal"><div class="n">01</div><h3>Прогрейтесь в парной</h3><p>Жаркий пар, веники и купель — тело отпускает напряжение, голова очищается.</p></div>
+        <div class="step reveal"><div class="n">02</div><h3>Окунитесь в тёплый бассейн</h3><p>Подогреваемая вода и мягкая подсветка. Плавайте медленно, без спешки.</p></div>
+        <div class="step reveal"><div class="n">03</div><h3>Отдохните в номере</h3><p>Тихо, чисто и мягко. Останьтесь на ночь и проснитесь полностью восстановленными.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== REVIEWS ===== -->
+<section class="reviews section">
+  <div class="wrap">
+    <div class="section-head reveal" style="text-align:center;margin:0 auto">
+      <span class="eyebrow">Отзывы гостей</span>
+      <h2 style="font-size:clamp(2rem,5vw,3.4rem);margin-top:.7rem">5.0 — и это заслуженно</h2>
+      <p class="lead" style="margin-top:1rem">Реальные впечатления гостей «Аква виллы»</p>
+    </div>
+    <div class="review-grid" data-stagger>
+      <figure class="review" data-cursor>
+        <div class="stars">★★★★★</div>
+        <blockquote>«Приехали в баню компанией — остались в восторге. Чисто, тепло, бассейн отличный. Вернёмся обязательно.»</blockquote>
+        <figcaption><span class="av">М</span><span><span class="who">Марина К.</span><span class="src">отзыв гостя · 2ГИС</span></span></figcaption>
+      </figure>
+      <figure class="review" data-cursor>
+        <div class="stars">★★★★★</div>
+        <blockquote>«Лучшее место под Краснодаром, чтобы перезагрузиться. Номер уютный, персонал внимательный. 5 звёзд по делу.»</blockquote>
+        <figcaption><span class="av">А</span><span><span class="who">Алексей Д.</span><span class="src">отзыв гостя · 2ГИС</span></span></figcaption>
+      </figure>
+      <figure class="review" data-cursor>
+        <div class="stars">★★★★★</div>
+        <blockquote>«Бронировали напрямую по телефону — быстро и без лишних комиссий. Всё чисто, тихо, спалось отлично.»</blockquote>
+        <figcaption><span class="av">Е</span><span><span class="who">Елена С.</span><span class="src">отзыв гостя · 2ГИС</span></span></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ===== BIG CTA ===== -->
+<section class="section" style="padding-top:0">
+  <div class="wrap">
+    <div class="cta-band reveal">
+      <img loading="lazy" src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?auto=format&fit=crop&w=1600&q=85" alt="" aria-hidden="true" />
+      <span class="glow"></span>
+      <div class="inner">
+        <h2>Бронируйте напрямую — без комиссий агрегаторов</h2>
+        <p>Лучшая цена, живое общение и забота о каждом госте. Скоро — бронирование через AI-бота 24/7.</p>
+        <div class="cta-actions">
+          <a href="contacts.html" class="btn btn-primary magnetic" data-cursor>Забронировать номер</a>
+          <a href="tel:+79288833390" class="btn btn-ghost magnetic" data-cursor>+7 928 883-33-90</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <div class="brand"><span class="brand-mark">A</span><span class="brand-name" style="color:var(--cream)">Аква вилла</span></div>
+        <p>Банно-гостиничный комплекс в Краснодаре. Рейтинг 5.0 · Номинант премии 2ГИС.</p>
+      </div>
+      <div>
+        <h4>Навигация</h4>
+        <ul>
+          <li><a href="index.html">Главная</a></li>
+          <li><a href="rooms.html">Номера</a></li>
+          <li><a href="about.html">Об отеле</a></li>
+          <li><a href="gallery.html">Галерея</a></li>
+          <li><a href="contacts.html">Контакты</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Контакты</h4>
+        <ul>
+          <li><a href="tel:+79288833390">+7 928 883-33-90</a></li>
+          <li class="foot-muted">ДНТ Магистраль, 90</li>
+          <li class="foot-muted">Прикубанский округ, Краснодар</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Бронирование</h4>
+        <p class="foot-muted" style="font-size:.9rem;margin-bottom:1rem">Напрямую, без комиссий агрегаторов.</p>
+        <a href="contacts.html" class="btn btn-primary btn-sm">Забронировать</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <p>© <span id="year"></span> Аква вилла · Краснодар. Все права защищены.</p>
+      <p>Концепт сайта · Urartu AI Studio · <a href="https://urartu.pro">urartu.pro</a></p>
+    </div>
+  </div>
+</footer>
+
+<a href="tel:+79288833390" class="fab" aria-label="Позвонить">
+  <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z"/></svg>
+</a>
+
+<script src="assets/site.js"></script>
+</body>
+</html>
