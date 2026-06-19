@@ -443,3 +443,10 @@ body.cursor-on,body.cursor-on a,body.cursor-on button{cursor:none}
 /* ---------- No-JS fallback ---------- */
 .no-js .reveal{opacity:1;transform:none}
 .no-js .clip-reveal{clip-path:none}
+
+/* === Mobile hero hard-fix (QA): no ugly hyphenation, fit title whole === */
+@media (max-width:480px){
+  .hero h1{font-size:clamp(1.8rem,6.8vw,2.6rem) !important;hyphens:manual !important;line-height:1.08}
+  .hero h1, .hero h1 *{white-space:normal !important;overflow-wrap:break-word !important;word-break:normal;max-width:100% !important}
+  .hero-lede,.hero-lead,.lead,.hero-meta{max-width:100% !important;overflow-wrap:break-word}
+}

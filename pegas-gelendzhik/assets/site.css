@@ -656,3 +656,12 @@ body::after{
 .no-js .clip-reveal{clip-path:none}
 .no-js .clip-reveal img{transform:none}
 .no-js .page-fade{opacity:1;animation:none}
+
+/* === Mobile hero hard-fix (QA): prevent kinetic title/lead from clipping at right edge === */
+@media (max-width:480px){
+  .d-hero{font-size:clamp(1.85rem,7.2vw,2.6rem) !important;line-height:1.06 !important}
+  .d-hero, .d-hero *{white-space:normal !important;overflow:visible !important;
+    overflow-wrap:break-word !important;word-break:break-word;max-width:100% !important}
+  .hero .lead, .hero-cine .lead, .lead{max-width:100% !important;overflow-wrap:break-word !important}
+  .hero-cine .eyebrow, .eyebrow{max-width:100% !important;white-space:normal !important;overflow-wrap:break-word}
+}

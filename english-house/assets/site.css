@@ -469,3 +469,9 @@ label{font-size:.8rem;font-weight:600;color:var(--british);margin-bottom:.5em;le
   .cursor-dot,.cursor-ring{display:none !important;}
   *,*::before,*::after{animation-duration:.001ms !important;animation-iteration-count:1 !important;transition-duration:.001ms !important;}
 }
+
+/* === Mobile hero hard-fix (QA): title clears right edge === */
+@media (max-width:480px){
+  .hero h1{font-size:clamp(2rem,8vw,2.9rem) !important;line-height:1.06}
+  .hero h1, .hero h1 *{white-space:normal !important;overflow-wrap:break-word !important;max-width:100% !important}
+}
