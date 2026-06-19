@@ -37,6 +37,15 @@
       es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
     }, {threshold:.14, rootMargin:'0px 0px -8% 0px'});
     reveals.forEach(function(r){ io.observe(r); });
+    /* Safety: reveal anything already within (or above) the first viewport on load,
+       so a non-scrolling render (crawler/screenshot) never shows hidden/clipped blocks. */
+    requestAnimationFrame(function(){
+      var vh = window.innerHeight;
+      reveals.forEach(function(r){
+        var t = r.getBoundingClientRect().top;
+        if(t < vh * 0.92){ r.classList.add('in'); io.unobserve(r); }
+      });
+    });
   } else { reveals.forEach(function(r){ r.classList.add('in'); }); }
 
   /* count-up */

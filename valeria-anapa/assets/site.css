@@ -178,6 +178,21 @@ body::after{
 .site-header:not(.scrolled) .nav-link{ color:rgba(255,255,255,.92); text-shadow:0 1px 8px rgba(0,0,0,.3); }
 .site-header:not(.scrolled) .hdr-tel{ color:#fff; text-shadow:0 1px 8px rgba(0,0,0,.3); }
 
+/* Light-top pages (no dark hero behind the fixed header) — keep header legible
+   from the very first pixel: solid frosted bar + dark text, even before scroll. */
+body.light-top .site-header{
+  background:rgba(251,247,242,.9);
+  backdrop-filter:saturate(140%) blur(14px);
+  box-shadow:0 12px 34px -22px rgba(70,96,63,.6);
+  border-bottom:1px solid var(--line);
+}
+body.light-top .site-header .b-name{ color:var(--green-deep); text-shadow:none; }
+body.light-top .site-header .b-sub{ color:var(--muted); }
+body.light-top .site-header .nav-link{ color:var(--ink); text-shadow:none; }
+body.light-top .site-header .hdr-tel{ color:var(--green-deep); text-shadow:none; }
+body.light-top .site-header .burger{ background:rgba(255,255,255,.6); border-color:var(--line); }
+body.light-top .site-header .burger span{ background:var(--green-deep); }
+
 .nav{ display:flex; align-items:center; gap:2rem; }
 .nav-link{ position:relative; font-size:.95rem; font-weight:600; color:var(--ink); transition:color .3s; }
 .nav-link::after{
@@ -252,8 +267,8 @@ body.cursor-ready a,body.cursor-ready button,body.cursor-ready .magnetic{ cursor
 .hero-scrim{
   position:absolute; inset:0; z-index:1;
   background:
-    linear-gradient(180deg, rgba(30,25,22,.45) 0%, rgba(30,25,22,.18) 30%, rgba(30,25,22,.36) 62%, rgba(30,25,22,.78) 100%),
-    radial-gradient(120% 80% at 15% 110%, rgba(70,96,63,.5), transparent 55%),
+    linear-gradient(180deg, rgba(28,23,20,.5) 0%, rgba(28,23,20,.24) 28%, rgba(28,23,20,.5) 60%, rgba(20,16,14,.88) 100%),
+    radial-gradient(120% 80% at 15% 110%, rgba(70,96,63,.55), transparent 55%),
     radial-gradient(100% 70% at 90% -10%, rgba(201,139,152,.34), transparent 55%);
 }
 .hero-inner{ position:relative; z-index:2; width:100%; padding-block:clamp(7rem,12vh,9rem) clamp(3.5rem,9vh,6rem); }
@@ -564,10 +579,13 @@ body.cursor-ready a,body.cursor-ready button,body.cursor-ready .magnetic{ cursor
   .form-grid{ grid-template-columns:1fr; }
   .hero-cta .btn{ width:100%; }
   .fab-call{ display:flex; }
-  /* Hero: tame the display heading so long RU words never overflow */
-  .hero h1{ font-size:clamp(2.05rem, 6.6vw + 1rem, 3.1rem); letter-spacing:-.2px; hyphens:auto; }
-  .hero h1 br{ display:none; }
+  /* Hero: tame the display heading so long RU words wrap cleanly at spaces
+     (no mid-word hyphenation, which produced ugly breaks like «до-мом»).
+     Keep the authored <br> so the break lands at a real space, not inside a word. */
+  .hero h1{ font-size:clamp(1.9rem, 5.2vw + .85rem, 2.6rem); letter-spacing:-.2px; line-height:1.1; hyphens:manual; }
   .hero-lead{ font-size:1.02rem; }
+  /* a touch more side breathing room on small screens */
+  .hero-inner.wrap,.page-hero .hero-inner.wrap{ padding-inline:clamp(1.25rem,4.5vw,2.5rem); }
   .page-hero h1{ font-size:clamp(2rem, 6vw + 1rem, 3rem); }
   .page-hero h1 br{ display:none; }
 }

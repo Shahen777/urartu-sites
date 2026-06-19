@@ -278,6 +278,11 @@ body::after{
 /* ---------- room preview cards ---------- */
 .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(20px,2.4vw,34px);margin-top:clamp(36px,4vw,56px);}
 @media (max-width:860px){.cards{grid-template-columns:1fr;}}
+/* why-us 4-up (about page) — responsive without inline override */
+.cards.why-grid{grid-template-columns:repeat(4,1fr);}
+@media (max-width:860px){.cards.why-grid{grid-template-columns:repeat(2,1fr);}}
+@media (max-width:460px){.cards.why-grid{grid-template-columns:1fr;}}
+
 .rcard{display:block;}
 .rcard .ph{overflow:hidden;border-radius:var(--r-md);aspect-ratio:4/5;position:relative;}
 .rcard .ph img{width:100%;height:100%;object-fit:cover;transition:transform 1.1s var(--ease);}
