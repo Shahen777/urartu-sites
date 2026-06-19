@@ -21,7 +21,7 @@
   /* sticky header state + hide-on-down */
   var header = document.getElementById("site-header");
   var lastY = 0, ticking = false;
-  var heroImg = document.querySelector(".hero-media img");
+  var heroImg = document.querySelector(".hero-media img, .hero-media video");
   function onScroll(){
     var sy = window.pageYOffset || document.documentElement.scrollTop;
     if (header){
@@ -30,7 +30,7 @@
       else header.style.transform = "translateY(0)";
     }
     if (heroImg && !reduce && sy < window.innerHeight){
-      heroImg.style.transform = "translateY(" + (sy * 0.22) + "px)";
+      heroImg.style.transform = "translateY(" + (sy * 0.22) + "px) scale(1.06)";
     }
     lastY = sy; ticking = false;
   }

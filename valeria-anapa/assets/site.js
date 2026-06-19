@@ -14,6 +14,21 @@
     var y = document.getElementById('year');
     if (y) y.textContent = new Date().getFullYear();
 
+    /* ---- Hero video ---- */
+    var heroVid = document.querySelector('.hero-video');
+    if (heroVid) {
+      if (reduceMotion) {
+        try { heroVid.removeAttribute('autoplay'); heroVid.pause(); } catch (e) {}
+      } else {
+        // hide static fallback once video can paint; nudge autoplay on mobile
+        var hideFallback = function () { heroVid.classList.add('is-playing'); };
+        heroVid.addEventListener('loadeddata', hideFallback);
+        heroVid.addEventListener('playing', hideFallback);
+        var p = heroVid.play();
+        if (p && p.catch) p.catch(function () {});
+      }
+    }
+
     /* ---- Mobile menu ---- */
     var burger = document.getElementById('burger');
     var mobileNav = document.getElementById('mobileNav');

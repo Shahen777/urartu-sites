@@ -80,15 +80,28 @@
     counters.forEach(countUp);
   }
 
-  /* ---- hero parallax (subtle) ---- */
-  var heroImg = document.getElementById('heroImg');
-  if (heroImg && !reduce){
+  /* ---- hero media: video parallax + reduced-motion / data-saver guard ---- */
+  var heroVideo = document.getElementById('heroVideo');
+  var heroImg = document.getElementById('heroImg'); // legacy photo hero (other pages)
+  var heroMedia = heroVideo || heroImg;
+  if (heroVideo){
+    // honor reduced motion + Save-Data: keep poster, stop playback
+    var saveData = (navigator.connection && navigator.connection.saveData) || false;
+    if (reduce || saveData){
+      try { heroVideo.removeAttribute('autoplay'); heroVideo.pause(); } catch(_){}
+    } else {
+      var play = heroVideo.play();
+      if (play && play.catch){ play.catch(function(){}); } // autoplay blocked → poster stays
+    }
+  }
+  if (heroMedia && !reduce){
     var t = false;
+    var baseScale = heroVideo ? 1.06 : 1.16;
     window.addEventListener('scroll', function(){
       if (t) return; t = true;
       requestAnimationFrame(function(){
         var sy = Math.min(window.pageYOffset, 800);
-        heroImg.style.transform = 'translate3d(0,'+(sy*0.16)+'px,0) scale(1.16)';
+        heroMedia.style.transform = 'translate3d(0,'+(sy*0.14)+'px,0) scale('+baseScale+')';
         t = false;
       });
     }, {passive:true});

@@ -2,6 +2,18 @@
 (function(){
   'use strict';
 
+  /* —— Видео-герой: гарантируем autoplay, fallback на фото при ошибке —— */
+  (function(){
+    var hv = document.querySelector('.hero-video');
+    if(!hv) return;
+    var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if(reduce){ hv.removeAttribute('autoplay'); if(hv.pause) hv.pause(); return; }
+    var p = hv.play && hv.play();
+    if(p && p.catch){ p.catch(function(){ /* остаётся poster/fallback */ }); }
+    hv.addEventListener('error', function(){ hv.style.display='none'; });
+    hv.addEventListener('stalled', function(){ var r=hv.play&&hv.play(); if(r&&r.catch)r.catch(function(){}); });
+  })();
+
   /* —— Sticky-шапка: смена фона при скролле —— */
   var header = document.querySelector('.site-header');
   function onScroll(){

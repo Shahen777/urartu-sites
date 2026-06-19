@@ -229,11 +229,24 @@ body.cursor-ready a,body.cursor-ready button,body.cursor-ready .magnetic{ cursor
 
 /* ---------- HERO ---------- */
 .hero{ position:relative; min-height:100svh; display:flex; align-items:flex-end; overflow:clip; }
-.hero-media{ position:absolute; inset:0; z-index:0; overflow:clip; }
+.hero-media{ position:absolute; inset:0; z-index:0; overflow:clip; background:#1e1916; }
 .hero-media img{
   width:100%; height:120%; object-fit:cover;
   transform:scale(1.12); will-change:transform;
   animation:kenburns 22s ease-out forwards;
+}
+/* Video hero */
+.hero-video{
+  position:absolute; inset:0; z-index:1;
+  width:100%; height:100%; object-fit:cover;
+  transform:scale(1.04); will-change:transform;
+  opacity:0; transition:opacity .9s ease;
+}
+.hero-video.is-playing{ opacity:1; }
+.hero-fallback{
+  position:absolute; inset:0; z-index:0;
+  width:100%; height:100%; object-fit:cover;
+  animation:none !important; transform:none;
 }
 @keyframes kenburns{ from{ transform:scale(1.18) translateY(0); } to{ transform:scale(1.04) translateY(-2%); } }
 .hero-scrim{

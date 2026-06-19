@@ -231,6 +231,17 @@ body::after{
   will-change:transform;
 }
 .hero__img.zoomed{ transform:scale(1.04); }
+/* video hero */
+.hero__video{
+  position:absolute; inset:0; width:100%; height:100%; object-fit:cover;
+  z-index:1; transform:scale(1.06); transform-origin:50% 52%;
+  transition:transform 14s var(--ease); will-change:transform;
+}
+.hero.is-playing .hero__video{ transform:scale(1); }
+/* poster/fallback image sits behind the video */
+.hero__img--fallback{
+  z-index:0; transform:scale(1.06) !important; transition:none;
+}
 .hero__scrim{
   position:absolute; inset:0;
   background:

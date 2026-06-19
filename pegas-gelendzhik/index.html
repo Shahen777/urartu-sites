@@ -55,7 +55,11 @@
 <!-- ГЕРОЙ — кинематографичный, полноэкранный -->
 <section class="hero-cine -mt-20">
   <div class="hero-media">
-    <img src="https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?auto=format&fit=crop&w=1920&q=85" alt="Гостевой дом Пегас, Геленджик">
+    <video class="hero-video" autoplay muted loop playsinline preload="metadata"
+           poster="img/hero-src.jpg" aria-hidden="true">
+      <source src="media/hero.mp4" type="video/mp4">
+    </video>
+    <img class="hero-fallback" src="img/hero-src.jpg" alt="Гостевой дом Пегас, Геленджик">
   </div>
   <div class="hero-frame"></div>
   <div class="scrim"></div>

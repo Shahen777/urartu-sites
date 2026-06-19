@@ -227,6 +227,10 @@ p{text-wrap:pretty}
 .hero__bg{position:absolute;inset:-8% 0;will-change:transform}
 .hero__bg img{width:100%;height:100%;object-fit:cover;animation:kenburns 22s var(--ease) forwards}
 @keyframes kenburns{from{transform:scale(1.14)}to{transform:scale(1.02)}}
+/* video hero: poster img is the fallback layer, video covers it when it plays */
+.hero__bg .hero__poster{position:absolute;inset:0;z-index:0;animation:none;transform:scale(1.04)}
+.hero__video{position:absolute;inset:0;z-index:1;width:100%;height:100%;object-fit:cover;
+  background:var(--pine-night);transform:scale(1.04)}
 .hero__scrim{position:absolute;inset:0;background:
   linear-gradient(100deg,rgba(15,24,18,.82) 0%,rgba(15,24,18,.5) 38%,rgba(15,24,18,.08) 66%,transparent 84%),
   linear-gradient(0deg,rgba(15,24,18,.85) 0%,rgba(15,24,18,.15) 40%,rgba(15,24,18,.35) 100%)}
@@ -448,6 +452,8 @@ p{text-wrap:pretty}
   *,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important;scroll-behavior:auto!important}
   .reveal,.clip-reveal,.kin .line span{opacity:1!important;transform:none!important;clip-path:none!important}
   .hero__bg img,.phead__bg img{animation:none;transform:scale(1.02)}
+  .hero__video{display:none}
+  .hero__bg .hero__poster{z-index:1}
   .marquee__track{animation:none;flex-wrap:wrap;width:auto;justify-content:center}
   .cursor-dot,.cursor-ring{display:none}
 }

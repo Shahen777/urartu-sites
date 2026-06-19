@@ -163,6 +163,13 @@ body.cursor-on,body.cursor-on a,body.cursor-on button{cursor:none}
 .hero{position:relative;min-height:100svh;display:flex;align-items:flex-end;overflow:hidden;color:#fff}
 .hero-bg{position:absolute;inset:-6%;z-index:0;background-size:cover;background-position:center;
   will-change:transform;animation:kenburns 26s ease-in-out infinite alternate}
+.hero-video{position:absolute;inset:0;z-index:0;width:100%;height:100%;
+  object-fit:cover;object-position:center;pointer-events:none}
+/* video sits above the poster underlay; if it fails to load, .hero-bg shows through */
+.hero--video .hero-bg{animation:none;inset:0}
+.hero--video .hero-scrim{
+  background:linear-gradient(180deg,rgba(6,48,47,.5) 0%,rgba(6,48,47,.18) 32%,rgba(6,48,47,.6) 76%,rgba(6,48,47,.92) 100%),
+    radial-gradient(120% 90% at 15% 95%,rgba(6,48,47,.72),transparent 60%)}
 @keyframes kenburns{from{transform:scale(1.06) translate(0,0)}to{transform:scale(1.18) translate(-2%,-2%)}}
 .hero-scrim{position:absolute;inset:0;z-index:1;
   background:linear-gradient(180deg,rgba(6,48,47,.45) 0%,rgba(6,48,47,.05) 32%,rgba(6,48,47,.55) 78%,rgba(6,48,47,.88) 100%),

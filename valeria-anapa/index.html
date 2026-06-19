@@ -51,7 +51,11 @@
 <!-- HERO -->
 <section class="hero">
   <div class="hero-media">
-    <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=2000&q=85" alt="Гостевой дом «Валерия» в Анапе" fetchpriority="high">
+    <video class="hero-video" autoplay muted loop playsinline preload="metadata"
+           poster="img/hero-src.jpg" aria-hidden="true">
+      <source src="media/hero.mp4" type="video/mp4">
+    </video>
+    <img class="hero-fallback" src="img/hero-src.jpg" alt="Гостевой дом «Валерия» в Анапе" fetchpriority="high">
   </div>
   <div class="hero-scrim"></div>
   <div class="wrap hero-inner">
