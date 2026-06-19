@@ -267,7 +267,8 @@ body.cursor-ready a,body.cursor-ready button,body.cursor-ready .magnetic{ cursor
 .hero-scrim{
   position:absolute; inset:0; z-index:1;
   background:
-    linear-gradient(180deg, rgba(28,23,20,.5) 0%, rgba(28,23,20,.24) 28%, rgba(28,23,20,.5) 60%, rgba(20,16,14,.88) 100%),
+    linear-gradient(95deg, rgba(20,16,14,.72) 0%, rgba(20,16,14,.32) 44%, transparent 72%),
+    linear-gradient(180deg, rgba(28,23,20,.5) 0%, rgba(28,23,20,.24) 28%, rgba(28,23,20,.5) 60%, rgba(20,16,14,.9) 100%),
     radial-gradient(120% 80% at 15% 110%, rgba(70,96,63,.55), transparent 55%),
     radial-gradient(100% 70% at 90% -10%, rgba(201,139,152,.34), transparent 55%);
 }
