@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="ru" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Контакты и бронирование — Гостевой дом «Джамайка», Геленджик</title>
+<meta name="description" content="Контакты гостевого дома «Джамайка» в Геленджике: телефон +7 928 231-44-07, адрес ул. Революционная, 7. Форма онлайн-бронирования.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body class="solid-head">
+
+<header class="site-header scrolled">
+  <div class="bar">
+    <a href="index.html" class="brand"><span class="logo-mark">Д</span><span><span class="brand-name">Джамайка</span><span class="brand-sub">Геленджик · у моря</span></span></a>
+    <nav class="nav" aria-label="Основная навигация">
+      <a href="index.html" class="nav-link">Главная</a>
+      <a href="rooms.html" class="nav-link">Номера</a>
+      <a href="about.html" class="nav-link">Об отеле</a>
+      <a href="gallery.html" class="nav-link">Галерея</a>
+      <a href="contacts.html" class="nav-link active">Контакты</a>
+    </nav>
+    <div class="head-cta">
+      <a href="tel:+79282314407" class="head-phone ul">+7 928 231-44-07</a>
+      <a href="#book" class="btn btn-sand" data-magnetic>Забронировать</a>
+    </div>
+    <button id="burger" class="burger" aria-label="Открыть меню">☰</button>
+  </div>
+</header>
+<div id="mobileMenu" class="mobile-menu">
+  <a href="index.html" class="nav-link">Главная</a>
+  <a href="rooms.html" class="nav-link">Номера</a>
+  <a href="about.html" class="nav-link">Об отеле</a>
+  <a href="gallery.html" class="nav-link">Галерея</a>
+  <a href="contacts.html" class="nav-link active">Контакты</a>
+  <a href="tel:+79282314407" class="btn btn-ghost btn-block">☎ +7 928 231-44-07</a>
+  <a href="#book" class="btn btn-sand btn-block">Забронировать</a>
+</div>
+
+<!-- INTRO -->
+<section class="section tight bg-white" style="padding-top:clamp(7rem,12vw,9rem)">
+  <div class="wrap sec-head center reveal">
+    <span class="eyebrow center">Контакты и бронирование</span>
+    <h1 class="sec-title">Забронируйте напрямую</h1>
+    <p class="muted">Позвоните или оставьте заявку — ответим быстро, без комиссий агрегаторов. Заявки принимает AI-помощник 24/7.</p>
+  </div>
+</section>
+
+<!-- CONTACT CARDS -->
+<section class="section tight bg-white" style="padding-top:0">
+  <div class="wrap contact-cards">
+    <a href="tel:+79282314407" class="cc reveal"><div class="ico">☎</div><h3>Телефон</h3><p class="big">+7 928 231-44-07</p><p class="muted" style="font-size:var(--step--1);margin-top:.4rem">ежедневно с 8:00 до 22:00</p></a>
+    <div class="cc reveal d1"><div class="ico">📍</div><h3>Адрес</h3><p class="muted">Геленджик, ул. Революционная, 7</p><p class="muted" style="font-size:var(--step--1);margin-top:.4rem">5 минут до моря</p></div>
+    <div class="cc reveal d2"><div class="ico">🕑</div><h3>Заезд / выезд</h3><p class="muted">Заезд с 14:00<br>Выезд до 12:00</p><p class="muted" style="font-size:var(--step--1);margin-top:.4rem">ресепшн 24/7</p></div>
+  </div>
+</section>
+
+<!-- MAP + FORM -->
+<section class="section bg-mist" style="padding-top:clamp(2rem,5vw,3rem)">
+  <div class="wrap book-split">
+
+    <div class="reveal">
+      <div class="map-card">
+        <div class="mbg" style="background-image:url('img/p1.jpg')"></div>
+        <div class="mscrim"></div>
+        <div class="minner">
+          <div style="font-size:2.6rem;margin-bottom:.4rem">📍</div>
+          <h3>Геленджик</h3>
+          <p style="color:rgba(255,255,255,.92)">ул. Революционная, 7</p>
+          <p style="color:rgba(255,255,255,.8);font-size:var(--step--1);margin-top:.2rem">5 минут до моря и набережной</p>
+          <a href="https://yandex.ru/maps/?text=Геленджик улица Революционная 7" target="_blank" rel="noopener" class="btn btn-sand" data-magnetic style="margin-top:1.2rem;align-self:flex-start">Открыть на карте</a>
+        </div>
+      </div>
+    </div>
+
+    <div id="book" class="reveal d1">
+      <div class="form-card">
+        <h2>Форма бронирования</h2>
+        <p class="muted" style="font-size:var(--step--1)">Заполните — и мы подтвердим бронь. Лучшая цена при прямом бронировании.</p>
+
+        <form id="bookForm" style="margin-top:.4rem">
+          <div class="field-row">
+            <label class="field"><span>Дата заезда</span><input type="date" name="checkin" required></label>
+            <label class="field"><span>Дата выезда</span><input type="date" name="checkout" required></label>
+          </div>
+          <div class="field-row">
+            <label class="field"><span>Гостей</span>
+              <select name="guests"><option>1 гость</option><option selected>2 гостя</option><option>3 гостя</option><option>4 гостя</option><option>5+ гостей</option></select>
+            </label>
+            <label class="field"><span>Категория номера</span>
+              <select name="room"><option>Стандарт «Бирюза»</option><option>Комфорт «Лагуна»</option><option>Семейный «Пальма» с балконом</option><option>Люкс «Коралл» у моря</option><option>Апартамент «Тропик» с кухней</option></select>
+            </label>
+          </div>
+          <label class="field"><span>Ваше имя</span><input type="text" name="name" required placeholder="Имя"></label>
+          <label class="field"><span>Телефон</span><input type="tel" name="phone" required placeholder="+7 ___ ___-__-__"></label>
+          <button type="submit" class="btn btn-teal btn-block btn-lg" style="margin-top:1.4rem" data-magnetic>Отправить заявку</button>
+          <p class="muted" style="font-size:.75rem;text-align:center;margin-top:.9rem">Нажимая кнопку, вы соглашаетесь на обработку данных для оформления брони.</p>
+        </form>
+
+        <div id="formOk" class="form-ok" style="display:none">
+          <div class="em">🎉</div>
+          <h3>Спасибо за заявку!</h3>
+          <p class="muted">Мы свяжемся с вами в ближайшее время и подтвердим бронь. Хорошего отдыха в «Джамайке»!</p>
+          <a href="tel:+79282314407" class="btn btn-sand" data-magnetic style="margin-top:1.2rem">☎ Позвонить сейчас</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="cols">
+    <div><div class="fbrand"><span class="logo-mark">Д</span><span class="brand-name">Джамайка</span></div><p class="muted" style="font-size:var(--step--1);max-width:30ch">Гостевой дом у моря в Геленджике. Тропическое настроение, 5 минут до моря, рейтинг 9.6.</p></div>
+    <div><h4>Навигация</h4><ul><li><a href="index.html" class="ul">Главная</a></li><li><a href="rooms.html" class="ul">Номера</a></li><li><a href="about.html" class="ul">Об отеле</a></li><li><a href="gallery.html" class="ul">Галерея</a></li><li><a href="contacts.html" class="ul">Контакты</a></li></ul></div>
+    <div><h4>Контакты</h4><ul><li><a href="tel:+79282314407" class="ul">☎ +7 928 231-44-07</a></li><li>Геленджик, ул. Революционная, 7</li><li>5 минут до моря</li></ul></div>
+    <div><h4>Бронирование</h4><p class="muted" style="font-size:var(--step--1);margin-bottom:1rem">Напрямую — без комиссий. Заявки принимает AI-помощник 24/7.</p><a href="#book" class="btn btn-sand" data-magnetic>Забронировать</a></div>
+  </div>
+  <div class="legal"><span>© <span data-year></span> Гостевой дом «Джамайка», Геленджик</span><span>Концепт сайта · <a href="https://urartu.pro" class="ul">Urartu AI Studio · urartu.pro</a> · <a href="mailto:mos-city@bk.ru" class="ul">mos-city@bk.ru</a> · <a href="tel:+79263337847" class="ul">+7 926 333-78-47</a> · <a href="https://t.me/Shahen_kazaryan" class="ul">@Shahen_kazaryan</a></span></div>
+</footer>
+
+<a href="tel:+79282314407" class="float-call" aria-label="Позвонить">☎</a>
+<script src="assets/main.js"></script>
+</body>
+</html>

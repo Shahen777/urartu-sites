@@ -1,0 +1,644 @@
+/* Гостевой дом «Жемчужина Мыса» — Pearl Grey + Sea Turquoise
+   Urartu AI Studio */
+
+:root{
+  --emerald:#2E5A66;       /* глубокий перламутрово-слюдяной сине-серый */
+  --emerald-deep:#1E3D47;  /* тёмный жемчужно-морской */
+  --gold:#3CC4BE;          /* морская бирюза — акцент */
+  --gold-soft:#7FD8D3;     /* светлая бирюза */
+  --cream:#F4F2EF;         /* жемчужно-белый */
+  --cream-deep:#E7E4DE;    /* перламутрово-серый */
+  --ink:#23272B;
+}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Inter',system-ui,sans-serif;
+  color:var(--ink);
+  background:var(--cream);
+  margin:0;
+  -webkit-font-smoothing:antialiased;
+}
+
+/* ——— Мини-preflight (раньше давал CDN-Tailwind): сброс дефолтов
+       браузера, чтобы вёрстка не «поехала» без CDN ——— */
+h1,h2,h3,h4,h5,h6,p,figure,blockquote,ul,ol,dl,dd{margin:0}
+ul,ol{list-style:none;padding:0}
+a{color:inherit;text-decoration:none}
+img,svg,video{display:block;max-width:100%}
+button{font-family:inherit;background:none;border:0;padding:0;cursor:pointer;color:inherit}
+input,select,textarea{font-family:inherit;font-size:100%}
+h1,h2,h3,.font-display{
+  font-family:'Cormorant',Georgia,serif;
+  font-weight:600;
+  letter-spacing:.01em;
+}
+
+/* ——— Утилиты бренда ——— */
+.text-emerald{color:var(--emerald)}
+.text-gold{color:var(--gold)}
+.bg-emerald{background:var(--emerald)}
+.bg-emerald-deep{background:var(--emerald-deep)}
+.bg-cream{background:var(--cream)}
+.bg-cream-deep{background:var(--cream-deep)}
+
+.gold-line{
+  height:1px;width:64px;
+  background:linear-gradient(90deg,transparent,var(--gold),transparent);
+}
+.gold-line.left{margin:0;background:linear-gradient(90deg,var(--gold),transparent)}
+
+.eyebrow{
+  font-family:'Inter',sans-serif;
+  text-transform:uppercase;
+  letter-spacing:.28em;
+  font-size:.72rem;
+  font-weight:600;
+  color:var(--gold);
+}
+
+/* ——— Кнопки ——— */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:.5rem;
+  padding:.85rem 1.6rem;border-radius:999px;
+  font-weight:600;font-size:.92rem;letter-spacing:.02em;
+  transition:transform .25s ease, box-shadow .25s ease, background .25s ease, color .25s ease;
+  cursor:pointer;text-decoration:none;border:none;
+}
+.btn-gold{
+  background:linear-gradient(135deg,var(--gold),#2a9e98);
+  color:#0c2e33;
+  box-shadow:0 10px 30px -8px rgba(60,196,190,.6);
+}
+.btn-gold:hover{transform:translateY(-2px);box-shadow:0 16px 38px -8px rgba(60,196,190,.75)}
+.btn:active{transform:translateY(0) scale(.985)}
+.btn:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+a:focus-visible,button:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:6px}
+.btn-outline{
+  background:transparent;color:var(--cream);
+  border:1px solid rgba(244,242,239,.5);
+}
+.btn-outline:hover{background:rgba(244,242,239,.12);border-color:var(--gold);color:#fff}
+.btn-emerald{background:var(--emerald);color:var(--cream)}
+.btn-emerald:hover{background:var(--emerald-deep);transform:translateY(-2px)}
+
+/* ——— Шапка ——— */
+.site-header{
+  position:sticky;top:0;z-index:50;
+  transition:background .35s ease, box-shadow .35s ease, padding .35s ease;
+  background:rgba(46,90,102,.0);
+}
+/* Верхний скрим: гарантирует читаемость лого/меню над любым светлым фото героя */
+.site-header::before{
+  content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;
+  background:linear-gradient(180deg,rgba(30,61,71,.55),rgba(30,61,71,0));
+  opacity:1;transition:opacity .35s ease;
+}
+.site-header.solid::before{opacity:0}
+.site-header.solid{
+  background:rgba(30,61,71,.96);
+  backdrop-filter:blur(10px);
+  box-shadow:0 8px 30px -12px rgba(0,0,0,.45);
+}
+.nav-link{
+  position:relative;color:var(--cream);text-decoration:none;
+  font-size:.9rem;letter-spacing:.04em;padding:.25rem 0;opacity:.9;
+}
+.nav-link:hover{opacity:1}
+.nav-link::after{
+  content:"";position:absolute;left:0;bottom:-3px;height:1px;width:0;
+  background:var(--gold);transition:width .3s ease;
+}
+.nav-link:hover::after,.nav-link.active::after{width:100%}
+.nav-link.active{color:var(--gold-soft)}
+
+/* ——— Рейтинг-бейдж ——— */
+.rating-badge{
+  display:inline-flex;align-items:center;gap:.6rem;
+  background:rgba(244,242,239,.1);
+  border:1px solid rgba(60,196,190,.5);
+  backdrop-filter:blur(6px);
+  padding:.55rem 1.1rem;border-radius:999px;
+}
+
+/* ——— Карточки ——— */
+.card{
+  background:#fff;border-radius:20px;overflow:hidden;
+  box-shadow:0 20px 50px -28px rgba(46,90,102,.45);
+  border:1px solid rgba(60,196,190,.18);
+  transition:transform .4s cubic-bezier(.2,.8,.2,1), box-shadow .4s ease;
+}
+.card:hover{transform:translateY(-6px);box-shadow:0 34px 70px -30px rgba(46,90,102,.55)}
+.card-img{overflow:hidden}
+.card-img img{transition:transform .8s cubic-bezier(.2,.8,.2,1);display:block;width:100%}
+.card:hover .card-img img{transform:scale(1.07)}
+
+.hover-zoom img{transition:transform .8s cubic-bezier(.2,.8,.2,1)}
+.hover-zoom:hover img{transform:scale(1.06)}
+
+/* Подъём бордерных карточек (преимущества/инфраструктура) при наведении */
+.feature-card{transition:transform .35s cubic-bezier(.2,.8,.2,1),border-color .35s ease,background .35s ease}
+.feature-card:hover{transform:translateY(-5px);border-color:rgba(60,196,190,.55)!important;background:rgba(244,242,239,.09)!important}
+
+/* Плавный сдвиг ссылок-меню в футере */
+.hover\:text-gold{transition:color .25s ease,padding-left .25s ease}
+li>.hover\:text-gold:hover{padding-left:.25rem}
+
+/* ——— Появление при скролле ——— */
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .8s ease, transform .8s cubic-bezier(.2,.8,.2,1)}
+.reveal.in{opacity:1;transform:none}
+.reveal.d1{transition-delay:.1s}
+.reveal.d2{transition-delay:.2s}
+.reveal.d3{transition-delay:.3s}
+
+/* ——— Декоративная виньетка ——— */
+.hero-veil{
+  background:
+    linear-gradient(180deg, rgba(30,61,71,.55) 0%, rgba(30,61,71,.35) 40%, rgba(30,61,71,.85) 100%);
+}
+.section-veil{
+  background:linear-gradient(180deg, rgba(30,61,71,.92), rgba(46,90,102,.92));
+}
+
+/* ——— Орнамент-разделитель ——— */
+.divider{display:flex;align-items:center;justify-content:center;gap:.75rem}
+.divider .dot{width:6px;height:6px;border-radius:50%;background:var(--gold);transform:rotate(45deg)}
+.divider .ln{height:1px;width:60px;background:linear-gradient(90deg,transparent,var(--gold))}
+.divider .ln.r{background:linear-gradient(90deg,var(--gold),transparent)}
+
+/* ——— Lightbox ——— */
+.lb{position:fixed;inset:0;z-index:100;display:none;align-items:center;justify-content:center;
+  background:rgba(8,30,23,.94);backdrop-filter:blur(6px);padding:1.5rem}
+.lb.open{display:flex}
+.lb img{max-width:92vw;max-height:86vh;border-radius:12px;box-shadow:0 30px 80px rgba(0,0,0,.6)}
+.lb-close,.lb-nav{position:absolute;color:var(--cream);background:rgba(244,242,239,.08);
+  border:1px solid rgba(60,196,190,.4);border-radius:999px;cursor:pointer;
+  display:flex;align-items:center;justify-content:center;transition:background .2s}
+.lb-close{top:1.2rem;right:1.2rem;width:46px;height:46px;font-size:1.4rem}
+.lb-nav{top:50%;transform:translateY(-50%);width:52px;height:52px;font-size:1.6rem}
+.lb-nav.prev{left:1.2rem}.lb-nav.next{right:1.2rem}
+.lb-close:hover,.lb-nav:hover{background:rgba(60,196,190,.25)}
+
+/* ——— Плавающая кнопка звонка (моб.) ——— */
+.fab-call{
+  position:fixed;right:1rem;bottom:1rem;z-index:60;
+  width:60px;height:60px;border-radius:50%;
+  background:linear-gradient(135deg,var(--gold),#2a9e98);
+  color:#0c2e33;display:none;align-items:center;justify-content:center;
+  box-shadow:0 12px 30px -6px rgba(60,196,190,.7);
+  animation:pulse 2.4s infinite;
+}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(60,196,190,.5)}70%{box-shadow:0 0 0 18px rgba(60,196,190,0)}100%{box-shadow:0 0 0 0 rgba(60,196,190,0)}}
+@media(max-width:768px){.fab-call{display:flex}}
+
+/* ——— Формы ——— */
+.field{
+  width:100%;padding:.85rem 1rem;border-radius:12px;
+  border:1px solid rgba(46,90,102,.18);background:#fff;color:var(--ink);
+  font-size:.95rem;transition:border .2s, box-shadow .2s;
+}
+.field:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 3px rgba(60,196,190,.2)}
+.label{display:block;font-size:.8rem;font-weight:600;letter-spacing:.04em;margin-bottom:.4rem;color:var(--emerald)}
+
+/* ——— Прочее ——— */
+.kicker-num{font-family:'Cormorant',serif;font-size:2.6rem;line-height:1;color:var(--gold)}
+.link-gold{color:var(--gold);text-decoration:none;border-bottom:1px solid rgba(60,196,190,.4);transition:border .2s}
+.link-gold:hover{border-color:var(--gold)}
+.bg-texture{background-image:radial-gradient(rgba(60,196,190,.06) 1px,transparent 1px);background-size:22px 22px}
+
+/* ——— Hero Ken-Burns зум + параллакс ——— */
+.hero-img{
+  will-change:transform;
+  animation:kenburns 22s ease-in-out infinite alternate;
+  transform-origin:center;
+  height:118% !important;            /* запас, чтобы параллакс не оголял края */
+  top:var(--py, 0px) !important;     /* мягкий параллакс, не конфликтует с зумом */
+}
+@keyframes kenburns{
+  0%{transform:scale(1.06) translateY(0)}
+  100%{transform:scale(1.15) translateY(-2%)}
+}
+
+/* ——— Count-up: предотвращаем «прыжок» вёрстки ——— */
+.kicker-num,[data-count]{font-variant-numeric:tabular-nums}
+
+/* ——— Уважение к prefers-reduced-motion ——— */
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{
+    animation-duration:.001ms !important;
+    animation-iteration-count:1 !important;
+    transition-duration:.001ms !important;
+    scroll-behavior:auto !important;
+  }
+  .reveal{opacity:1 !important;transform:none !important}
+  .hero-img{animation:none;transform:none}
+  .fab-call{animation:none}
+}
+
+/* ——— Подстраховка: без JS контент героя виден ——— */
+.no-js .reveal{opacity:1;transform:none}
+
+/* ===================================================================
+   SELF-HOSTED UTILITY LAYER
+   Заменяет runtime-CDN Tailwind (cdn.tailwindcss.com), который вызывал
+   FOUC/гонку (на мобайле адаптивные классы успевали не примениться,
+   меню/контент ломались) и предупреждение «not for production».
+   Здесь — ровно те утилиты, что использует разметка сайта.
+   =================================================================== */
+
+/* layout / display */
+.relative{position:relative}.absolute{position:absolute}
+.inset-0{inset:0}.bottom-6{bottom:1.5rem}.left-1\/2{left:50%}
+.-bottom-6{bottom:-1.5rem}.-right-6{right:-1.5rem}
+.block{display:block}.inline-block{display:inline-block}
+.flex{display:flex}.inline-flex{display:inline-flex}.grid{display:grid}.hidden{display:none}
+.flex-col{flex-direction:column}.flex-wrap{flex-wrap:wrap}
+.items-center{align-items:center}.items-start{align-items:flex-start}.items-end{align-items:flex-end}
+.justify-center{justify-content:center}.justify-between{justify-content:space-between}
+.shrink-0{flex-shrink:0}
+.overflow-hidden{overflow:hidden}
+
+/* grid */
+.grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}
+.order-1{order:1}.order-2{order:2}
+
+/* spacing — margin */
+.mx-auto{margin-left:auto;margin-right:auto}
+.mt-1{margin-top:.25rem}.mt-2{margin-top:.5rem}.mt-3{margin-top:.75rem}.mt-4{margin-top:1rem}
+.mt-8{margin-top:2rem}.mt-9{margin-top:2.25rem}.mt-12{margin-top:3rem}
+.-mt-8{margin-top:-2rem}.-mt-20{margin-top:-5rem}
+.mb-1{margin-bottom:.25rem}.mb-2{margin-bottom:.5rem}.mb-3{margin-bottom:.75rem}.mb-4{margin-bottom:1rem}
+.mb-5{margin-bottom:1.25rem}.mb-6{margin-bottom:1.5rem}.mb-7{margin-bottom:1.75rem}.mb-8{margin-bottom:2rem}
+.mb-9{margin-bottom:2.25rem}.mb-12{margin-bottom:3rem}.mb-14{margin-bottom:3.5rem}.mb-16{margin-bottom:4rem}
+.-translate-x-1\/2{transform:translateX(-50%)}
+
+/* spacing — padding */
+.px-4{padding-left:1rem;padding-right:1rem}.px-5{padding-left:1.25rem;padding-right:1.25rem}.px-8{padding-left:2rem;padding-right:2rem}
+.py-2{padding-top:.5rem;padding-bottom:.5rem}.py-4{padding-top:1rem;padding-bottom:1rem}.py-5{padding-top:1.25rem;padding-bottom:1.25rem}
+.py-7{padding-top:1.75rem;padding-bottom:1.75rem}.py-8{padding-top:2rem;padding-bottom:2rem}.py-20{padding-top:5rem;padding-bottom:5rem}
+.py-24{padding-top:6rem;padding-bottom:6rem}.py-28{padding-top:7rem;padding-bottom:7rem}
+.pt-6{padding-top:1.5rem}.pt-16{padding-top:4rem}.pt-20{padding-top:5rem}.pb-8{padding-bottom:2rem}
+.p-6{padding:1.5rem}.p-7{padding:1.75rem}.p-8{padding:2rem}
+
+/* gaps */
+.gap-2{gap:.5rem}.gap-3{gap:.75rem}.gap-4{gap:1rem}.gap-5{gap:1.25rem}.gap-6{gap:1.5rem}
+.gap-7{gap:1.75rem}.gap-9{gap:2.25rem}.gap-10{gap:2.5rem}.gap-12{gap:3rem}.gap-14{gap:3.5rem}
+.gap-x-5{column-gap:1.25rem}.gap-y-2{row-gap:.5rem}
+.space-y-2>*+*{margin-top:.5rem}.space-y-3>*+*{margin-top:.75rem}
+.space-y-6>*+*{margin-top:1.5rem}.space-y-12>*+*{margin-top:3rem}
+
+/* sizing */
+.w-px{width:1px}.w-full{width:100%}.w-12{width:3rem}.w-16{width:4rem}
+.h-5{height:1.25rem}.h-12{height:3rem}.h-16{height:4rem}.h-20{height:5rem}
+.h-56{height:14rem}.h-60{height:15rem}.h-72{height:18rem}.h-full{height:100%}
+.h-\[420px\]{height:420px}
+.min-h-\[92vh\]{min-height:92vh}
+.max-w-xl{max-width:36rem}.max-w-2xl{max-width:42rem}.max-w-3xl{max-width:48rem}
+.max-w-5xl{max-width:64rem}.max-w-6xl{max-width:72rem}.max-w-7xl{max-width:80rem}
+
+/* borders / radius / shadow */
+.border{border-width:1px;border-style:solid}
+.border-t{border-top-width:1px;border-top-style:solid}
+.border-y{border-top-width:1px;border-bottom-width:1px;border-style:solid}
+.rounded-2xl{border-radius:1rem}.rounded-full{border-radius:9999px}
+.shadow-lg{box-shadow:0 10px 15px -3px rgba(0,0,0,.1),0 4px 6px -4px rgba(0,0,0,.1)}
+.shadow-xl{box-shadow:0 20px 25px -5px rgba(0,0,0,.1),0 8px 10px -6px rgba(0,0,0,.1)}
+.shadow-2xl{box-shadow:0 25px 50px -12px rgba(0,0,0,.25)}
+
+/* color / bg helpers reusing brand tokens */
+.bg-white{background:#fff}
+
+/* image */
+.object-cover{object-fit:cover}
+.opacity-25{opacity:.25}.opacity-60{opacity:.6}.opacity-70{opacity:.7}
+
+/* typography */
+.text-center{text-align:center}.text-left{text-align:left}
+.font-semibold{font-weight:600}
+.italic{font-style:italic}
+.uppercase{text-transform:uppercase}
+.leading-none{line-height:1}.leading-tight{line-height:1.25}.leading-relaxed{line-height:1.625}
+.leading-\[1\.05\]{line-height:1.05}
+.tracking-wide{letter-spacing:.025em}.tracking-wider{letter-spacing:.05em}
+.tracking-\[\.3em\]{letter-spacing:.3em}
+.text-xs{font-size:.75rem;line-height:1rem}
+.text-\[\.62rem\]{font-size:.62rem;line-height:1rem}
+.text-sm{font-size:.875rem;line-height:1.25rem}
+.text-base{font-size:1rem;line-height:1.5rem}
+.text-lg{font-size:1.125rem;line-height:1.75rem}
+.text-xl{font-size:1.25rem;line-height:1.75rem}
+.text-2xl{font-size:1.5rem;line-height:2rem}
+.text-3xl{font-size:1.875rem;line-height:2.25rem}
+.text-4xl{font-size:2.25rem;line-height:2.5rem}
+.text-5xl{font-size:3rem;line-height:1.08}
+.text-6xl{font-size:3.75rem;line-height:1.05}
+.text-7xl{font-size:4.5rem;line-height:1.03}
+.text-white{color:#fff}
+
+/* transition + interaction */
+.transition{transition:color .2s ease,background-color .2s ease,border-color .2s ease,opacity .2s ease,box-shadow .2s ease,transform .2s ease}
+.group:hover .group-hover\:text-gold{color:var(--gold)}
+.hover\:text-gold:hover{color:var(--gold)}
+
+/* multi-column (masonry-style galleries) */
+.columns-1{column-count:1}
+.\[\&\>\*\]\:mb-5>*{margin-bottom:1.25rem}
+.break-inside-avoid{break-inside:avoid}
+
+/* bounce (был Tailwind animate-bounce) */
+.animate-bounce{animation:tw-bounce 1s infinite}
+@keyframes tw-bounce{
+  0%,100%{transform:translateY(-25%);animation-timing-function:cubic-bezier(.8,0,1,1)}
+  50%{transform:none;animation-timing-function:cubic-bezier(0,0,.2,1)}
+}
+
+/* ——— Адаптив: sm ≥640 ——— */
+@media (min-width:640px){
+  .sm\:columns-2{column-count:2}
+  .sm\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+/* ——— Адаптив: md ≥768 ——— */
+@media (min-width:768px){
+  .md\:block{display:block}
+  .md\:flex-row{flex-direction:row}
+  .md\:items-end{align-items:flex-end}
+  .md\:justify-between{justify-content:space-between}
+  .md\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .md\:grid-cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .md\:grid-cols-4{grid-template-columns:repeat(4,minmax(0,1fr))}
+  .md\:h-auto{height:auto}
+  .md\:p-10{padding:2.5rem}
+  .md\:mt-0{margin-top:0}
+  .md\:order-1{order:1}.md\:order-2{order:2}
+  .md\:text-5xl{font-size:3rem;line-height:1.08}
+  .md\:text-6xl{font-size:3.75rem;line-height:1.05}
+  .md\:text-7xl{font-size:4.5rem;line-height:1.03}
+}
+/* ——— Адаптив: lg ≥1024 ——— */
+@media (min-width:1024px){
+  .lg\:flex{display:flex}
+  .lg\:hidden{display:none}
+  .lg\:px-8{padding-left:2rem;padding-right:2rem}
+  .lg\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .lg\:grid-cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .lg\:grid-cols-4{grid-template-columns:repeat(4,minmax(0,1fr))}
+  .lg\:columns-3{column-count:3}
+  .lg\:order-1{order:1}.lg\:order-2{order:2}
+}
+
+/* Лёгкий fade-in всей страницы, чтобы не было резкого появления стилей */
+body{opacity:1}
+
+/* ===================================================================
+   МОБИЛЬНАЯ ЧИТАЕМОСТЬ И ЗАЩИТА ОТ ГОРИЗОНТАЛЬНОГО СКРОЛЛА
+   =================================================================== */
+html,body{max-width:100%;overflow-x:hidden}
+
+/* Крупные заголовки переносят длинные русские слова, не вылезая за экран */
+h1,h2{overflow-wrap:break-word;word-break:normal;hyphens:auto}
+
+@media (max-width:640px){
+  /* Понижаем гигантские размеры заголовков на узких экранах,
+     чтобы «бронирование» / «Преимущества» не обрезались */
+  .text-5xl{font-size:2.15rem;line-height:1.12}
+  .text-6xl{font-size:2.35rem;line-height:1.1}
+  .text-7xl{font-size:2.6rem;line-height:1.08}
+  .text-4xl{font-size:1.85rem;line-height:1.18}
+  .text-3xl{font-size:1.6rem;line-height:1.22}
+
+  /* Чуть плотнее вертикальные отступы секций на мобайле */
+  .py-28{padding-top:4.5rem;padding-bottom:4.5rem}
+  .py-24{padding-top:3.75rem;padding-bottom:3.75rem}
+
+  /* Кнопки CTA на всю ширину блока — легче нажать, заметнее */
+  .btn{font-size:.9rem}
+
+  /* Карта-заглушка и крупные изображения не выходят за экран */
+  .h-\[420px\]{height:300px}
+}
+
+/* Контейнеры никогда не шире вьюпорта */
+.max-w-7xl,.max-w-6xl,.max-w-5xl,.max-w-3xl,.max-w-2xl{width:100%}
+
+/* Grid-элементы могут сжиматься (иначе длинное слово распирает колонку) */
+.grid>*{min-width:0}
+
+/* ===================================================================
+   ★★★ AWARD-TIER 2026 LAYER ★★★
+   Urartu AI Studio — тихая роскошь, кинематограф, кинетика.
+   Только transform/opacity в анимациях. Полный reduced-motion фоллбэк
+   в самом низу. Ничего не ломает существующую вёрстку — только поднимает.
+   =================================================================== */
+
+/* ——— Тонкое зерно / noise-оверлей на всю страницу ——— */
+body::after{
+  content:"";position:fixed;inset:0;z-index:9998;pointer-events:none;
+  opacity:.045;mix-blend-mode:overlay;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* ——— Fluid-типографика (редакторские дисплей-заголовки) ———
+   Перекрывают модульные text-* для главных заголовков с классом .display */
+.display{
+  font-family:'Cormorant',Georgia,serif;
+  font-weight:600;line-height:.96;letter-spacing:-.012em;
+}
+.d-hero{font-size:clamp(3.2rem,11.5vw,9.5rem)}
+.d-xl{font-size:clamp(2.6rem,6.5vw,6rem);line-height:1}
+.d-lg{font-size:clamp(2.1rem,4.6vw,4.2rem);line-height:1.02}
+.d-md{font-size:clamp(1.7rem,3vw,2.8rem);line-height:1.05}
+.lead{font-size:clamp(1.02rem,1.35vw,1.22rem);line-height:1.7}
+
+/* ——— Кинетика заголовков: слова всплывают со stagger ——— */
+.kinetic{display:inline}
+.kinetic .word{
+  display:inline-block;overflow:hidden;vertical-align:top;
+}
+.kinetic .word > span{
+  display:inline-block;transform:translateY(110%);
+  transition:transform .9s cubic-bezier(.16,1,.3,1);
+  transition-delay:var(--wd,0ms);
+}
+.kinetic.in .word > span{transform:translateY(0)}
+
+/* ——— Кастомный курсор (десктоп) ——— */
+.cursor-dot,.cursor-ring{
+  position:fixed;top:0;left:0;z-index:9999;pointer-events:none;
+  border-radius:50%;mix-blend-mode:difference;
+  opacity:0;transition:opacity .3s ease;
+}
+.cursor-dot{width:7px;height:7px;background:#fff;margin:-3.5px 0 0 -3.5px}
+.cursor-ring{
+  width:42px;height:42px;border:1.5px solid #fff;margin:-21px 0 0 -21px;
+  transition:opacity .3s ease, width .3s cubic-bezier(.2,.8,.2,1),
+             height .3s cubic-bezier(.2,.8,.2,1), background .3s ease, border-color .3s ease;
+}
+.cursor-on .cursor-dot,.cursor-on .cursor-ring{opacity:1}
+.cursor-on.cursor-hover .cursor-ring{width:64px;height:64px;background:rgba(60,196,190,.18);border-color:rgba(60,196,190,.8)}
+.cursor-on.cursor-hover .cursor-dot{opacity:0}
+@media (hover:none),(pointer:coarse){.cursor-dot,.cursor-ring{display:none}}
+.cursor-on,.cursor-on a,.cursor-on button{cursor:none}
+
+/* ——— Магнитные кнопки / интерактивы ——— */
+.magnetic{will-change:transform}
+
+/* ——— Растущее золотое подчёркивание для текстовых ссылок ——— */
+.link-grow{position:relative;color:var(--gold)}
+.link-grow::after{content:"";position:absolute;left:0;bottom:-2px;height:1px;width:0;
+  background:var(--gold);transition:width .45s cubic-bezier(.16,1,.3,1)}
+.link-grow:hover::after{width:100%}
+
+/* ——— Кинематографичный герой (полноэкранный) ——— */
+.hero-cine{
+  position:relative;min-height:100svh;display:flex;align-items:flex-end;
+  overflow:hidden;background:var(--emerald-deep);
+}
+.hero-cine .hero-media{position:absolute;inset:0;overflow:hidden}
+.hero-cine .hero-media img{
+  position:absolute;inset:-6% -2%;width:104%;height:112%;object-fit:cover;
+  will-change:transform;animation:kenburns2 26s ease-in-out infinite alternate;
+}
+/* Видео-герой: фон поверх fallback-фото */
+.hero-cine .hero-media .hero-video{
+  position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
+  z-index:1;animation:none;background:var(--emerald-deep);
+}
+/* Fallback-фото лежит под видео (видно, пока видео грузится / если не поддержано) */
+.hero-cine .hero-media .hero-fallback{z-index:0}
+@keyframes kenburns2{
+  0%{transform:scale(1.04) translate3d(0,0,0)}
+  100%{transform:scale(1.16) translate3d(-1.5%,-2%,0)}
+}
+.hero-cine .scrim{
+  position:absolute;inset:0;pointer-events:none;z-index:1;
+  background:
+    radial-gradient(140% 110% at 22% 95%, rgba(8,30,23,.90) 0%, rgba(8,30,23,.52) 32%, transparent 66%),
+    linear-gradient(96deg, rgba(8,30,23,.82) 0%, rgba(8,30,23,.40) 40%, transparent 70%),
+    linear-gradient(180deg, rgba(30,61,71,.45) 0%, rgba(30,61,71,.10) 30%, rgba(8,30,23,.42) 62%, rgba(6,24,18,.92) 100%);
+}
+.hero-cine .hero-inner{position:relative;z-index:2;width:100%}
+
+/* Тонкая золотая рамка-вуаль внутри героя (бутик-акцент) */
+.hero-frame{position:absolute;inset:clamp(14px,2.2vw,30px);z-index:1;pointer-events:none;
+  border:1px solid rgba(60,196,190,.28);border-radius:4px}
+
+/* Метаданные внизу героя (как в Aman) */
+.hero-meta{display:flex;flex-wrap:wrap;align-items:center;gap:clamp(1rem,3vw,2.6rem)}
+.hero-meta .m{display:flex;flex-direction:column;gap:.15rem}
+.hero-meta .m .k{font-size:.66rem;letter-spacing:.26em;text-transform:uppercase;color:rgba(244,242,239,.6)}
+.hero-meta .m .v{font-family:'Cormorant',serif;font-size:1.35rem;color:var(--cream)}
+.hero-meta .sep{width:1px;height:34px;background:rgba(60,196,190,.35)}
+
+/* ——— Scroll cue ——— */
+.scroll-cue{display:flex;flex-direction:column;align-items:center;gap:.5rem;color:rgba(244,242,239,.7)}
+.scroll-cue .bar{width:1px;height:46px;background:linear-gradient(180deg,var(--gold),transparent);
+  position:relative;overflow:hidden}
+.scroll-cue .bar::after{content:"";position:absolute;left:0;top:-50%;width:100%;height:50%;
+  background:var(--gold);animation:cueRun 1.9s cubic-bezier(.7,0,.3,1) infinite}
+@keyframes cueRun{0%{top:-50%}60%,100%{top:100%}}
+
+/* ——— Параллакс по data-speed (мягкая «физика» через transition) ——— */
+[data-speed]{will-change:transform}
+
+/* ——— Clip-path раскрытие фото ——— */
+.clip-reveal{clip-path:inset(0 0 100% 0);transition:clip-path 1.15s cubic-bezier(.16,1,.3,1)}
+.clip-reveal.in{clip-path:inset(0 0 0 0)}
+.clip-reveal img{transform:scale(1.12);transition:transform 1.4s cubic-bezier(.16,1,.3,1)}
+.clip-reveal.in img{transform:scale(1)}
+
+/* ——— Bento-сетка (удобства/инфраструктура) ——— */
+.bento{display:grid;grid-template-columns:repeat(6,1fr);gap:clamp(.75rem,1.4vw,1.1rem)}
+.bento .cell{
+  position:relative;overflow:hidden;border-radius:22px;
+  background:rgba(244,242,239,.045);
+  border:1px solid rgba(60,196,190,.22);
+  padding:clamp(1.4rem,2.2vw,2.1rem);
+  display:flex;flex-direction:column;justify-content:flex-end;
+  min-height:190px;
+  transition:transform .5s cubic-bezier(.16,1,.3,1),border-color .5s ease,background .5s ease;
+}
+.bento .cell:hover{transform:translateY(-6px);border-color:rgba(60,196,190,.6);background:rgba(244,242,239,.08)}
+.bento .cell .ico{margin-bottom:auto}
+.bento .cell h3{font-family:'Cormorant',serif;font-size:clamp(1.5rem,2.2vw,2rem);color:var(--cream);margin-bottom:.4rem}
+.bento .cell p{font-size:.9rem;line-height:1.55;color:rgba(244,242,239,.75)}
+.bento .span-3{grid-column:span 3}
+.bento .span-2{grid-column:span 2}
+.bento .span-4{grid-column:span 4}
+.bento .tall{min-height:300px}
+.bento .cell.photo{padding:0;min-height:300px}
+.bento .cell.photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
+  transition:transform .9s cubic-bezier(.16,1,.3,1)}
+.bento .cell.photo:hover img{transform:scale(1.07)}
+.bento .cell.photo .cap{position:relative;z-index:2;background:linear-gradient(180deg,transparent,rgba(8,30,23,.85));
+  width:100%;padding:1.4rem}
+@media (max-width:900px){
+  .bento{grid-template-columns:repeat(2,1fr)}
+  .bento .span-3,.bento .span-2,.bento .span-4{grid-column:span 1}
+  .bento .cell{min-height:160px}
+  .bento .cell.photo,.bento .tall{min-height:220px;grid-column:span 2}
+}
+
+/* ——— Sticky-split (номера / контент рядом с закреплённой картинкой) ——— */
+.sticky-media{position:sticky;top:96px}
+
+/* ——— Маркуи / горизонтальная лента ——— */
+.marquee{overflow:hidden;width:100%;mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
+.marquee-track{display:flex;gap:1.1rem;width:max-content;animation:marq 38s linear infinite}
+.marquee:hover .marquee-track{animation-play-state:paused}
+@keyframes marq{to{transform:translateX(-50%)}}
+.marquee-track .ph{flex:0 0 auto;width:clamp(220px,28vw,400px);aspect-ratio:4/3;border-radius:18px;overflow:hidden;
+  border:1px solid rgba(60,196,190,.2)}
+.marquee-track .ph img{width:100%;height:100%;object-fit:cover;transition:transform .8s cubic-bezier(.16,1,.3,1)}
+.marquee-track .ph:hover img{transform:scale(1.08)}
+
+/* ——— Облагороженные тени и радиусы ——— */
+.card{border-radius:22px;box-shadow:0 30px 70px -40px rgba(8,30,23,.65)}
+.card:hover{box-shadow:0 48px 90px -42px rgba(8,30,23,.7)}
+
+/* ——— Тонкая золотая вертикаль-акцент в секциях ——— */
+.section-label{display:inline-flex;align-items:center;gap:.7rem}
+.section-label::before{content:"";width:34px;height:1px;background:var(--gold)}
+
+/* ——— Эффект «прожектора» для тёмных секций (мягкий свет за курсором) ——— */
+.spotlight{position:relative;isolation:isolate}
+.spotlight::before{content:"";position:absolute;inset:0;z-index:0;pointer-events:none;
+  background:radial-gradient(420px circle at var(--mx,50%) var(--my,30%), rgba(60,196,190,.10), transparent 65%);
+  transition:opacity .4s ease}
+
+/* ——— Tilt-карточки ——— */
+.tilt{transition:transform .35s cubic-bezier(.16,1,.3,1)}
+
+/* ——— page-fade при загрузке ——— */
+.page-fade{opacity:0;animation:pageIn .9s ease .05s forwards}
+@keyframes pageIn{to{opacity:1}}
+
+/* ——— Премиальный заголовок внутренних страниц ——— */
+.page-hero{min-height:clamp(48vh,56vh,560px);display:flex;align-items:center}
+.page-hero > img{animation:kenburns2 28s ease-in-out infinite alternate;will-change:transform}
+
+/* ——— Десктоп: больше воздуха в секциях ——— */
+@media (min-width:1024px){
+  .py-24{padding-top:7.5rem;padding-bottom:7.5rem}
+  .py-28{padding-top:9rem;padding-bottom:9rem}
+}
+
+/* ===================================================================
+   REDUCED MOTION — полный фоллбэк для award-слоя
+   =================================================================== */
+@media (prefers-reduced-motion: reduce){
+  .hero-cine .hero-media img{animation:none}
+  .hero-cine .hero-media .hero-video{display:none}
+  .kinetic .word > span{transform:none !important;transition:none !important}
+  .clip-reveal{clip-path:none !important}
+  .clip-reveal img{transform:none !important}
+  .marquee-track{animation:none}
+  .scroll-cue .bar::after{animation:none}
+  .cursor-dot,.cursor-ring{display:none !important}
+  body::after{display:none}
+  .page-fade{animation:none;opacity:1}
+}
+.no-js .kinetic .word > span{transform:none}
+.no-js .clip-reveal{clip-path:none}
+.no-js .clip-reveal img{transform:none}
+.no-js .page-fade{opacity:1;animation:none}
