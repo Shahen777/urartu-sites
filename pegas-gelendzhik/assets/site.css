@@ -513,9 +513,9 @@ body::after{
 .hero-cine .scrim{
   position:absolute;inset:0;pointer-events:none;
   background:
-    radial-gradient(140% 110% at 22% 96%, rgba(8,30,23,.96), transparent 70%),
-    linear-gradient(95deg, rgba(8,30,23,.86) 0%, rgba(8,30,23,.42) 42%, rgba(8,30,23,.06) 72%),
-    linear-gradient(180deg, rgba(10,44,34,.60) 0%, rgba(10,44,34,.18) 30%, rgba(10,44,34,.50) 62%, rgba(8,30,23,.96) 100%);
+    radial-gradient(150% 120% at 24% 92%, rgba(6,24,18,.99) 0%, rgba(6,24,18,.78) 30%, transparent 72%),
+    linear-gradient(96deg, rgba(6,24,18,.96) 0%, rgba(6,24,18,.72) 30%, rgba(6,24,18,.30) 55%, transparent 78%),
+    linear-gradient(180deg, rgba(10,44,34,.62) 0%, rgba(10,44,34,.20) 28%, rgba(8,30,23,.66) 60%, rgba(6,24,18,.98) 100%);
 }
 .hero-cine .hero-inner{position:relative;z-index:2;width:100%}
 
