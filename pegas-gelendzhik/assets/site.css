@@ -511,11 +511,11 @@ body::after{
   100%{transform:scale(1.16) translate3d(-1.5%,-2%,0)}
 }
 .hero-cine .scrim{
-  position:absolute;inset:0;pointer-events:none;
+  position:absolute;inset:0;pointer-events:none;z-index:1;
   background:
-    radial-gradient(150% 120% at 24% 92%, rgba(6,24,18,.99) 0%, rgba(6,24,18,.78) 30%, transparent 72%),
-    linear-gradient(96deg, rgba(6,24,18,.96) 0%, rgba(6,24,18,.72) 30%, rgba(6,24,18,.30) 55%, transparent 78%),
-    linear-gradient(180deg, rgba(10,44,34,.62) 0%, rgba(10,44,34,.20) 28%, rgba(8,30,23,.66) 60%, rgba(6,24,18,.98) 100%);
+    radial-gradient(140% 110% at 22% 95%, rgba(8,30,23,.90) 0%, rgba(8,30,23,.52) 32%, transparent 66%),
+    linear-gradient(96deg, rgba(8,30,23,.82) 0%, rgba(8,30,23,.40) 40%, transparent 70%),
+    linear-gradient(180deg, rgba(10,44,34,.45) 0%, rgba(10,44,34,.10) 30%, rgba(8,30,23,.42) 62%, rgba(6,24,18,.92) 100%);
 }
 .hero-cine .hero-inner{position:relative;z-index:2;width:100%}
 
