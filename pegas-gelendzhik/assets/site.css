@@ -416,6 +416,20 @@ h1,h2{overflow-wrap:break-word;word-break:normal;hyphens:auto}
 
   /* Карта-заглушка и крупные изображения не выходят за экран */
   .h-\[420px\]{height:300px}
+
+  /* Hero eyebrow и подзаголовок не вылезают за правый край на мобайле:
+     широкий letter-spacing урезаем, разрешаем перенос длинных строк */
+  .eyebrow{
+    letter-spacing:.16em;
+    max-width:100%;
+    overflow-wrap:break-word;
+    white-space:normal;
+  }
+  .lead{
+    max-width:100%;
+    overflow-wrap:break-word;
+    word-break:normal;
+  }
 }
 
 /* Контейнеры никогда не шире вьюпорта */

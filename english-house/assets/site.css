@@ -82,8 +82,8 @@ body::after{
 .hairline.left{background:linear-gradient(90deg,var(--brass),transparent);}
 .ornament{font-family:"Playfair Display",serif;color:var(--brass);}
 
-.eyebrow{display:flex;align-items:center;gap:18px;}
-.eyebrow .dash{width:clamp(28px,5vw,56px);height:1px;background:var(--brass);opacity:.55;}
+.eyebrow{display:flex;align-items:center;gap:18px;flex-wrap:wrap;max-width:100%;}
+.eyebrow .dash{width:clamp(28px,5vw,56px);height:1px;background:var(--brass);opacity:.55;flex-shrink:0;}
 
 /* ---------- buttons ---------- */
 .btn{
@@ -176,7 +176,8 @@ body::after{
 .scrim-l{position:absolute;inset:0;background:linear-gradient(105deg,rgba(14,37,30,.82),rgba(14,37,30,.16) 58%,transparent);}
 .hero-inner{position:relative;width:100%;max-width:var(--maxw);margin:0 auto;
   padding:clamp(110px,16vh,180px) var(--gutter) clamp(56px,8vh,96px);color:var(--cream);}
-.hero h1{font-size:var(--fs-h1);font-weight:500;}
+.hero h1{font-size:var(--fs-h1);font-weight:500;overflow-wrap:break-word;}
+.eyebrow .kicker{overflow-wrap:break-word;}
 .hero h1 .sub{display:block;font-style:italic;font-weight:400;color:var(--brass-l);
   font-size:clamp(1.5rem,.8rem + 2.6vw,3.1rem);margin-top:.35em;line-height:1.1;}
 .hero-lead{margin-top:1.6em;max-width:38ch;color:rgba(239,234,224,.9);font-size:var(--fs-lead);}
@@ -191,6 +192,14 @@ body::after{
 .rating-badge .score{font-family:"Playfair Display",serif;font-size:clamp(2.4rem,1.5rem + 3vw,3.4rem);line-height:1;margin-top:4px;}
 .rating-badge .meta{font-size:.6rem;letter-spacing:.22em;text-transform:uppercase;color:rgba(20,52,43,.65);margin-top:8px;font-weight:600;}
 @media (max-width:640px){ .rating-badge{padding:12px 16px;} .rating-badge .stars{font-size:.66rem;} }
+/* Mobile: keep rating badge fully on-screen */
+@media (max-width:560px){
+  .rating-badge{top:84px;right:14px;padding:9px 13px;border-radius:var(--r-sm,14px);
+    max-width:calc(100vw - 28px);}
+  .rating-badge .stars{font-size:.58rem;letter-spacing:.12em;}
+  .rating-badge .score{font-size:1.7rem;margin-top:2px;}
+  .rating-badge .meta{font-size:.5rem;letter-spacing:.14em;margin-top:5px;}
+}
 
 .scroll-cue{position:absolute;bottom:26px;left:50%;transform:translateX(-50%);z-index:5;
   display:flex;flex-direction:column;align-items:center;gap:8px;color:rgba(239,234,224,.7);

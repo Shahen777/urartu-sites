@@ -645,3 +645,35 @@ body::after{
 .no-js .clip-reveal{clip-path:none}
 .no-js .clip-reveal img{transform:none}
 .no-js .page-fade{opacity:1;animation:none}
+
+/* ——— Мобильная полировка hero (≤430px): длинное название не должно вылезать ——— */
+@media (max-width:430px){
+  /* Уменьшаем hero-заголовок и разрешаем перенос длинных слов («Александра»») */
+  .d-hero{
+    font-size:clamp(2.2rem,9vw,3.1rem);
+    overflow-wrap:break-word;
+    word-break:break-word;
+    hyphens:auto;
+  }
+  /* Кинетика оборачивает слова в inline-block с overflow:hidden — это блокирует
+     внутрисловный перенос. На узких экранах позволяем словам переноситься. */
+  .d-hero.kinetic .word,
+  .d-hero.kinetic .word > span{
+    overflow-wrap:break-word;
+    word-break:break-word;
+    hyphens:auto;
+    white-space:normal;
+    max-width:100%;
+  }
+  /* Eyebrow не обрезается справа: переносится и не выходит за контейнер */
+  .hero-cine .eyebrow{
+    white-space:normal;
+    overflow-wrap:break-word;
+    max-width:100%;
+  }
+  /* Контент героя не шире вьюпорта; сохраняем боковые отступы контейнера */
+  .hero-cine .hero-inner > div > div[style*="max-width"]{
+    max-width:100% !important;
+  }
+  .hero-cine .lead{max-width:100%}
+}
