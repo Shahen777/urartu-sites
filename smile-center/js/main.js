@@ -9,7 +9,6 @@
     st.textContent = `*,*::before,*::after{animation:none!important;transition:none!important}
       .rv,.rv-img,.rv-mask{opacity:1!important;transform:none!important;clip-path:none!important}
       .rv-img img{transform:none!important}
-      .hero{height:780px!important;min-height:0!important;max-height:none!important}
       .cookie{display:none!important}`;
     document.head.appendChild(st);
     document.querySelectorAll('.rv,.rv-img,.rv-mask').forEach(el => el.classList.add('is-in'));
@@ -23,7 +22,7 @@
       cur.style.left = e.clientX + 'px';
       cur.style.top = e.clientY + 'px';
     }, { passive: true });
-    document.querySelectorAll('img, .svc, .doc, a.btn, .faq__q').forEach(el => {
+    document.querySelectorAll('img, .svc-row, .doc, .btn, .faq__q').forEach(el => {
       el.addEventListener('mouseenter', () => cur.classList.add('is-photo'));
       el.addEventListener('mouseleave', () => cur.classList.remove('is-photo'));
     });
@@ -51,7 +50,10 @@
 
   /* --- rAF-parallax картинок --- */
   if (!mq) {
+    // сдержанный параллакс для split-медиа
     const phs = [...document.querySelectorAll('.split__media img')];
+    // сильный кинематографичный параллакс для полноширинных банов (луна, бан)
+    const bigs = [...document.querySelectorAll('.moon__media img, .band__media img')];
     const heroImg = document.querySelector('.hero__media img');
     let ticking = false;
     const par = () => {
@@ -60,10 +62,17 @@
         const r = box.getBoundingClientRect();
         if (r.bottom < 0 || r.top > innerHeight) return;
         const p = (r.top + r.height / 2 - innerHeight / 2) / innerHeight;
-        img.style.transform = `translateY(${p * -22}px)`;
+        img.style.transform = `translateY(${p * -24}px)`;
+      });
+      bigs.forEach(img => {
+        const box = img.parentElement;
+        const r = box.getBoundingClientRect();
+        if (r.bottom < 0 || r.top > innerHeight) return;
+        const p = (r.top + r.height / 2 - innerHeight / 2) / innerHeight;
+        img.style.transform = `translateY(${p * -70}px)`;
       });
       if (heroImg && scrollY < innerHeight) {
-        heroImg.style.transform = `translateY(${scrollY * 0.18}px) scale(1.05)`;
+        heroImg.style.transform = `translateY(${scrollY * 0.14}px) scale(1.05)`;
       }
       ticking = false;
     };
