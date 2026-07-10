@@ -9,6 +9,7 @@
     st.textContent = `*,*::before,*::after{animation:none!important;transition:none!important}
       .rv,.rv-img,.rv-mask{opacity:1!important;transform:none!important;clip-path:none!important}
       .rv-img img{transform:none!important}
+      .hero{height:780px!important;min-height:0!important;max-height:none!important}
       .cookie{display:none!important}`;
     document.head.appendChild(st);
     document.querySelectorAll('.rv,.rv-img,.rv-mask').forEach(el => el.classList.add('is-in'));
@@ -33,14 +34,13 @@
   const onScrollNav = () => nav && nav.classList.toggle('is-scrolled', scrollY > 30);
   addEventListener('scroll', onScrollNav, { passive: true }); onScrollNav();
   const burger = document.querySelector('.nav__burger');
-  const links = document.querySelector('.nav__links');
-  if (burger) burger.addEventListener('click', () => {
+  if (burger && nav) burger.addEventListener('click', () => {
     burger.classList.toggle('is-open');
-    links.classList.toggle('is-open');
+    nav.classList.toggle('is-open');
   });
-  if (links) links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+  if (nav) nav.querySelectorAll('.nav__grp a').forEach(a => a.addEventListener('click', () => {
     burger && burger.classList.remove('is-open');
-    links.classList.remove('is-open');
+    nav.classList.remove('is-open');
   }));
 
   /* --- reveal на IntersectionObserver --- */
@@ -52,6 +52,7 @@
   /* --- rAF-parallax картинок --- */
   if (!mq) {
     const phs = [...document.querySelectorAll('.split__media img')];
+    const heroImg = document.querySelector('.hero__media img');
     let ticking = false;
     const par = () => {
       phs.forEach(img => {
@@ -61,6 +62,9 @@
         const p = (r.top + r.height / 2 - innerHeight / 2) / innerHeight;
         img.style.transform = `translateY(${p * -22}px)`;
       });
+      if (heroImg && scrollY < innerHeight) {
+        heroImg.style.transform = `translateY(${scrollY * 0.18}px) scale(1.05)`;
+      }
       ticking = false;
     };
     addEventListener('scroll', () => { if (!ticking) { requestAnimationFrame(par); ticking = true; } }, { passive: true });

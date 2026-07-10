@@ -7,19 +7,20 @@
 <meta name="description" content="Услуги стоматологии Смайл Центр в Краснодаре: имплантация, ортодонтия и брекеты, протезирование, виниры и отбеливание, гигиена, детская стоматология, лечение кариеса, удаление. Стоимость рассчитаем на бесплатной консультации.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;500;600;700&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 <div class="cursor"></div>
 
-<nav class="nav">
-  <a class="nav__logo" href="index.html"><span class="dot"></span>Смайл <em>Центр</em></a>
+<nav class="nav is-inner">
   <button class="nav__burger" aria-label="меню"><span></span><span></span><span></span></button>
-  <div class="nav__links">
-    <a href="index.html">Главная</a>
+  <div class="nav__grp nav__grp--l">
     <a href="uslugi.html" class="is-active">Услуги</a>
     <a href="vrachi.html">Врачи</a>
+  </div>
+  <a class="nav__logo" href="index.html">Смайл <em>Центр</em></a>
+  <div class="nav__grp nav__grp--r">
     <a href="o-klinike.html">О клинике</a>
     <a href="kontakty.html">Контакты</a>
     <a href="index.html#book" class="nav__cta">Записаться</a>
@@ -39,62 +40,78 @@
       <div>Мы не публикуем фиксированные цены: они зависят от клинической ситуации. <b>Первичная консультация — бесплатно.</b> На приёме врач составит план лечения и точную смету без обязательств.</div>
     </div>
 
-    <div class="svc-grid">
-      <article class="svc svc--full rv">
-        <div class="svc__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c-3 0-5 1.5-5 4 0 1.5.5 3 .8 5 .3 2 .2 5 1.2 8 .4 1.2 1.5 1.2 1.8 0 .4-1.5.4-3 1.2-3s.8 1.5 1.2 3c.3 1.2 1.4 1.2 1.8 0 1-3 .9-6 1.2-8 .3-2 .8-3.5.8-5 0-2.5-2-4-5-4Z"/></svg></div>
-        <h3>Имплантация</h3><p>Восстановление одного или нескольких зубов имплантами — без обточки соседних. Надёжная опора для коронок и протезов.</p>
-        <ul><li>Одиночные импланты</li><li>Восстановление «под ключ»</li><li>Протезирование на имплантах</li></ul>
-        <div class="price">Стоимость — после осмотра и КТ</div>
-      </article>
+    <div class="svc-list">
+      <div class="svc-row svc-row--full rv"><span class="svc-row__num">01</span>
+        <div class="svc-row__main">
+          <h3 class="svc-row__name">Имплантация</h3>
+          <p class="svc-row__desc">Восстановление одного или нескольких зубов имплантами — без обточки соседних. Надёжная опора для коронок и протезов.</p>
+          <ul class="svc-row__tags"><li>Одиночные импланты</li><li>Восстановление «под ключ»</li><li>Протезирование на имплантах</li></ul>
+        </div>
+        <div class="svc-row__price">Стоимость — после осмотра и КТ</div>
+      </div>
 
-      <article class="svc svc--full rv rv-d1">
-        <div class="svc__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9h18M3 15h18"/><circle cx="7" cy="9" r="1.4"/><circle cx="12" cy="9" r="1.4"/><circle cx="17" cy="9" r="1.4"/><circle cx="7" cy="15" r="1.4"/><circle cx="12" cy="15" r="1.4"/><circle cx="17" cy="15" r="1.4"/></svg></div>
-        <h3>Ортодонтия и брекеты</h3><p>Исправление прикуса у детей и взрослых. Подберём систему под ваш ритм жизни и эстетические пожелания.</p>
-        <ul><li>Металлические и эстетические брекеты</li><li>Прозрачные элайнеры</li><li>Детская ортодонтия</li></ul>
-        <div class="price">Рассчитаем на консультации</div>
-      </article>
+      <div class="svc-row svc-row--full rv"><span class="svc-row__num">02</span>
+        <div class="svc-row__main">
+          <h3 class="svc-row__name">Ортодонтия и брекеты</h3>
+          <p class="svc-row__desc">Исправление прикуса у детей и взрослых. Подберём систему под ваш ритм жизни и эстетические пожелания.</p>
+          <ul class="svc-row__tags"><li>Металлические и эстетические брекеты</li><li>Прозрачные элайнеры</li><li>Детская ортодонтия</li></ul>
+        </div>
+        <div class="svc-row__price">Рассчитаем на консультации</div>
+      </div>
 
-      <article class="svc svc--full rv rv-d2">
-        <div class="svc__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 4h12l-1.2 5.5a5 5 0 0 1-1.6 2.8L12 15l-3.2-2.7a5 5 0 0 1-1.6-2.8Z"/><path d="M9 20h6M12 15v5"/></svg></div>
-        <h3>Протезирование</h3><p>Возвращаем эстетику и полноценное жевание — от одной коронки до полного восстановления зубного ряда.</p>
-        <ul><li>Коронки и виниры</li><li>Мостовидные протезы</li><li>Съёмные и частичные протезы</li></ul>
-        <div class="price">Стоимость — после осмотра</div>
-      </article>
+      <div class="svc-row svc-row--full rv"><span class="svc-row__num">03</span>
+        <div class="svc-row__main">
+          <h3 class="svc-row__name">Протезирование</h3>
+          <p class="svc-row__desc">Возвращаем эстетику и полноценное жевание — от одной коронки до полного восстановления зубного ряда.</p>
+          <ul class="svc-row__tags"><li>Коронки и виниры</li><li>Мостовидные протезы</li><li>Съёмные и частичные протезы</li></ul>
+        </div>
+        <div class="svc-row__price">Стоимость — после осмотра</div>
+      </div>
 
-      <article class="svc svc--full rv rv-d3">
-        <div class="svc__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.8 4.2L18 9l-4.2 1.8L12 15l-1.8-4.2L6 9l4.2-1.8Z"/><path d="M18 16l.9 2.1L21 19l-2.1.9L18 22l-.9-2.1L15 19l2.1-.9Z"/></svg></div>
-        <h3>Эстетика, виниры и отбеливание</h3><p>Ровная и светлая улыбка: профессиональное отбеливание, керамические виниры, реставрация формы и цвета зубов.</p>
-        <ul><li>Отбеливание</li><li>Керамические виниры</li><li>Художественная реставрация</li></ul>
-        <div class="price">Рассчитаем на консультации</div>
-      </article>
+      <div class="svc-row svc-row--full rv"><span class="svc-row__num">04</span>
+        <div class="svc-row__main">
+          <h3 class="svc-row__name">Эстетика, виниры и отбеливание</h3>
+          <p class="svc-row__desc">Ровная и светлая улыбка: профессиональное отбеливание, керамические виниры, реставрация формы и цвета зубов.</p>
+          <ul class="svc-row__tags"><li>Отбеливание</li><li>Керамические виниры</li><li>Художественная реставрация</li></ul>
+        </div>
+        <div class="svc-row__price">Рассчитаем на консультации</div>
+      </div>
 
-      <article class="svc svc--full rv">
-        <div class="svc__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2c1.5 3 1.5 5 0 6M9 22l-.5-6c-.3-3 1-5 3.5-5s3.8 2 3.5 5L15 22"/><path d="M8.5 16h7"/></svg></div>
-        <h3>Профессиональная гигиена</h3><p>Комплексная чистка Air Flow и ультразвуком, удаление налёта и камня, реминерализация — основа здоровья зубов.</p>
-        <ul><li>Чистка Air Flow</li><li>Снятие зубного камня</li><li>Профилактика кариеса</li></ul>
-        <div class="price">Стоимость — по объёму работ</div>
-      </article>
+      <div class="svc-row svc-row--full rv"><span class="svc-row__num">05</span>
+        <div class="svc-row__main">
+          <h3 class="svc-row__name">Профессиональная гигиена</h3>
+          <p class="svc-row__desc">Комплексная чистка Air Flow и ультразвуком, удаление налёта и камня, реминерализация — основа здоровья зубов.</p>
+          <ul class="svc-row__tags"><li>Чистка Air Flow</li><li>Снятие зубного камня</li><li>Профилактика кариеса</li></ul>
+        </div>
+        <div class="svc-row__price">Стоимость — по объёму работ</div>
+      </div>
 
-      <article class="svc svc--full rv rv-d1">
-        <div class="svc__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="9" r="1.4"/><circle cx="15" cy="9" r="1.4"/><path d="M12 4c-4 0-7 2.5-7 6 0 4 2.5 10 4 10 1 0 1.2-2 3-2s2 2 3 2c1.5 0 4-6 4-10 0-3.5-3-6-7-6Z"/></svg></div>
-        <h3>Детская стоматология</h3><p>Бережный приём для маленьких пациентов: лечение без страха, профилактика и обучение уходу за зубами.</p>
-        <ul><li>Лечение молочных зубов</li><li>Герметизация фиссур</li><li>Адаптация к приёму</li></ul>
-        <div class="price">Рассчитаем на консультации</div>
-      </article>
+      <div class="svc-row svc-row--full rv"><span class="svc-row__num">06</span>
+        <div class="svc-row__main">
+          <h3 class="svc-row__name">Детская стоматология</h3>
+          <p class="svc-row__desc">Бережный приём для маленьких пациентов: лечение без страха, профилактика и обучение уходу за зубами.</p>
+          <ul class="svc-row__tags"><li>Лечение молочных зубов</li><li>Герметизация фиссур</li><li>Адаптация к приёму</li></ul>
+        </div>
+        <div class="svc-row__price">Рассчитаем на консультации</div>
+      </div>
 
-      <article class="svc svc--full rv rv-d2">
-        <div class="svc__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c-3 0-5 1.5-5 4 0 4 1 15 3 15 1 0 1-4 2-4s1 4 2 4c2 0 3-11 3-15 0-2.5-2-4-5-4Z"/><path d="M9.5 8.5s1-1 2.5-1 2.5 1 2.5 1"/></svg></div>
-        <h3>Лечение кариеса</h3><p>Лечение под увеличением с сохранением здоровых тканей. Эстетичные пломбы, которые незаметны и служат долго.</p>
-        <ul><li>Лечение кариеса и пульпита</li><li>Лечение каналов</li><li>Эстетичные реставрации</li></ul>
-        <div class="price">Стоимость — после осмотра</div>
-      </article>
+      <div class="svc-row svc-row--full rv"><span class="svc-row__num">07</span>
+        <div class="svc-row__main">
+          <h3 class="svc-row__name">Лечение кариеса</h3>
+          <p class="svc-row__desc">Лечение под увеличением с сохранением здоровых тканей. Эстетичные пломбы, которые незаметны и служат долго.</p>
+          <ul class="svc-row__tags"><li>Лечение кариеса и пульпита</li><li>Лечение каналов</li><li>Эстетичные реставрации</li></ul>
+        </div>
+        <div class="svc-row__price">Стоимость — после осмотра</div>
+      </div>
 
-      <article class="svc svc--full rv rv-d3">
-        <div class="svc__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c-3 0-5 1.5-5 4 0 4 1 15 3 15 1 0 1-4 2-4s1 4 2 4c2 0 3-11 3-15 0-2.5-2-4-5-4Z"/><path d="M8 4 16 12M16 4 8 12"/></svg></div>
-        <h3>Хирургия и удаление</h3><p>Аккуратное удаление зубов, в том числе зубов мудрости, и малая хирургия под надёжной анестезией.</p>
-        <ul><li>Удаление зубов</li><li>Удаление зубов мудрости</li><li>Подготовка к имплантации</li></ul>
-        <div class="price">Стоимость — после осмотра</div>
-      </article>
+      <div class="svc-row svc-row--full rv"><span class="svc-row__num">08</span>
+        <div class="svc-row__main">
+          <h3 class="svc-row__name">Хирургия и удаление</h3>
+          <p class="svc-row__desc">Аккуратное удаление зубов, в том числе зубов мудрости, и малая хирургия под надёжной анестезией.</p>
+          <ul class="svc-row__tags"><li>Удаление зубов</li><li>Удаление зубов мудрости</li><li>Подготовка к имплантации</li></ul>
+        </div>
+        <div class="svc-row__price">Стоимость — после осмотра</div>
+      </div>
     </div>
   </div>
 </section>
@@ -102,7 +119,7 @@
 <section class="section">
   <div class="cta-band rv">
     <div class="deco d1"></div><div class="deco d2"></div>
-    <span class="eyebrow eyebrow--center" style="display:inline-flex;color:#cfeae1">Не знаете, с чего начать?</span>
+    <span class="eyebrow eyebrow--center" style="display:inline-flex">Не знаете, с чего начать?</span>
     <h2>Приходите на бесплатную консультацию</h2>
     <p>Врач осмотрит, ответит на вопросы и составит понятный план лечения со сметой. Без обязательств.</p>
     <a href="index.html#book" class="btn btn--solid">Записаться на приём</a>
@@ -112,7 +129,7 @@
 <footer class="footer">
   <div class="footer__grid">
     <div>
-      <div class="footer__logo"><span class="dot"></span>Смайл Центр</div>
+      <div class="footer__logo">Смайл <em>Центр</em></div>
       <p>Стоматология в Краснодаре: имплантация, ортодонтия, протезирование, эстетика и детский приём. Лечим спокойно, честно и без боли.</p>
     </div>
     <div>
