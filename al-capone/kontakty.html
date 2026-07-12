@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Контакты и запись — Al Capone барбершоп Москва</title>
+<meta name="description" content="Контакты барбершопа Al Capone в Москве: телефон +7 904 567-61-03, ежедневно 10:00–22:00. Онлайн-заявка на стрижку, бороду и бритьё.">
+<meta name="keywords" content="Al Capone барбершоп Москва мужская стрижка борода">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap&subset=cyrillic,latin" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav class="nav">
+  <a class="nav__logo" href="index.html"><span class="nav__mark">AC</span>AL CAPONE <em>barbershop</em></a>
+  <button class="nav__burger" aria-label="Открыть меню" aria-expanded="false"><span></span><span></span><span></span></button>
+  <div class="nav__links">
+    <a href="index.html">Главная</a>
+    <a href="uslugi.html">Услуги</a>
+    <a href="mastera.html">Мастера</a>
+    <a href="o-barbershope.html">О барбершопе</a>
+    <a href="kontakty.html" class="is-active">Контакты</a>
+    <a href="kontakty.html#zapis" class="btn btn--lime nav__cta">Записаться</a>
+  </div>
+</nav>
+
+<header class="page-hero wrap">
+  <div class="crumbs">Al Capone · Контакты</div>
+  <h1>Записаться<br><em>и найти нас</em></h1>
+  <p>Позвоните, оставьте заявку или загляните лично. Работаем в Москве ежедневно с 10:00 до 22:00.</p>
+</header>
+
+<section class="section--tight wrap">
+  <div class="contact-grid">
+    <div class="c-list">
+      <div class="c-item rv">
+        <div class="lbl">Телефон</div>
+        <div class="val"><a href="tel:+79045676103">+7 904 567-61-03</a></div>
+        <div class="note">звоните для записи и вопросов по услугам</div>
+      </div>
+      <div class="c-item rv">
+        <div class="lbl">Часы работы</div>
+        <div class="val">Ежедневно · 10:00 — 22:00</div>
+        <div class="note">без выходных; точное время визита уточняйте</div>
+      </div>
+      <div class="c-item rv">
+        <div class="lbl">Город</div>
+        <div class="val">Москва</div>
+        <div class="note">точный адрес подскажем при записи</div>
+      </div>
+      <div class="c-item rv">
+        <div class="lbl">На карте</div>
+        <div class="val"><a href="https://yandex.ru/maps/?text=Al%20Capone%20барбершоп%20Москва" target="_blank" rel="noopener">Открыть в Яндекс.Картах ↗</a></div>
+        <div class="note">маршрут и отзывы в один клик</div>
+      </div>
+    </div>
+    <figure class="split__ph rv-img" style="aspect-ratio:4/5"><img src="img/interior.jpg" alt="Интерьер барбершопа Al Capone в Москве"></figure>
+  </div>
+</section>
+
+<!-- ЗАПИСЬ / ФОРМА -->
+<section class="section wrap" id="zapis">
+  <div class="book rv">
+    <div class="book__grid">
+      <div class="book__intro">
+        <span class="eyebrow">Онлайн-заявка</span>
+        <h2 style="margin-top:14px">Займите <em>кресло</em></h2>
+        <p>Оставьте заявку — мы перезвоним, подтвердим время и подберём свободного мастера под вашу услугу.</p>
+        <p>Или позвоните прямо сейчас:</p>
+        <a class="book__call link-u" href="tel:+79045676103">+7 904 567-61-03</a>
+      </div>
+      <form class="book-form" novalidate>
+        <div class="field">
+          <label for="name">Ваше имя</label>
+          <input id="name" name="name" type="text" placeholder="Как к вам обращаться" required autocomplete="name">
+        </div>
+        <div class="field">
+          <label for="phone">Телефон</label>
+          <input id="phone" name="phone" type="tel" placeholder="+7 ___ ___-__-__" required autocomplete="tel">
+        </div>
+        <div class="field-2">
+          <div class="field">
+            <label for="service">Услуга</label>
+            <select id="service" name="service" required>
+              <option value="" selected>Выберите услугу</option>
+              <option>Мужская стрижка</option>
+              <option>Стрижка машинкой</option>
+              <option>Борода и бритьё</option>
+              <option>Королевское бритьё</option>
+              <option>Камуфляж седины</option>
+              <option>Детская стрижка</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="date">Желаемая дата</label>
+            <input id="date" name="date" type="date">
+          </div>
+        </div>
+        <div class="consent">
+          <input id="consent" name="consent" type="checkbox">
+          <label for="consent">Я согласен(а) на обработку персональных данных в соответствии с <a href="politika.html" class="link-u">политикой обработки персональных данных</a> (152-ФЗ).</label>
+        </div>
+        <button class="btn btn--lime" type="submit" disabled>Отправить заявку</button>
+        <p class="book-form__ok" hidden>Спасибо! Заявка принята — мы перезвоним для подтверждения.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer__inner">
+    <div class="footer__brand">
+      <div class="logo"><span class="nav__mark">AC</span>AL CAPONE</div>
+      <p>Мужской барбершоп в Москве. Стрижки, борода и бритьё. Ежедневно 10:00–22:00.</p>
+    </div>
+    <div class="footer__col">
+      <h4>Навигация</h4>
+      <ul>
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="uslugi.html">Услуги</a></li>
+        <li><a href="mastera.html">Мастера</a></li>
+        <li><a href="o-barbershope.html">О барбершопе</a></li>
+        <li><a href="kontakty.html">Контакты</a></li>
+      </ul>
+    </div>
+    <div class="footer__col">
+      <h4>Контакты</h4>
+      <ul>
+        <li><a href="tel:+79045676103">+7 904 567-61-03</a></li>
+        <li>Москва</li>
+        <li>Ежедневно 10:00–22:00 <span class="muted">(уточняйте)</span></li>
+        <li><a href="https://yandex.ru/maps/?text=Al%20Capone%20барбершоп%20Москва" target="_blank" rel="noopener">Яндекс.Карты ↗</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <span>© 2026 AL CAPONE · Москва</span>
+    <a href="politika.html">Политика обработки персональных данных</a>
+    <span class="sig">сайт — Urartu AI Studio</span>
+  </div>
+</footer>
+
+<div class="cookie" hidden>
+  <p>Мы используем cookie, чтобы сайт работал корректно. Продолжая, вы соглашаетесь с <a href="politika.html">политикой обработки данных</a>.</p>
+  <div class="cookie__btns">
+    <button class="btn btn--lime" data-cookie="accept">Принять</button>
+    <button class="btn btn--ghost" data-cookie="decline">Отклонить</button>
+  </div>
+</div>
+
+<div class="lightbox"><img src="" alt=""></div>
+
+<script src="js/main.js"></script>
+</body>
+</html>
