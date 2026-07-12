@@ -7,80 +7,104 @@
 <meta name="description" content="Команда стоматологии Смайл Центр в Краснодаре: стоматолог-терапевт, имплантолог, ортодонт, гигиенист и детский стоматолог. Внимательные врачи, которые лечат без боли.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<div class="cursor"></div>
 
 <nav class="nav">
-  <button class="nav__burger" aria-label="меню"><span></span><span></span><span></span></button>
-  <div class="nav__grp nav__grp--l">
-    <a href="uslugi.html">Услуги</a>
-    <a href="vrachi.html" class="is-active">Врачи</a>
+  <div class="nav__inner">
+    <a class="nav__logo" href="index.html">Смайл Центр</a>
+    <div class="nav__links">
+      <a class="nav__link" href="uslugi.html">Услуги</a>
+      <a class="nav__link is-active" href="vrachi.html">Врачи</a>
+      <a class="nav__link" href="o-klinike.html">О клинике</a>
+      <a class="nav__link" href="kontakty.html">Контакты</a>
+    </div>
+    <div class="nav__right">
+      <a class="btn btn--fill btn--sm" href="index.html#book">Записаться</a>
+      <button class="nav__burger" aria-label="меню" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
   </div>
-  <a class="nav__logo" href="index.html">Смайл&nbsp;<em>Центр</em></a>
-  <div class="nav__grp nav__grp--r">
-    <a href="o-klinike.html">О клинике</a>
-    <a href="kontakty.html">Контакты</a>
-    <a href="index.html#book" class="nav__cta">Записаться</a>
+  <div class="nav__menu">
+    <a class="nav__link" href="uslugi.html">Услуги</a>
+    <a class="nav__link" href="vrachi.html">Врачи</a>
+    <a class="nav__link" href="o-klinike.html">О клинике</a>
+    <a class="nav__link" href="kontakty.html">Контакты</a>
   </div>
 </nav>
 
 <header class="page-hero">
-  <span class="lbl crumbs">Смайл Центр · Врачи</span>
-  <h1>Команда, которой<br><em>доверяют</em> улыбки</h1>
-  <p>Врачи разных направлений работают вместе: диагностируют, планируют и ведут пациента от первого визита до результата — спокойно и внимательно.</p>
+  <div class="container">
+    <span class="eyebrow rv">Смайл Центр · Врачи</span>
+    <h1 class="display rv rv-d1" style="margin-top:12px">Команда, которой <span class="accent">доверяют</span></h1>
+    <p class="sub rv rv-d1">Врачи разных направлений работают вместе: диагностируют, планируют и ведут пациента от первого визита до результата — спокойно и внимательно.</p>
+  </div>
 </header>
 
 <section class="section section--tight">
-  <div class="wrap">
-    <div class="docs-grid">
+  <div class="container">
+    <div class="docs">
       <article class="doc rv">
-        <div class="doc__ph rv-img"><span class="tag">Терапевт</span><img src="img/doctor2.jpg" alt="Ведущий стоматолог-терапевт клиники Смайл Центр"></div>
-        <div class="doc__b"><h3>Ведущий стоматолог</h3><div class="role">Терапия · микроскоп</div><p>Лечение кариеса и каналов с сохранением здоровых тканей. Эстетичные реставрации, которые служат долго и остаются незаметными.</p></div>
+        <div class="doc__img rv-img"><img src="img/doctor2.jpg" alt="Ведущий стоматолог-терапевт клиники Смайл Центр"></div>
+        <h3 class="doc__name">Ведущий стоматолог</h3>
+        <div class="doc__role">Терапия · микроскоп</div>
+        <p class="doc__desc">Лечение кариеса и каналов с сохранением здоровых тканей. Эстетичные реставрации, которые служат долго и остаются незаметными.</p>
       </article>
       <article class="doc rv rv-d1">
-        <div class="doc__ph doc__ph--ph"><span class="mono">И</span></div>
-        <div class="doc__b"><h3>Имплантолог</h3><div class="role">Хирургия · имплантация</div><p>Установка имплантов и восстановление отсутствующих зубов по чёткому протоколу, с планированием по КТ и гарантией на работу.</p></div>
+        <div class="doc__img doc__ph"><span>И</span></div>
+        <h3 class="doc__name">Имплантолог</h3>
+        <div class="doc__role">Хирургия · имплантация</div>
+        <p class="doc__desc">Установка имплантов и восстановление отсутствующих зубов по чёткому протоколу, с планированием по КТ и гарантией на работу.</p>
       </article>
       <article class="doc rv rv-d2">
-        <div class="doc__ph doc__ph--ph"><span class="mono">О</span></div>
-        <div class="doc__b"><h3>Ортодонт</h3><div class="role">Брекеты · элайнеры</div><p>Исправление прикуса у детей и взрослых. Подбирает систему под образ жизни и сопровождает на каждом этапе лечения.</p></div>
+        <div class="doc__img doc__ph"><span>О</span></div>
+        <h3 class="doc__name">Ортодонт</h3>
+        <div class="doc__role">Брекеты · элайнеры</div>
+        <p class="doc__desc">Исправление прикуса у детей и взрослых. Подбирает систему под образ жизни и сопровождает на каждом этапе лечения.</p>
       </article>
       <article class="doc rv">
-        <div class="doc__ph doc__ph--ph"><span class="mono">Г</span></div>
-        <div class="doc__b"><h3>Гигиенист</h3><div class="role">Профгигиена · профилактика</div><p>Профессиональная чистка, Air Flow и реминерализация. Научит правильному домашнему уходу и поможет сохранить результат.</p></div>
+        <div class="doc__img doc__ph"><span>Г</span></div>
+        <h3 class="doc__name">Гигиенист</h3>
+        <div class="doc__role">Профгигиена · профилактика</div>
+        <p class="doc__desc">Профессиональная чистка, Air Flow и реминерализация. Научит правильному домашнему уходу и поможет сохранить результат.</p>
       </article>
       <article class="doc rv rv-d1">
-        <div class="doc__ph doc__ph--ph"><span class="mono">Д</span></div>
-        <div class="doc__b"><h3>Детский стоматолог</h3><div class="role">Детский приём</div><p>Находит подход к маленьким пациентам: лечение проходит в игре и без стресса, чтобы визиты к стоматологу не пугали в будущем.</p></div>
+        <div class="doc__img doc__ph"><span>Д</span></div>
+        <h3 class="doc__name">Детский стоматолог</h3>
+        <div class="doc__role">Детский приём</div>
+        <p class="doc__desc">Находит подход к маленьким пациентам: лечение проходит в игре и без стресса, чтобы визиты к стоматологу не пугали в будущем.</p>
       </article>
       <article class="doc rv rv-d2">
-        <div class="doc__ph doc__ph--ph"><span class="mono">П</span></div>
-        <div class="doc__b"><h3>Ортопед</h3><div class="role">Протезирование</div><p>Коронки, виниры и протезы для восстановления эстетики и жевания. Тщательно подбирает форму и цвет под естественную улыбку.</p></div>
+        <div class="doc__img doc__ph"><span>П</span></div>
+        <h3 class="doc__name">Ортопед</h3>
+        <div class="doc__role">Протезирование</div>
+        <p class="doc__desc">Коронки, виниры и протезы для восстановления эстетики и жевания. Тщательно подбирает форму и цвет под естественную улыбку.</p>
       </article>
     </div>
-    <div class="disclaimer rv" style="margin-top:clamp(38px,5vw,60px)">
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8h.01M11 12h1v4h1"/></svg>
+    <div class="note-box rv" style="margin-top:clamp(40px,5vw,60px)">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8h.01M11 12h1v4h1"/></svg>
       <div>Карточки показывают специализации команды для оформления сайта. При запуске здесь размещаются фотографии, ФИО и сертификаты конкретных врачей клиники.</div>
     </div>
   </div>
 </section>
 
-<section class="section section--tight">
-  <div class="cta-band rv">
-    <span class="lbl lbl--c">Подберём врача</span>
-    <h2>Выберем специалиста <em>под вас</em></h2>
-    <p>Оставьте заявку — администратор подберёт специалиста и удобное время. Первичная консультация бесплатна.</p>
-    <a href="index.html#book" class="btn btn--light">Записаться на приём <span class="btn__ar">↗</span></a>
+<section class="section section--wash">
+  <div class="container cta-band">
+    <span class="eyebrow rv">Подберём врача</span>
+    <h2 class="h rv">Выберем специалиста <span class="accent">под вас</span></h2>
+    <p class="sub rv">Оставьте заявку — администратор подберёт специалиста и удобное время. Первичная консультация бесплатна.</p>
+    <div class="actions actions--center rv rv-d1">
+      <a href="index.html#book" class="btn btn--fill">Записаться на приём</a>
+      <a href="uslugi.html" class="btn btn--outline">Услуги и цены</a>
+    </div>
   </div>
 </section>
 
 <footer class="footer">
   <div class="footer__grid">
     <div>
-      <div class="footer__logo">Смайл&nbsp;<em>Центр</em></div>
+      <div class="footer__logo">Смайл Центр</div>
       <p>Стоматология в Краснодаре: имплантация, ортодонтия, протезирование, эстетика и детский приём. Лечим спокойно, честно и без боли.</p>
     </div>
     <div>
@@ -108,8 +132,6 @@
     <span class="sig">сайт — Urartu AI Studio</span>
   </div>
 </footer>
-
-<a class="fab__btn" href="index.html#book" style="position:fixed;right:20px;bottom:20px;z-index:850"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2v4M16 2v4M3 10h18M5 6h14a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2Z"/></svg><span>Записаться</span></a>
 
 <div class="cookie">
   <p>Мы используем cookie, чтобы сайт работал корректно и был удобнее. Подробнее — в <a href="politika.html">Политике конфиденциальности</a>.</p>

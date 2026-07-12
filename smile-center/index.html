@@ -7,187 +7,163 @@
 <meta name="description" content="Смайл Центр — стоматология в Краснодаре: имплантация, ортодонтия и брекеты, протезирование, виниры и отбеливание, гигиена, детская стоматология. Лечение без боли. Запишитесь на приём — первичная консультация бесплатно.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<div class="cursor"></div>
 
 <nav class="nav">
-  <button class="nav__burger" aria-label="меню"><span></span><span></span><span></span></button>
-  <div class="nav__grp nav__grp--l">
-    <a href="uslugi.html">Услуги</a>
-    <a href="vrachi.html">Врачи</a>
+  <div class="nav__inner">
+    <a class="nav__logo" href="index.html">Смайл Центр</a>
+    <div class="nav__links">
+      <a class="nav__link" href="uslugi.html">Услуги</a>
+      <a class="nav__link" href="vrachi.html">Врачи</a>
+      <a class="nav__link" href="o-klinike.html">О клинике</a>
+      <a class="nav__link" href="kontakty.html">Контакты</a>
+    </div>
+    <div class="nav__right">
+      <a class="btn btn--fill btn--sm" href="#book">Записаться</a>
+      <button class="nav__burger" aria-label="меню" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
   </div>
-  <a class="nav__logo" href="index.html">Смайл&nbsp;<em>Центр</em></a>
-  <div class="nav__grp nav__grp--r">
-    <a href="o-klinike.html">О клинике</a>
-    <a href="kontakty.html">Контакты</a>
-    <a href="#book" class="nav__cta">Записаться</a>
+  <div class="nav__menu">
+    <a class="nav__link" href="uslugi.html">Услуги</a>
+    <a class="nav__link" href="vrachi.html">Врачи</a>
+    <a class="nav__link" href="o-klinike.html">О клинике</a>
+    <a class="nav__link" href="kontakty.html">Контакты</a>
   </div>
 </nav>
 
-<!-- ГЕРОЙ — светлый, кинематографичный -->
+<!-- PRODUCT HERO -->
 <header class="hero">
-  <div class="hero__top"><span class="lbl rv">Стоматология&nbsp;·&nbsp;Краснодар</span></div>
-  <h1 class="hero__title rv rv-d1"><span>Здоровая</span><span><em>улыбка</em></span></h1>
-  <div class="hero__sub">
-    <p class="rv rv-d2">Спокойная клиника в Краснодаре, где лечат без боли и суеты. Внимательные врачи, современное оборудование и честный план лечения — от первой консультации до результата.</p>
-    <a href="#book" class="btn rv rv-d2">Записаться <span class="btn__ar">↗</span></a>
+  <div class="container">
+    <span class="eyebrow hero__eyebrow rv">Стоматология · Краснодар</span>
+    <h1 class="display hero__title rv rv-d1">Здоровая улыбка</h1>
+    <p class="lead hero__tagline rv rv-d1">Стоматология в Краснодаре. Спокойно, бережно, без боли.</p>
+    <div class="actions actions--center hero__actions rv rv-d2">
+      <a href="#book" class="btn btn--fill">Записаться</a>
+      <a href="uslugi.html" class="btn btn--outline">Услуги и цены</a>
+    </div>
   </div>
-  <figure class="hero__media rv-img rv-d3"><img src="img/hero2.jpg" alt="Сияющая улыбка пациентки клиники Смайл Центр на светлом фоне" fetchpriority="high"></figure>
-  <div class="hero__meta rv rv-d4">
-    <a href="tel:+79002323334">+7 900 232-33-34</a>
-    <span>Первичная консультация — бесплатно</span>
-    <span>Ежедневно&nbsp;09:00&nbsp;—&nbsp;21:00</span>
+  <figure class="hero__media rv-img rv-d2"><img src="img/hero2.jpg" alt="Улыбающаяся пациентка клиники Смайл Центр на светлом фоне" fetchpriority="high"></figure>
+  <div class="container">
+    <div class="hero__meta rv">
+      <a href="tel:+79002323334">+7 900 232-33-34</a>
+      <span>Первичная консультация — бесплатно</span>
+      <span>Ежедневно 09:00 — 21:00</span>
+    </div>
   </div>
 </header>
 
-<!-- БЕГУЩАЯ СТРОКА -->
-<div class="ticker" aria-hidden="true">
-  <div class="ticker__track">
-    <span>Имплантация</span><span>Брекеты</span><span>Протезирование</span><span>Виниры</span><span>Отбеливание</span><span>Гигиена</span><span>Детская</span><span>Без боли</span><span>Имплантация</span><span>Брекеты</span><span>Протезирование</span><span>Виниры</span><span>Отбеливание</span><span>Гигиена</span><span>Детская</span><span>Без боли</span>
-  </div>
-</div>
-
-<!-- СТАТИСТИКА -->
-<section class="section section--tight">
-  <div class="wrap">
-    <span class="lbl rv" style="margin-bottom:clamp(28px,4vw,50px);display:inline-flex">Коротко о нас</span>
-    <div class="stat-row rv">
-      <div class="stat"><b data-count="15" data-suffix="+">0</b><span>лет помогаем<br>улыбкам</span></div>
-      <div class="stat"><b data-count="5000" data-suffix="+">0</b><span>пациентов<br>доверили здоровье</span></div>
-      <div class="stat"><b data-count="8">0</b><span>врачей разных<br>направлений</span></div>
-      <div class="stat"><b data-count="4.9">0</b><span>средняя оценка<br>по отзывам</span></div>
+<!-- TYPOGRAPHY-CTA · ИМПЛАНТАЦИЯ -->
+<section class="section section--wash">
+  <div class="container type-cta">
+    <span class="eyebrow rv">Восстановление зубов</span>
+    <h2 class="display rv rv-d1" style="margin-top:14px">Имплантация <span class="accent">под ключ</span></h2>
+    <p class="sub rv rv-d1">Один титановый корень возвращает уверенную улыбку и полноценное жевание. Планируем по КТ, ставим по протоколу, отвечаем за результат.</p>
+    <div class="actions actions--center rv rv-d2" style="margin-top:32px">
+      <a href="#book" class="btn btn--fill">Записаться</a>
+      <a href="uslugi.html" class="btn btn--outline">Об имплантации</a>
     </div>
-    <p class="stat-note">Показатели приведены как ориентир для оформления — при запуске клиника указывает свои фактические данные.</p>
+    <figure class="product rv-img rv-d1"><img src="img/object.jpg" alt="Дентальный имплант с коронкой крупным планом — имплантация в Смайл Центр"></figure>
   </div>
 </section>
 
-<!-- УСЛУГИ — редакторский список -->
-<section class="section section--alt" id="uslugi">
-  <div class="wrap">
+<!-- SERVICE CARD GRID -->
+<section class="section" id="uslugi">
+  <div class="container">
     <div class="sec-head">
-      <div>
-        <span class="lbl rv">Направления</span>
-        <h2 class="rv">Всё для здоровья<br>полости рта</h2>
+      <div class="sec-head__t">
+        <span class="eyebrow rv">Направления</span>
+        <h2 class="h rv">Всё для здоровья полости рта</h2>
       </div>
-      <a href="uslugi.html" class="btn btn--ghost rv">Все услуги и цены</a>
+      <a href="uslugi.html" class="btn btn--ghost rv">Все услуги и цены <span class="chev">›</span></a>
     </div>
-    <div class="svc-list">
-      <a class="svc-row rv" href="uslugi.html"><span class="svc-row__num">01</span>
-        <div class="svc-row__main"><h3 class="svc-row__name">Имплантация</h3><p class="svc-row__desc">Восстановление зубов имплантами — надёжная опора без обточки соседних зубов.</p></div>
-        <span class="svc-row__go">↗</span>
+    <div class="grid grid--3">
+      <a class="tile tile--photo rv" href="uslugi.html">
+        <img src="img/smile2.jpg" alt="Ровные белые зубы крупным планом">
+        <div class="tile__body"><div class="tile__label">Эстетика</div><div class="tile__name">Виниры и отбеливание</div></div>
       </a>
-      <a class="svc-row rv" href="uslugi.html"><span class="svc-row__num">02</span>
-        <div class="svc-row__main"><h3 class="svc-row__name">Ортодонтия</h3><p class="svc-row__desc">Брекет-системы и прозрачные элайнеры — ровный прикус в комфортном темпе.</p></div>
-        <span class="svc-row__go">↗</span>
+      <a class="tile tile--text rv rv-d1" href="uslugi.html">
+        <div class="tile__body"><div class="tile__label">Имплантация</div><div class="tile__name">Импланты</div><p class="tile__desc">Надёжная опора без обточки соседних зубов — по протоколу и с гарантией.</p><div class="tile__foot"><span class="btn btn--ghost">Подробнее <span class="chev">›</span></span></div></div>
       </a>
-      <a class="svc-row rv" href="uslugi.html"><span class="svc-row__num">03</span>
-        <div class="svc-row__main"><h3 class="svc-row__name">Протезирование</h3><p class="svc-row__desc">Коронки, мосты и съёмные протезы — эстетика и полноценное жевание.</p></div>
-        <span class="svc-row__go">↗</span>
+      <a class="tile tile--text rv rv-d2" href="uslugi.html">
+        <div class="tile__body"><div class="tile__label">Ортодонтия</div><div class="tile__name">Брекеты и элайнеры</div><p class="tile__desc">Ровный прикус у детей и взрослых в комфортном темпе.</p><div class="tile__foot"><span class="btn btn--ghost">Подробнее <span class="chev">›</span></span></div></div>
       </a>
-      <a class="svc-row rv" href="uslugi.html"><span class="svc-row__num">04</span>
-        <div class="svc-row__main"><h3 class="svc-row__name">Эстетика и виниры</h3><p class="svc-row__desc">Отбеливание и виниры — ровная, светлая улыбка, которой хочется делиться.</p></div>
-        <span class="svc-row__go">↗</span>
+      <a class="tile tile--photo rv" href="uslugi.html">
+        <img src="img/interior2.jpg" alt="Светлый чистый кабинет клиники Смайл Центр">
+        <div class="tile__body"><div class="tile__label">Профилактика</div><div class="tile__name">Профессиональная гигиена</div></div>
       </a>
-      <a class="svc-row rv" href="uslugi.html"><span class="svc-row__num">05</span>
-        <div class="svc-row__main"><h3 class="svc-row__name">Гигиена</h3><p class="svc-row__desc">Профессиональная чистка и Air Flow — профилактика кариеса и свежее дыхание.</p></div>
-        <span class="svc-row__go">↗</span>
+      <a class="tile tile--text rv rv-d1" href="uslugi.html">
+        <div class="tile__body"><div class="tile__label">Протезирование</div><div class="tile__name">Коронки и протезы</div><p class="tile__desc">Эстетика и полноценное жевание — от коронки до полного ряда.</p><div class="tile__foot"><span class="btn btn--ghost">Подробнее <span class="chev">›</span></span></div></div>
       </a>
-      <a class="svc-row rv" href="uslugi.html"><span class="svc-row__num">06</span>
-        <div class="svc-row__main"><h3 class="svc-row__name">Детская стоматология</h3><p class="svc-row__desc">Лечение в игре и без страха — бережный подход к самым маленьким пациентам.</p></div>
-        <span class="svc-row__go">↗</span>
+      <a class="tile tile--text rv rv-d2" href="uslugi.html">
+        <div class="tile__body"><div class="tile__label">Дети</div><div class="tile__name">Детская стоматология</div><p class="tile__desc">Лечение в игре и без страха — бережно к самым маленьким.</p><div class="tile__foot"><span class="btn btn--ghost">Подробнее <span class="chev">›</span></span></div></div>
       </a>
-      <a class="svc-row rv" href="uslugi.html"><span class="svc-row__num">07</span>
-        <div class="svc-row__main"><h3 class="svc-row__name">Лечение кариеса</h3><p class="svc-row__desc">Лечение под увеличением с сохранением здоровых тканей — аккуратно и надолго.</p></div>
-        <span class="svc-row__go">↗</span>
+      <a class="tile tile--text rv" href="uslugi.html">
+        <div class="tile__body"><div class="tile__label">Терапия</div><div class="tile__name">Лечение кариеса</div><p class="tile__desc">Лечение под увеличением с сохранением здоровых тканей.</p><div class="tile__foot"><span class="btn btn--ghost">Подробнее <span class="chev">›</span></span></div></div>
       </a>
-      <a class="svc-row rv" href="uslugi.html"><span class="svc-row__num">08</span>
-        <div class="svc-row__main"><h3 class="svc-row__name">Хирургия и удаление</h3><p class="svc-row__desc">Удаление и хирургия, в том числе зубов мудрости — под надёжной анестезией.</p></div>
-        <span class="svc-row__go">↗</span>
+      <a class="tile tile--text rv rv-d1" href="uslugi.html">
+        <div class="tile__body"><div class="tile__label">Хирургия</div><div class="tile__name">Удаление зубов</div><p class="tile__desc">Удаление и малая хирургия под надёжной анестезией.</p><div class="tile__foot"><span class="btn btn--ghost">Подробнее <span class="chev">›</span></span></div></div>
       </a>
     </div>
   </div>
 </section>
 
-<!-- МОМЕНТ-ЛУНА · ИМПЛАНТАЦИЯ -->
-<section class="moon">
-  <div class="moon__media rv-img"><img src="img/object.jpg" alt="Дентальный имплант в драматичном свете — восстановление зуба в клинике Смайл Центр"></div>
-  <div class="moon__inner">
-    <div>
-      <span class="lbl rv">Момент, который меняет всё</span>
-      <h2 class="rv rv-d1">Имплан<em>тация</em></h2>
+<!-- FEATURE BANNER · О КЛИНИКЕ -->
+<section class="section section--wash">
+  <div class="container banner">
+    <span class="eyebrow rv">О клинике</span>
+    <h2 class="h-lg rv rv-d1" style="margin-top:14px">Клиника, куда приятно приходить</h2>
+    <p class="sub rv rv-d1" style="max-width:52ch;margin:18px auto 0">Мягкий свет, тишина, дерево и воздух — и врачи, которые никуда не спешат. Мы построили пространство вокруг простой идеи: к стоматологу можно приходить без тревоги.</p>
+    <div class="actions actions--center rv rv-d2" style="margin-top:30px">
+      <a href="o-klinike.html" class="btn btn--outline">Подробнее о клинике</a>
     </div>
-    <div class="moon__foot">
-      <p class="rv rv-d1">Один титановый корень возвращает то, что кажется потерянным навсегда — уверенную улыбку и полноценное жевание. Планируем по КТ, ставим по протоколу, отвечаем за результат.</p>
-      <a href="uslugi.html" class="btn btn--light rv rv-d2">Об имплантации <span class="btn__ar">↗</span></a>
-    </div>
-  </div>
-</section>
-
-<!-- О КЛИНИКЕ — бан -->
-<section class="section">
-  <div class="split split--wide-media">
-    <figure class="split__media split__media--wide rv-img"><img src="img/interior2.jpg" alt="Светлый интерьер клиники Смайл Центр — белый и дуб"></figure>
-    <div>
-      <span class="lbl rv">О клинике</span>
-      <h2 class="rv">Клиника, куда<br>приятно приходить</h2>
-      <p class="lead rv">Мы построили пространство вокруг простой идеи: к стоматологу можно приходить без тревоги. Мягкий свет, тишина, дерево и воздух — и врачи, которые никуда не спешат.</p>
-      <ul class="feat-list">
-        <li class="rv rv-d1"><span class="fi">01</span><div><b>Лечение без боли</b><p>Современная анестезия и седация — комфорт даже при сложных вмешательствах.</p></div></li>
-        <li class="rv rv-d2"><span class="fi">02</span><div><b>Честный план и смета</b><p>Показываем варианты и стоимость до начала — без навязанных процедур.</p></div></li>
-        <li class="rv rv-d3"><span class="fi">03</span><div><b>Гарантия на работы</b><p>Отвечаем за результат и ведём пациента после лечения.</p></div></li>
-      </ul>
-      <div style="margin-top:42px" class="rv"><a href="o-klinike.html" class="btn btn--ghost">Подробнее о клинике</a></div>
-    </div>
-  </div>
-</section>
-
-<!-- КИНЕМАТОГРАФИЧНЫЙ БАН · ЭСТЕТИКА -->
-<section class="band">
-  <div class="band__media rv-img"><img src="img/smile2.jpg" alt="Макро-план ровных белых зубов — эстетика и отбеливание в Смайл Центр"></div>
-  <div class="band__inner">
-    <span class="lbl rv">Эстетика · виниры · отбеливание</span>
-    <h2 class="rv rv-d1">Улыбка, которой<br>хочется делиться</h2>
+    <figure class="bleed rv-img"><img src="img/lounge.jpg" alt="Спокойная светлая зона ожидания клиники Смайл Центр"></figure>
   </div>
 </section>
 
 <!-- ВРАЧИ -->
-<section class="section section--alt">
-  <div class="wrap">
+<section class="section">
+  <div class="container">
     <div class="sec-head">
-      <div>
-        <span class="lbl rv">Команда</span>
-        <h2 class="rv">Врачи, которым<br>доверяют</h2>
+      <div class="sec-head__t">
+        <span class="eyebrow rv">Команда</span>
+        <h2 class="h rv">Врачи, которым доверяют</h2>
       </div>
-      <a href="vrachi.html" class="btn btn--ghost rv">Вся команда</a>
+      <a href="vrachi.html" class="btn btn--ghost rv">Вся команда <span class="chev">›</span></a>
     </div>
-    <div class="docs-grid">
+    <div class="docs">
       <article class="doc rv">
-        <div class="doc__ph rv-img"><span class="tag">Терапевт</span><img src="img/doctor2.jpg" alt="Ведущий стоматолог клиники Смайл Центр"></div>
-        <div class="doc__b"><h3>Ведущий стоматолог</h3><div class="role">Терапия · микроскоп</div><p>Аккуратное лечение кариеса и восстановление зубов с сохранением здоровых тканей.</p></div>
+        <div class="doc__img rv-img"><img src="img/doctor2.jpg" alt="Ведущий стоматолог-терапевт клиники Смайл Центр"></div>
+        <h3 class="doc__name">Ведущий стоматолог</h3>
+        <div class="doc__role">Терапия · микроскоп</div>
+        <p class="doc__desc">Аккуратное лечение кариеса и восстановление зубов с сохранением здоровых тканей.</p>
       </article>
       <article class="doc rv rv-d1">
-        <div class="doc__ph doc__ph--ph"><span class="mono">И</span></div>
-        <div class="doc__b"><h3>Имплантолог</h3><div class="role">Хирургия · имплантация</div><p>Установка имплантов и восстановление отсутствующих зубов по чёткому протоколу.</p></div>
+        <div class="doc__img doc__ph"><span>И</span></div>
+        <h3 class="doc__name">Имплантолог</h3>
+        <div class="doc__role">Хирургия · имплантация</div>
+        <p class="doc__desc">Установка имплантов и восстановление зубов по чёткому протоколу.</p>
       </article>
       <article class="doc rv rv-d2">
-        <div class="doc__ph doc__ph--ph"><span class="mono">О</span></div>
-        <div class="doc__b"><h3>Ортодонт</h3><div class="role">Брекеты · элайнеры</div><p>Исправление прикуса у детей и взрослых — от диагностики до ровной улыбки.</p></div>
+        <div class="doc__img doc__ph"><span>О</span></div>
+        <h3 class="doc__name">Ортодонт</h3>
+        <div class="doc__role">Брекеты · элайнеры</div>
+        <p class="doc__desc">Исправление прикуса у детей и взрослых — от диагностики до ровной улыбки.</p>
       </article>
     </div>
   </div>
 </section>
 
 <!-- ОТЗЫВЫ -->
-<section class="section reviews">
-  <div class="wrap">
-    <span class="lbl lbl--c rv" style="display:flex;margin-bottom:clamp(40px,6vw,72px)">Отзывы пациентов</span>
-    <div class="review-slider">
-      <blockquote class="review"><div class="stars">★★★★★</div><p>Впервые лечила зубы совсем без страха</p><cite>Марина · <span>Яндекс Карты</span></cite></blockquote>
-      <blockquote class="review"><div class="stars">★★★★★</div><p>Импланты — аккуратно, без боли, с гарантией</p><cite>Дмитрий · <span>Отзыв пациента</span></cite></blockquote>
-      <blockquote class="review"><div class="stars">★★★★★</div><p>Ребёнок теперь ходит к врачу с удовольствием</p><cite>Ольга · <span>Яндекс Карты</span></cite></blockquote>
+<section class="section section--wash reviews">
+  <div class="container">
+    <span class="eyebrow rv" style="margin-bottom:clamp(36px,5vw,60px);display:inline-block">Отзывы пациентов</span>
+    <div class="review-stage">
+      <blockquote class="review"><div class="review__stars">★★★★★</div><p class="review__q">Впервые лечила зубы совсем без страха</p><cite class="review__cite"><b>Марина</b> · Яндекс Карты</cite></blockquote>
+      <blockquote class="review"><div class="review__stars">★★★★★</div><p class="review__q">Импланты — аккуратно, без боли, с гарантией</p><cite class="review__cite"><b>Дмитрий</b> · Отзыв пациента</cite></blockquote>
+      <blockquote class="review"><div class="review__stars">★★★★★</div><p class="review__q">Ребёнок теперь ходит к врачу с удовольствием</p><cite class="review__cite"><b>Ольга</b> · Яндекс Карты</cite></blockquote>
     </div>
     <div class="review-dots"><button aria-label="отзыв 1"></button><button aria-label="отзыв 2"></button><button aria-label="отзыв 3"></button></div>
   </div>
@@ -195,78 +171,77 @@
 
 <!-- FAQ -->
 <section class="section">
-  <div class="wrap wrap--narrow">
-    <div class="sec-head" style="justify-content:flex-start;margin-bottom:clamp(30px,4vw,56px)">
-      <div>
-        <span class="lbl rv">Частые вопросы</span>
-        <h2 class="rv">Отвечаем честно</h2>
-      </div>
+  <div class="container">
+    <div class="center" style="margin-bottom:clamp(32px,4vw,56px)">
+      <span class="eyebrow rv">Частые вопросы</span>
+      <h2 class="h rv" style="margin-top:12px">Отвечаем честно</h2>
     </div>
     <div class="faq rv">
-      <div class="faq__i"><button class="faq__q">Сколько стоит лечение?</button><div class="faq__a"><p>Точную стоимость называем после осмотра и диагностики — она зависит от состояния зубов и выбранного плана. Первичная консультация бесплатна: расскажем варианты и составим смету заранее, без скрытых доплат.</p></div></div>
-      <div class="faq__i"><button class="faq__q">Это правда не больно?</button><div class="faq__a"><p>Да. Мы используем современную анестезию, а для тревожных пациентов и объёмных вмешательств доступна седация. Перед процедурой всегда убеждаемся, что вам комфортно.</p></div></div>
-      <div class="faq__i"><button class="faq__q">Можно прийти с ребёнком?</button><div class="faq__a"><p>Конечно. У нас есть детский приём: врач находит подход к ребёнку, лечение проходит бережно и без стресса, чтобы визиты к стоматологу не пугали в будущем.</p></div></div>
-      <div class="faq__i"><button class="faq__q">Даёте гарантию на работы?</button><div class="faq__a"><p>Да, мы предоставляем гарантию на выполненные работы и наблюдаем пациента после лечения. Условия гарантии обсуждаются на консультации и фиксируются в договоре.</p></div></div>
-      <div class="faq__i"><button class="faq__q">Как записаться на приём?</button><div class="faq__a"><p>Заполните форму записи на этой странице или позвоните по телефону +7 900 232-33-34. Мы перезвоним, уточним удобное время и подберём врача под ваш запрос.</p></div></div>
+      <div class="faq__item"><button class="faq__q" aria-expanded="false">Сколько стоит лечение?<span class="faq__ico"></span></button><div class="faq__a"><p>Точную стоимость называем после осмотра и диагностики — она зависит от состояния зубов и выбранного плана. Первичная консультация бесплатна: расскажем варианты и составим смету заранее, без скрытых доплат.</p></div></div>
+      <div class="faq__item"><button class="faq__q" aria-expanded="false">Это правда не больно?<span class="faq__ico"></span></button><div class="faq__a"><p>Да. Мы используем современную анестезию, а для тревожных пациентов и объёмных вмешательств доступна седация. Перед процедурой всегда убеждаемся, что вам комфортно.</p></div></div>
+      <div class="faq__item"><button class="faq__q" aria-expanded="false">Можно прийти с ребёнком?<span class="faq__ico"></span></button><div class="faq__a"><p>Конечно. У нас есть детский приём: врач находит подход к ребёнку, лечение проходит бережно и без стресса, чтобы визиты к стоматологу не пугали в будущем.</p></div></div>
+      <div class="faq__item"><button class="faq__q" aria-expanded="false">Даёте гарантию на работы?<span class="faq__ico"></span></button><div class="faq__a"><p>Да, мы предоставляем гарантию на выполненные работы и наблюдаем пациента после лечения. Условия гарантии обсуждаются на консультации и фиксируются в договоре.</p></div></div>
+      <div class="faq__item"><button class="faq__q" aria-expanded="false">Как записаться на приём?<span class="faq__ico"></span></button><div class="faq__a"><p>Заполните форму записи на этой странице или позвоните по телефону +7 900 232-33-34. Мы перезвоним, уточним удобное время и подберём врача под ваш запрос.</p></div></div>
     </div>
   </div>
 </section>
 
 <!-- БЛОК ЗАПИСИ (152-ФЗ) -->
-<section class="section section--alt" id="book">
-  <div class="book rv">
-    <div class="book__aside">
-      <span class="lbl">Запись на приём</span>
-      <h2>Оставьте заявку — мы перезвоним</h2>
-      <p class="intro">Подберём удобное время и врача. Первичная консультация — бесплатно.</p>
-      <div class="b-contact">
-        <a href="tel:+79002323334"><span class="ci"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg></span><span>+7 900 232-33-34<small>Ежедневно 09:00–21:00</small></span></a>
-        <div><span class="ci"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg></span><span>Краснодар<small>точный адрес и схема — по телефону</small></span></div>
+<section class="section section--wash" id="book">
+  <div class="container">
+    <div class="book">
+      <div class="book__aside">
+        <span class="eyebrow rv">Запись на приём</span>
+        <h2 class="h rv" style="margin-top:12px">Оставьте заявку — мы перезвоним</h2>
+        <p class="lead rv">Подберём удобное время и врача. Первичная консультация — бесплатно.</p>
+        <div class="book__contacts rv">
+          <a href="tel:+79002323334"><span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg></span><span><b>+7 900 232-33-34</b><small>Ежедневно 09:00–21:00</small></span></a>
+          <div><span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg></span><span><b>Краснодар</b><small>точный адрес и схема — по телефону</small></span></div>
+        </div>
       </div>
-      <div class="deco"></div>
-    </div>
-    <div class="book__body">
-      <form class="book__form" data-book novalidate>
-        <div class="field">
-          <label for="name">Ваше имя <span class="req">*</span></label>
-          <input type="text" id="name" name="name" placeholder="Как к вам обращаться" required>
-        </div>
-        <div class="field">
-          <label for="phone">Телефон <span class="req">*</span></label>
-          <input type="tel" id="phone" name="phone" placeholder="+7 (___) ___-__-__" required>
-        </div>
-        <div class="field-row">
+      <div class="book__body rv">
+        <form class="form" data-book novalidate>
           <div class="field">
-            <label for="svc">Услуга</label>
-            <select id="svc" name="service">
-              <option value="">Выберите направление</option>
-              <option>Консультация</option>
-              <option>Имплантация</option>
-              <option>Ортодонтия / брекеты</option>
-              <option>Протезирование</option>
-              <option>Виниры / отбеливание</option>
-              <option>Гигиена</option>
-              <option>Детская стоматология</option>
-              <option>Лечение кариеса</option>
-              <option>Удаление</option>
-            </select>
+            <label for="name">Ваше имя <span class="req">*</span></label>
+            <input type="text" id="name" name="name" placeholder="Как к вам обращаться" required>
           </div>
           <div class="field">
-            <label for="date">Желаемая дата</label>
-            <input type="date" id="date" name="date">
+            <label for="phone">Телефон <span class="req">*</span></label>
+            <input type="tel" id="phone" name="phone" placeholder="+7 (___) ___-__-__" required>
           </div>
+          <div class="field-row">
+            <div class="field">
+              <label for="svc">Услуга</label>
+              <select id="svc" name="service">
+                <option value="">Выберите направление</option>
+                <option>Консультация</option>
+                <option>Имплантация</option>
+                <option>Ортодонтия / брекеты</option>
+                <option>Протезирование</option>
+                <option>Виниры / отбеливание</option>
+                <option>Гигиена</option>
+                <option>Детская стоматология</option>
+                <option>Лечение кариеса</option>
+                <option>Удаление</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="date">Желаемая дата</label>
+              <input type="date" id="date" name="date">
+            </div>
+          </div>
+          <label class="consent">
+            <input type="checkbox" name="consent" required>
+            <span>Я даю согласие на обработку персональных данных и принимаю <a href="politika.html" target="_blank" rel="noopener">Политику конфиденциальности</a>.</span>
+          </label>
+          <button type="submit" class="btn btn--fill" disabled>Записаться на приём</button>
+          <p class="form-note">Нажимая кнопку, вы соглашаетесь на обработку персональных данных. Форма демонстрационная — данные не передаются и не сохраняются.</p>
+        </form>
+        <div class="form-ok">
+          <div class="ok-ico"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></div>
+          <h3>Спасибо за заявку!</h3>
+          <p>Мы перезвоним в течение 15 минут и подберём удобное время приёма.</p>
         </div>
-        <label class="consent">
-          <input type="checkbox" name="consent" required>
-          <span>Я даю согласие на обработку персональных данных и принимаю <a href="politika.html" target="_blank" rel="noopener">Политику конфиденциальности</a>.</span>
-        </label>
-        <button type="submit" class="btn" disabled>Записаться на приём</button>
-        <p class="form-note">Нажимая кнопку, вы соглашаетесь на обработку персональных данных. Форма демонстрационная — данные не передаются и не сохраняются.</p>
-      </form>
-      <div class="form-ok">
-        <div class="ok-ico"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></div>
-        <h3>Спасибо за заявку!</h3>
-        <p>Мы перезвоним в течение 15 минут и подберём удобное время приёма.</p>
       </div>
     </div>
   </div>
@@ -276,7 +251,7 @@
 <footer class="footer">
   <div class="footer__grid">
     <div>
-      <div class="footer__logo">Смайл&nbsp;<em>Центр</em></div>
+      <div class="footer__logo">Смайл Центр</div>
       <p>Стоматология в Краснодаре: имплантация, ортодонтия, протезирование, эстетика и детский приём. Лечим спокойно, честно и без боли.</p>
     </div>
     <div>
@@ -304,8 +279,6 @@
     <span class="sig">сайт — Urartu AI Studio</span>
   </div>
 </footer>
-
-<a class="fab__btn" href="#book" style="position:fixed;right:20px;bottom:20px;z-index:850"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2v4M16 2v4M3 10h18M5 6h14a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2Z"/></svg><span>Записаться</span></a>
 
 <!-- COOKIE-БАННЕР -->
 <div class="cookie">

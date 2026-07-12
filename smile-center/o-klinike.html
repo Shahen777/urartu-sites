@@ -7,102 +7,92 @@
 <meta name="description" content="О стоматологии Смайл Центр в Краснодаре: спокойные кабинеты, современное оборудование, лечение без боли и седация, гарантия на работы. Клиника, куда приятно приходить.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<div class="cursor"></div>
 
 <nav class="nav">
-  <button class="nav__burger" aria-label="меню"><span></span><span></span><span></span></button>
-  <div class="nav__grp nav__grp--l">
-    <a href="uslugi.html">Услуги</a>
-    <a href="vrachi.html">Врачи</a>
+  <div class="nav__inner">
+    <a class="nav__logo" href="index.html">Смайл Центр</a>
+    <div class="nav__links">
+      <a class="nav__link" href="uslugi.html">Услуги</a>
+      <a class="nav__link" href="vrachi.html">Врачи</a>
+      <a class="nav__link is-active" href="o-klinike.html">О клинике</a>
+      <a class="nav__link" href="kontakty.html">Контакты</a>
+    </div>
+    <div class="nav__right">
+      <a class="btn btn--fill btn--sm" href="index.html#book">Записаться</a>
+      <button class="nav__burger" aria-label="меню" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
   </div>
-  <a class="nav__logo" href="index.html">Смайл&nbsp;<em>Центр</em></a>
-  <div class="nav__grp nav__grp--r">
-    <a href="o-klinike.html" class="is-active">О клинике</a>
-    <a href="kontakty.html">Контакты</a>
-    <a href="index.html#book" class="nav__cta">Записаться</a>
+  <div class="nav__menu">
+    <a class="nav__link" href="uslugi.html">Услуги</a>
+    <a class="nav__link" href="vrachi.html">Врачи</a>
+    <a class="nav__link" href="o-klinike.html">О клинике</a>
+    <a class="nav__link" href="kontakty.html">Контакты</a>
   </div>
 </nav>
 
 <header class="page-hero">
-  <span class="lbl crumbs">Смайл Центр · О клинике</span>
-  <h1>Клиника, куда<br><em>приятно</em> приходить</h1>
-  <p>Мы создали пространство, где нет привычной тревоги перед стоматологом: мягкий свет, дерево, спокойные кабинеты и врачи, которые никуда не спешат.</p>
+  <div class="container">
+    <span class="eyebrow rv">Смайл Центр · О клинике</span>
+    <h1 class="display rv rv-d1" style="margin-top:12px">Клиника, куда <span class="accent">приятно</span> приходить</h1>
+    <p class="sub rv rv-d1">Мы создали пространство, где нет привычной тревоги перед стоматологом: мягкий свет, дерево, спокойные кабинеты и врачи, которые никуда не спешат.</p>
+  </div>
 </header>
 
-<section class="section section--tight">
-  <div class="split">
-    <div>
-      <span class="lbl rv">Наш подход</span>
-      <h2 class="rv">Спокойствие<br>в деталях</h2>
-      <p class="lead rv">Атмосфера лечит не меньше, чем врач. Поэтому в клинике всё продумано ради вашего комфорта — от светлой зоны ожидания до кабинетов с естественным светом.</p>
-      <p class="lead rv">Мы работаем без спешки: у каждого приёма достаточно времени, чтобы всё объяснить, показать и согласовать. Вы всегда понимаете, что и зачем происходит.</p>
-      <div style="margin-top:36px" class="rv"><a href="index.html#book" class="btn">Записаться на приём</a></div>
+<!-- Наш подход -->
+<section class="section section--wash">
+  <div class="container type-cta">
+    <span class="eyebrow rv">Наш подход</span>
+    <h2 class="h-lg rv rv-d1" style="margin-top:12px">Спокойствие в деталях</h2>
+    <p class="sub rv rv-d1" style="max-width:56ch;margin:18px auto 0">Атмосфера лечит не меньше, чем врач. Всё продумано ради вашего комфорта — от светлой зоны ожидания до кабинетов с естественным светом. Мы работаем без спешки: у каждого приёма достаточно времени, чтобы всё объяснить и согласовать.</p>
+    <figure class="bleed rv-img"><img src="img/interior2.jpg" alt="Светлый интерьер клиники Смайл Центр — белый и дуб"></figure>
+  </div>
+</section>
+
+<!-- Принципы -->
+<section class="section">
+  <div class="container">
+    <div class="center" style="margin-bottom:clamp(32px,4vw,56px)">
+      <span class="eyebrow rv">Принципы клиники</span>
+      <h2 class="h rv" style="margin-top:12px">Три вещи, на которых всё держится</h2>
     </div>
-    <figure class="split__media rv-img"><img src="img/interior2.jpg" alt="Светлый интерьер клиники Смайл Центр — белый и дуб"></figure>
+    <div class="grid grid--3">
+      <div class="tile tile--text rv"><div class="tile__body"><div class="tile__label">01</div><div class="tile__name">Лечение без боли</div><p class="tile__desc">Современная анестезия, а при необходимости — седация. Делаем всё, чтобы приём проходил спокойно, даже если раньше было страшно.</p></div></div>
+      <div class="tile tile--text rv rv-d1"><div class="tile__body"><div class="tile__label">02</div><div class="tile__name">Современное оборудование</div><p class="tile__desc">Точная диагностика, лечение с увеличением и цифровые технологии. Меньше ошибок, аккуратнее результат, бережнее к зубам.</p></div></div>
+      <div class="tile tile--text rv rv-d2"><div class="tile__body"><div class="tile__label">03</div><div class="tile__name">Гарантия на работы</div><p class="tile__desc">Отвечаем за результат и сопровождаем пациента после лечения. Условия гарантии фиксируем в договоре — прозрачно и честно.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- Оборудование / детали -->
+<section class="section section--wash">
+  <div class="container type-cta">
+    <span class="eyebrow rv">Внимание к деталям</span>
+    <h2 class="h-lg rv rv-d1" style="margin-top:12px">Каждый этап под контролем</h2>
+    <p class="sub rv rv-d1" style="max-width:56ch;margin:18px auto 0">Кабинеты оснащены современными установками, диагностика и лечение проходят с увеличением. Стерильность и безопасность — базовый стандарт: инструменты проходят полную обработку, а расходные материалы одноразовые. От первого осмотра до финальной работы мы фиксируем план и держим вас в курсе — без неожиданных доплат.</p>
+    <figure class="bleed rv-img"><img src="img/smile2.jpg" alt="Ровная светлая улыбка пациента клиники Смайл Центр"></figure>
   </div>
 </section>
 
 <section class="section">
-  <div class="split split--wide-media">
-    <figure class="split__media split__media--wide rv-img"><img src="img/object.jpg" alt="Дентальный имплант крупным планом в клинике Смайл Центр"></figure>
-    <div>
-      <span class="lbl rv">Оборудование</span>
-      <h2 class="rv">Современно<br>и точно</h2>
-      <p class="lead rv">Кабинеты оснащены современными установками, а диагностика и лечение проходят с увеличением — это позволяет действовать аккуратно и сохранять здоровые ткани зуба.</p>
-      <p class="lead rv">Стерильность и безопасность — базовый стандарт: инструменты проходят полную обработку, а расходные материалы одноразовые.</p>
+  <div class="container cta-band">
+    <span class="eyebrow rv">Знакомство</span>
+    <h2 class="h rv">Познакомьтесь <span class="accent">с клиникой</span></h2>
+    <p class="sub rv">Запишитесь на бесплатную консультацию — покажем клинику, ответим на вопросы и составим план лечения.</p>
+    <div class="actions actions--center rv rv-d1">
+      <a href="index.html#book" class="btn btn--fill">Записаться на приём</a>
+      <a href="kontakty.html" class="btn btn--outline">Контакты</a>
     </div>
-  </div>
-</section>
-
-<section class="section section--tight section--alt">
-  <div class="wrap">
-    <div class="sec-head" style="justify-content:flex-start">
-      <div>
-        <span class="lbl rv">Принципы клиники</span>
-        <h2 class="rv">Три вещи, на которых<br>всё держится</h2>
-      </div>
-    </div>
-    <div class="princ">
-      <div class="princ__c rv"><div class="n">01</div><h3>Лечение без боли</h3><p>Современная анестезия, а при необходимости — седация. Мы делаем всё, чтобы приём проходил спокойно, даже если раньше было страшно.</p></div>
-      <div class="princ__c rv rv-d1"><div class="n">02</div><h3>Современное оборудование</h3><p>Точная диагностика, лечение с увеличением и цифровые технологии. Меньше ошибок, аккуратнее результат, бережнее к вашим зубам.</p></div>
-      <div class="princ__c rv rv-d2"><div class="n">03</div><h3>Гарантия на работы</h3><p>Отвечаем за результат и сопровождаем пациента после лечения. Условия гарантии фиксируем в договоре — прозрачно и честно.</p></div>
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="split">
-    <div>
-      <span class="lbl rv">Внимание к деталям</span>
-      <h2 class="rv">Каждый этап<br>под контролем</h2>
-      <p class="lead rv">От первичного осмотра до финальной работы мы фиксируем план и держим вас в курсе. Никаких неожиданных доплат и решений «на ходу» — только согласованные шаги.</p>
-      <ul class="feat-list">
-        <li class="rv rv-d1"><span class="fi">01</span><div><b>План и смета заранее</b><p>Показываем варианты и стоимость до начала работ.</p></div></li>
-        <li class="rv rv-d2"><span class="fi">02</span><div><b>Достаточно времени на приём</b><p>Не торопим — успеваем всё объяснить и согласовать.</p></div></li>
-        <li class="rv rv-d3"><span class="fi">03</span><div><b>Стерильность как стандарт</b><p>Полная обработка инструментов и одноразовые материалы.</p></div></li>
-      </ul>
-    </div>
-    <figure class="split__media rv-img"><img src="img/smile2.jpg" alt="Макро-план ровных белых зубов пациента Смайл Центр"></figure>
-  </div>
-</section>
-
-<section class="section section--tight">
-  <div class="cta-band rv">
-    <span class="lbl lbl--c">Знакомство</span>
-    <h2>Познакомьтесь <em>с клиникой</em></h2>
-    <p>Запишитесь на бесплатную консультацию — покажем клинику, ответим на вопросы и составим план лечения.</p>
-    <a href="index.html#book" class="btn btn--light">Записаться на приём <span class="btn__ar">↗</span></a>
   </div>
 </section>
 
 <footer class="footer">
   <div class="footer__grid">
     <div>
-      <div class="footer__logo">Смайл&nbsp;<em>Центр</em></div>
+      <div class="footer__logo">Смайл Центр</div>
       <p>Стоматология в Краснодаре: имплантация, ортодонтия, протезирование, эстетика и детский приём. Лечим спокойно, честно и без боли.</p>
     </div>
     <div>
@@ -130,8 +120,6 @@
     <span class="sig">сайт — Urartu AI Studio</span>
   </div>
 </footer>
-
-<a class="fab__btn" href="index.html#book" style="position:fixed;right:20px;bottom:20px;z-index:850"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2v4M16 2v4M3 10h18M5 6h14a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2Z"/></svg><span>Записаться</span></a>
 
 <div class="cookie">
   <p>Мы используем cookie, чтобы сайт работал корректно и был удобнее. Подробнее — в <a href="politika.html">Политике конфиденциальности</a>.</p>
